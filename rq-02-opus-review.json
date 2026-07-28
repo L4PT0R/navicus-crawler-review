@@ -1,0 +1,18 @@
+{
+  "schema_version": "navicus_rq_opus_review_v2",
+  "rq_id": "RQ-02",
+  "reviewed_at": "2026-07-28T20:33:18+09:00",
+  "fresh": true,
+  "provider": "claude",
+  "model": "opus",
+  "final_decision": "GO_CANONICALIZE_RQ_02",
+  "false_verified_count": 0,
+  "unresolved_p0_count": 0,
+  "unresolved_p1_count": 0,
+  "residual_p2_count": 13,
+  "stop_r1_met": true,
+  "stop_r2_met": true,
+  "stop_r3_met": false,
+  "next_loop_decision": "STOP",
+  "stop_r2_recheck_basis": "RQ-02 net-new ROUTE_VERIFIED=0 (<4); Independent PASS and Opus GO; evidence/blockers preserved"
+}

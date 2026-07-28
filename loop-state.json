@@ -1,0 +1,27 @@
+{
+  "schema_version": "navicus_public_route_quality_loop_state_v1",
+  "status": "RQ_02_CANONICAL_STOP_R2",
+  "current_rq": 2,
+  "audit_target_count": 139,
+  "frozen_content_state": {
+    "circle": 139,
+    "triangle": 0
+  },
+  "stop_decision": {
+    "stop_r1_met": true,
+    "stop_r2_met": true,
+    "stop_r3_met": false,
+    "baseline_verified_count": 99,
+    "current_verified_count": 92,
+    "net_new_verified_transition_count": 0,
+    "conservative_demotion_count": 7,
+    "verified_stock_change": -7,
+    "decision": "STOP_NO_RQ_03"
+  },
+  "rq_02": {
+    "status": "CANONICAL_STOP_R2",
+    "independent_audit": "PASS_TO_OPUS_REVIEW",
+    "opus_decision": "GO_CANONICALIZE_RQ_02",
+    "next_decision": "STOP_NO_RQ_03"
+  }
+}

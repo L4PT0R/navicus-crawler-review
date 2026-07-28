@@ -1,0 +1,17 @@
+{
+  "schema_version": "navicus_rq02_final_validation_v1",
+  "status": "PASS",
+  "metrics": {
+    "issuer_count": 139,
+    "route_counts": {
+      "ROUTE_VERIFIED": 92,
+      "ROUTE_REVIEW_REQUIRED": 44,
+      "ROUTE_TERMINAL_EXTERNAL": 3
+    },
+    "issuer_scoped_url_count": 857,
+    "provenance_edge_count": 5404,
+    "p0_count": 0,
+    "p1_count": 0
+  },
+  "findings": []
+}
