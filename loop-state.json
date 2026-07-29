@@ -1,6 +1,6 @@
 {
   "schema_version": "navicus_public_route_quality_loop_state_v1",
-  "status": "RQ_02_CANONICAL_STOP_R2",
+  "status": "RQ_02_CANONICAL_COMPLETE_NEXT_PHASE_ACTIVE",
   "current_rq": 2,
   "audit_target_count": 139,
   "frozen_content_state": {
@@ -23,5 +23,34 @@
     "independent_audit": "PASS_TO_OPUS_REVIEW",
     "opus_decision": "GO_CANONICALIZE_RQ_02",
     "next_decision": "STOP_NO_RQ_03"
+  },
+  "scope_correction": {
+    "corrected_at": "2026-07-29T00:00:00+09:00",
+    "reason": "The later Case Expansion Loop over-expanded the requested completion definition.",
+    "authoritative_circle_result": "139/139",
+    "completion_unit": "operator-approved official proposal aggregation list surface",
+    "completion_rule": "Every proposal case row visible on the target list surface is materialized or explicitly excluded; follow pagination only when it belongs to that surface.",
+    "not_required": [
+      "municipality-wide historical all-year discovery",
+      "complete official department denominator",
+      "public_end=true for all 1741 municipalities"
+    ],
+    "retired_metrics": [
+      "CE-01 137 P0 derived from the over-expanded scope",
+      "CE-05 0/1741 public_end gate"
+    ],
+    "gunma_control": {
+      "target_list_url": "https://www.pref.gunma.jp/site/nyuusatsu/list135-773.html",
+      "observed_list_rows": 38,
+      "materialized_list_rows": 38,
+      "status": "TARGET_LIST_COMPLETE"
+    }
+  },
+  "next_phase": {
+    "phase_name": "TOKYO_DESIGNATED_CITY_CRAWLER",
+    "status": "ACTIVE",
+    "started_at": "2026-07-29T00:00:00+09:00",
+    "scope": "Tokyo, designated cities, prefectures containing designated cities, and cities/special wards in the approved scope; towns and villages excluded.",
+    "runtime_llm_token_dependency_required": 0
   }
 }

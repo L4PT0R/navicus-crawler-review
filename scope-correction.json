@@ -1,0 +1,44 @@
+{
+  "schema_version": "navicus_scope_correction_v1",
+  "corrected_at": "2026-07-29T00:00:00+09:00",
+  "status": "APPLIED",
+  "authoritative_result": {
+    "assessment": "circle",
+    "circle_count": 139,
+    "target_count": 139,
+    "triangle_count": 0,
+    "source_gate": "RQ-02"
+  },
+  "retired_overexpanded_gates": [
+    "all 1741 municipalities must have public_end=true",
+    "all historical years must be discovered across the entire municipal site",
+    "the complete official department denominator must be frozen",
+    "CE-01 137 P0 and CE-05 0/1741 as phase-transition blockers"
+  ],
+  "correct_completion_definition": {
+    "unit": "operator-approved official proposal aggregation list surface",
+    "rule": "Materialize every proposal case row displayed on the target list surface, plus any operator-approved supplemental list surface.",
+    "pagination": "Follow to the last page only when pagination belongs to the target list surface.",
+    "historical_sitewide_discovery_required": false,
+    "department_denominator_required": false
+  },
+  "controls": {
+    "gunma": {
+      "list_url": "https://www.pref.gunma.jp/site/nyuusatsu/list135-773.html",
+      "observed_at": "2026-07-28",
+      "visible_case_rows": 38,
+      "materialized_case_rows": 38,
+      "status": "TARGET_LIST_COMPLETE"
+    },
+    "yokohama": {
+      "canonical_list_url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/bunka/",
+      "operator_approved_supplemental_list_url": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html"
+    }
+  },
+  "next_phase": {
+    "name": "TOKYO_DESIGNATED_CITY_CRAWLER",
+    "status": "ACTIVE",
+    "towns_and_villages_excluded": true,
+    "runtime_llm_token_dependency_required": 0
+  }
+}
