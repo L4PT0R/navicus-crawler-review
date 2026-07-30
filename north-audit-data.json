@@ -1,20 +1,21 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T13:06:19.900944Z",
+  "generated_at": "2026-07-30T13:18:34.548024Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4400,
+    "official_row_observation_count": 4425,
     "conclusion_counts": {
       "UNDERCOUNT_SUSPECTED": 41,
       "OFFICIAL_LIST_ENUMERATED": 3,
       "ROOT_INCOMPLETE": 18,
-      "PUBLIC_BOUNDARY_UNMEASURABLE": 5,
+      "PUBLIC_BOUNDARY_UNMEASURABLE": 4,
       "EXACT_CONFIRMED": 1,
-      "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1
+      "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1,
+      "OFFICIAL_BRANCHES_ENUMERATED": 1
     }
   },
   "items": [
@@ -11693,78 +11694,336 @@
       "prefecture": "愛知県",
       "display_name": "名古屋市",
       "lane": "C",
-      "conclusion": "PUBLIC_BOUNDARY_UNMEASURABLE",
+      "conclusion": "OFFICIAL_BRANCHES_ENUMERATED",
       "pages_count": 0,
       "canonical_count": 0,
-      "official_rows": 11,
-      "details_reached": 11,
-      "delta": 11,
+      "official_rows": 36,
+      "details_reached": 36,
+      "delta": 36,
       "confidence": "high",
       "root_url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html",
       "route": {
         "root": {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html",
-          "label": "名古屋市 プロポーザル等募集"
+          "label": "名古屋市 事業者向けのその他の募集"
         },
         "branches": [
           {
-            "label": "名古屋市 プロポーザル等募集",
-            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html",
-            "role": "dedicated_proposal_list",
-            "case_count": 11,
+            "label": "市会事務局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1044457/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 0,
+            "visible_row_count": 1,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "子育て家庭優待カード事業",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014252.html",
+            "role": "department_recruitment_branch",
+            "case_count": 0,
+            "visible_row_count": 1,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "スポーツ市民局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 2,
             "scanned": true,
             "details": [
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html"
+                "label": "スポーティブ・ライフ月間イベント等企画運営業務公募型プロポーザルの実施（今年度の募集は終了しました）",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html"
+              }
+            ]
+          },
+          {
+            "label": "環境局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014255/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 0,
+            "visible_row_count": 3,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "観光文化交流局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 3,
+            "visible_row_count": 9,
+            "scanned": true,
+            "details": [
+              {
+                "label": "豊臣ミュージアムにおける名古屋市独自展示業務委託に関するプロポーザルの審査結果",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html"
+                "label": "大河ドラマ「豊臣兄弟！」を契機とした名古屋駅・中村公園駅等におけるPR業務委託に関するプロポーザルの審査結果",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html"
+                "label": "大河ドラマに係る歴史観光推進施設運営管理業務委託に関するプロポーザルの審査結果",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html"
+              }
+            ]
+          },
+          {
+            "label": "教育委員会",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 8,
+            "visible_row_count": 14,
+            "scanned": true,
+            "details": [
+              {
+                "label": "名古屋市科学館食堂出店者募集について",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035762.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html"
+                "label": "名古屋市科学館ミュージアムショップ出店者募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035761.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html"
+                "label": "名古屋市美術館コーヒーショップ出店者募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014281.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html"
+                "label": "名古屋市科学館ミュージアムショップ出店者再々募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014264.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html"
+                "label": "名古屋市科学館食堂出店者再募集（選定結果）",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014267.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html"
+                "label": "名古屋市科学館ミュージアムショップ出店者再募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014265.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html"
+                "label": "名古屋市科学館食堂出店者再募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014266.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html"
+                "label": "名古屋市科学館食堂出店者募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014268.html"
+              }
+            ]
+          },
+          {
+            "label": "経済局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 5,
+            "scanned": true,
+            "details": [
+              {
+                "label": "「地域経済活性化促進事業業務委託（物価高騰対応重点支援地方創生臨時交付金活用事業）」に係る公募型プロポーザルの実施",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html"
+              }
+            ]
+          },
+          {
+            "label": "健康福祉局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 4,
+            "scanned": true,
+            "details": [
+              {
+                "label": "令和8年度 名古屋市自殺対策に関する広報業務等委託公募型プロポーザルについて",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html"
+              }
+            ]
+          },
+          {
+            "label": "財政局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014294/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 2,
+            "scanned": true,
+            "details": [
+              {
+                "label": "名古屋市ふるさと納税返礼品提供事業支援業務の事業者公募（令和7年度公告）",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014294/1043006.html"
+              }
+            ]
+          },
+          {
+            "label": "子ども青少年局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 4,
+            "visible_row_count": 19,
+            "scanned": true,
+            "details": [
+              {
+                "label": "令和8年度名古屋市地域子育て支援拠点運営事業者の追加募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1050160.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html",
-                "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html"
+                "label": "令和8年度名古屋市地域子育て支援拠点運営事業者の募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1043102.html"
               },
               {
-                "url": "https://www.chotatsu.city.nagoya.jp/chotatsu_topix/kensaku.html",
-                "label": "https://www.chotatsu.city.nagoya.jp/chotatsu_topix/kensaku.html"
+                "label": "名古屋市放課後事業及び生涯学習開放実施委託の公募",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035766.html"
               },
               {
-                "url": "https://www.city.nagoya.jp/jigyou/nyusatsu/1044665.html",
-                "label": "https://www.city.nagoya.jp/jigyou/nyusatsu/1044665.html"
+                "label": "「名古屋市妊産婦等生活援助事業」業務委託事業者の募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035763.html"
+              }
+            ]
+          },
+          {
+            "label": "市長室",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 4,
+            "visible_row_count": 4,
+            "scanned": true,
+            "details": [
+              {
+                "label": "令和8年度名古屋市CM映像（ハザードマップ）の制作及び放送業務委託に係る企画コンペの実施について",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1051226.html"
+              },
+              {
+                "label": "令和8年度名古屋市市政広報テレビ番組制作及び放送業務委託に係る企画コンペの実施について",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043465.html"
+              },
+              {
+                "label": "令和8年度名古屋市市政広報ラジオ番組「施策等説明番組」制作及び放送業務委託に係る企画コンペ実施について",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043578.html"
+              },
+              {
+                "label": "令和8年度広報なごや企画面デザイン及び版下作成業務委託に係る公募型プロポーザルの実施",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html"
+              }
+            ]
+          },
+          {
+            "label": "住宅都市局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 3,
+            "visible_row_count": 14,
+            "scanned": true,
+            "details": [
+              {
+                "label": "名古屋駅西側駅前広場におけるデジタルサイネージ等企画設計業務委託に係るプロポーザル",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html"
+              },
+              {
+                "label": "野跡駅前市有地開発事業者募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1050301.html"
+              },
+              {
+                "label": "旧教育館跡地暫定活用事業の事業予定者決定",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014322.html"
+              }
+            ]
+          },
+          {
+            "label": "総務局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 6,
+            "visible_row_count": 10,
+            "scanned": true,
+            "details": [
+              {
+                "label": "「第60回アジア開発銀行年次総会シティドレッシング実施準備等業務委託」の業務委託先を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1052072.html"
+              },
+              {
+                "label": "「第60回アジア開発銀行年次総会 愛知・名古屋PR 動画作成業務委託」の事業者を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1043119.html"
+              },
+              {
+                "label": "「第60回アジア開発銀行年次総会愛知・名古屋支援実行委員会Webサイト制作業務委託」の事業者を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1048554.html"
+              },
+              {
+                "label": "「第59回アジア開発銀行年次総会次回開催国ブース出展・イベント実施準備業務委託」の事業者を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1040471.html"
+              },
+              {
+                "label": "「第60回アジア開発銀行年次総会ロゴマーク作成業務委託」の事業者を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1037744.html"
+              },
+              {
+                "label": "市役所本庁舎地下1階食堂の運営事業者を募集します",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1014335.html"
+              }
+            ]
+          },
+          {
+            "label": "緑政土木局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014337/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 24,
+            "scanned": true,
+            "details": [
+              {
+                "label": "都市公園におけるキッチンカー運営の提案募集",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014337/1035772.html"
+              }
+            ]
+          },
+          {
+            "label": "選挙管理委員会事務局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014352/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 0,
+            "visible_row_count": 0,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "消防局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032957/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 0,
+            "visible_row_count": 0,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "監査事務局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 1,
+            "visible_row_count": 1,
+            "scanned": true,
+            "details": [
+              {
+                "label": "令和 8年度財政援助団体等監査等業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html"
+              }
+            ]
+          },
+          {
+            "label": "防災危機管理局",
+            "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/index.html",
+            "role": "department_recruitment_branch",
+            "case_count": 2,
+            "visible_row_count": 2,
+            "scanned": true,
+            "details": [
+              {
+                "label": "「港防災センター移転改築設計等業務委託」公募型プロポーザルの実施",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html"
+              },
+              {
+                "label": "「港防災センター移転改築の基本計画作成等業務委託」公募型プロポーザルの実施",
+                "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html"
               }
             ]
           }
@@ -11773,169 +12032,435 @@
       "checked_urls": [
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html",
-          "label": "名古屋市 プロポーザル等募集"
+          "label": "名古屋市 事業者向けのその他の募集"
         },
         {
-          "url": "https://www.city.nagoya.jp/jigyou/boshu/index.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/index.html"
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1044457/index.html",
+          "label": "市会事務局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014252.html",
+          "label": "子育て家庭優待カード事業"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/index.html",
+          "label": "スポーツ市民局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014255/index.html",
+          "label": "環境局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/index.html",
+          "label": "観光文化交流局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/index.html",
+          "label": "教育委員会"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/index.html",
+          "label": "経済局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/index.html",
+          "label": "健康福祉局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014294/index.html",
+          "label": "財政局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/index.html",
+          "label": "子ども青少年局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/index.html",
+          "label": "市長室"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/index.html",
+          "label": "住宅都市局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/index.html",
+          "label": "総務局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014337/index.html",
+          "label": "緑政土木局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014352/index.html",
+          "label": "選挙管理委員会事務局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032957/index.html",
+          "label": "消防局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/index.html",
+          "label": "監査事務局"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/index.html",
+          "label": "防災危機管理局"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html"
+          "label": "スポーティブ・ライフ月間イベント等企画運営業務公募型プロポーザルの実施（今年度の募集は終了しました）"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html"
+          "label": "豊臣ミュージアムにおける名古屋市独自展示業務委託に関するプロポーザルの審査結果"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html"
+          "label": "大河ドラマ「豊臣兄弟！」を契機とした名古屋駅・中村公園駅等におけるPR業務委託に関するプロポーザルの審査結果"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html"
+          "label": "大河ドラマに係る歴史観光推進施設運営管理業務委託に関するプロポーザルの審査結果"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035762.html",
+          "label": "名古屋市科学館食堂出店者募集について"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035761.html",
+          "label": "名古屋市科学館ミュージアムショップ出店者募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014281.html",
+          "label": "名古屋市美術館コーヒーショップ出店者募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014264.html",
+          "label": "名古屋市科学館ミュージアムショップ出店者再々募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014267.html",
+          "label": "名古屋市科学館食堂出店者再募集（選定結果）"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014265.html",
+          "label": "名古屋市科学館ミュージアムショップ出店者再募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014266.html",
+          "label": "名古屋市科学館食堂出店者再募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014268.html",
+          "label": "名古屋市科学館食堂出店者募集"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html"
+          "label": "「地域経済活性化促進事業業務委託（物価高騰対応重点支援地方創生臨時交付金活用事業）」に係る公募型プロポーザルの実施"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html"
+          "label": "令和8年度 名古屋市自殺対策に関する広報業務等委託公募型プロポーザルについて"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014294/1043006.html",
+          "label": "名古屋市ふるさと納税返礼品提供事業支援業務の事業者公募（令和7年度公告）"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1050160.html",
+          "label": "令和8年度名古屋市地域子育て支援拠点運営事業者の追加募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1043102.html",
+          "label": "令和8年度名古屋市地域子育て支援拠点運営事業者の募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035766.html",
+          "label": "名古屋市放課後事業及び生涯学習開放実施委託の公募"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035763.html",
+          "label": "「名古屋市妊産婦等生活援助事業」業務委託事業者の募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1051226.html",
+          "label": "令和8年度名古屋市CM映像（ハザードマップ）の制作及び放送業務委託に係る企画コンペの実施について"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043465.html",
+          "label": "令和8年度名古屋市市政広報テレビ番組制作及び放送業務委託に係る企画コンペの実施について"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043578.html",
+          "label": "令和8年度名古屋市市政広報ラジオ番組「施策等説明番組」制作及び放送業務委託に係る企画コンペ実施について"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html"
+          "label": "令和8年度広報なごや企画面デザイン及び版下作成業務委託に係る公募型プロポーザルの実施"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html"
+          "label": "名古屋駅西側駅前広場におけるデジタルサイネージ等企画設計業務委託に係るプロポーザル"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1050301.html",
+          "label": "野跡駅前市有地開発事業者募集"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014322.html",
+          "label": "旧教育館跡地暫定活用事業の事業予定者決定"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1052072.html",
+          "label": "「第60回アジア開発銀行年次総会シティドレッシング実施準備等業務委託」の業務委託先を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1043119.html",
+          "label": "「第60回アジア開発銀行年次総会 愛知・名古屋PR 動画作成業務委託」の事業者を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1048554.html",
+          "label": "「第60回アジア開発銀行年次総会愛知・名古屋支援実行委員会Webサイト制作業務委託」の事業者を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1040471.html",
+          "label": "「第59回アジア開発銀行年次総会次回開催国ブース出展・イベント実施準備業務委託」の事業者を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1037744.html",
+          "label": "「第60回アジア開発銀行年次総会ロゴマーク作成業務委託」の事業者を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1014335.html",
+          "label": "市役所本庁舎地下1階食堂の運営事業者を募集します"
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014337/1035772.html",
+          "label": "都市公園におけるキッチンカー運営の提案募集"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html"
+          "label": "令和 8年度財政援助団体等監査等業務委託に係る公募型プロポーザルの実施について"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html"
+          "label": "「港防災センター移転改築設計等業務委託」公募型プロポーザルの実施"
         },
         {
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html",
-          "label": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html"
-        },
-        {
-          "url": "https://www.chotatsu.city.nagoya.jp/",
-          "label": "https://www.chotatsu.city.nagoya.jp/"
-        },
-        {
-          "url": "https://www.chotatsu.city.nagoya.jp/chotatsu_topix/kensaku.html",
-          "label": "https://www.chotatsu.city.nagoya.jp/chotatsu_topix/kensaku.html"
-        },
-        {
-          "url": "https://www.city.nagoya.jp/jigyou/nyusatsu/1044665.html",
-          "label": "https://www.city.nagoya.jp/jigyou/nyusatsu/1044665.html"
+          "label": "「港防災センター移転改築の基本計画作成等業務委託」公募型プロポーザルの実施"
         }
       ],
       "missing_candidates": [
         {
-          "title": "スポーティブ・ライフ月間イベント等企画運営業務",
+          "title": "スポーティブ・ライフ月間イベント等企画運営業務公募型プロポーザルの実施（今年度の募集は終了しました）",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014253/1040469.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "豊臣ミュージアム独自展示業務",
+          "title": "豊臣ミュージアムにおける名古屋市独自展示業務委託に関するプロポーザルの審査結果",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1040470.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "大河ドラマPR業務",
+          "title": "大河ドラマ「豊臣兄弟！」を契機とした名古屋駅・中村公園駅等におけるPR業務委託に関するプロポーザルの審査結果",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1035759.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "大河ドラマ歴史観光推進施設運営管理",
+          "title": "大河ドラマに係る歴史観光推進施設運営管理業務委託に関するプロポーザルの審査結果",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/1032941.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "地域経済活性化促進事業",
+          "title": "名古屋市科学館食堂出店者募集について",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035762.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館ミュージアムショップ出店者募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1035761.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市美術館コーヒーショップ出店者募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014281.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館ミュージアムショップ出店者再々募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014264.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館食堂出店者再募集（選定結果）",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014267.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館ミュージアムショップ出店者再募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014265.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館食堂出店者再募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014266.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市科学館食堂出店者募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014263/1014268.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「地域経済活性化促進事業業務委託（物価高騰対応重点支援地方創生臨時交付金活用事業）」に係る公募型プロポーザルの実施",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014283/1046670.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "自殺対策広報業務等",
+          "title": "令和8年度 名古屋市自殺対策に関する広報業務等委託公募型プロポーザルについて",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014287/1046829.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "広報なごや企画面デザイン及び版下作成",
+          "title": "名古屋市ふるさと納税返礼品提供事業支援業務の事業者公募（令和7年度公告）",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014294/1043006.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度名古屋市地域子育て支援拠点運営事業者の追加募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1050160.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度名古屋市地域子育て支援拠点運営事業者の募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1043102.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "名古屋市放課後事業及び生涯学習開放実施委託の公募",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035766.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「名古屋市妊産婦等生活援助事業」業務委託事業者の募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014296/1035763.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度名古屋市CM映像（ハザードマップ）の制作及び放送業務委託に係る企画コンペの実施について",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1051226.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度名古屋市市政広報テレビ番組制作及び放送業務委託に係る企画コンペの実施について",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043465.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度名古屋市市政広報ラジオ番組「施策等説明番組」制作及び放送業務委託に係る企画コンペ実施について",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1043578.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和8年度広報なごや企画面デザイン及び版下作成業務委託に係る公募型プロポーザルの実施",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014314/1014315.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "名古屋駅西側駅前広場デジタルサイネージ等企画設計",
+          "title": "名古屋駅西側駅前広場におけるデジタルサイネージ等企画設計業務委託に係るプロポーザル",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014323.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "財政援助団体等監査等業務",
+          "title": "野跡駅前市有地開発事業者募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1050301.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "旧教育館跡地暫定活用事業の事業予定者決定",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014316/1014322.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「第60回アジア開発銀行年次総会シティドレッシング実施準備等業務委託」の業務委託先を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1052072.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「第60回アジア開発銀行年次総会 愛知・名古屋PR 動画作成業務委託」の事業者を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1043119.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「第60回アジア開発銀行年次総会愛知・名古屋支援実行委員会Webサイト制作業務委託」の事業者を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1048554.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「第59回アジア開発銀行年次総会次回開催国ブース出展・イベント実施準備業務委託」の事業者を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1040471.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "「第60回アジア開発銀行年次総会ロゴマーク作成業務委託」の事業者を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1037744.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "市役所本庁舎地下1階食堂の運営事業者を募集します",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014334/1014335.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "都市公園におけるキッチンカー運営の提案募集",
+          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014337/1035772.html",
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
+        },
+        {
+          "title": "令和 8年度財政援助団体等監査等業務委託に係る公募型プロポーザルの実施について",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1045820/1045821.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "港防災センター移転改築設計等",
+          "title": "「港防災センター移転改築設計等業務委託」公募型プロポーザルの実施",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1048896.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         },
         {
-          "title": "港防災センター移転改築基本計画作成等",
+          "title": "「港防災センター移転改築の基本計画作成等業務委託」公募型プロポーザルの実施",
           "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/1032959/1032960.html",
-          "status": "要確認"
+          "status": "局別公式一覧・詳細確認済み・Pages未収載"
         }
       ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+          "result": "総合募集ページ直下の18局・事務局ページをクロール対象として固定"
         },
         {
           "round": 2,
-          "hypotheses": [
-            "既存観光文化交流局一覧が全庁案件を代表する"
-          ],
-          "checked_urls": [
-            "https://www.city.nagoya.jp/jigyou/boshu/1014251/1014259/index.html",
-            "https://www.city.nagoya.jp/jigyou/boshu/index.html"
-          ],
-          "result": "PARTIAL"
+          "result": "18枝の公開115行を全件列挙し、各詳細本文を確認"
         },
         {
           "round": 3,
-          "hypotheses": [
-            "全18部局募集枝を列挙すれば公式サイト内案件を回収できる"
-          ],
-          "checked_urls": [
-            "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html"
-          ],
-          "result": "PARTIAL"
+          "result": "プロポーザル等36件・対象外79行へ保存的に分類"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://www.city.nagoya.jp/jigyou/boshu/1014251/index.html",
-          "finding": "18 reachable department/index branches enumerated; 11 unique proposal rows found and all 11 detail GETs returned 200",
-          "exhausted": true
-        },
-        {
-          "url": "https://www.chotatsu.city.nagoya.jp/chotatsu_topix/kensaku.html",
-          "finding": "public procurement search documents fiscal-year/month/department conditions, but official notice states some ward and proposal procedures are outside the current electronic system",
-          "exhausted": false
+          "branch_count": 18,
+          "visited_branch_count": 18,
+          "visible_unique_row_count": 115,
+          "confirmed_case_count": 36,
+          "explicit_exclusion_count": 79,
+          "row_conservation_pass": true
         }
       ],
-      "observed_at": "2026-07-30T10:42:31Z",
+      "observed_at": "2026-07-30",
       "operator_root_override": true,
-      "operator_root_basis": "north_route_audit_2026-07-30",
+      "operator_root_basis": "operator_supplied_18_department_branches",
       "excluded_result_urls": []
     },
     {

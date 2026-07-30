@@ -19,6 +19,7 @@ MITO_RESULT = WORKSPACE / "work/mito_citywide_recruitment_2026-07-30/result.json
 LIST_REPAIR_ROOT = WORKSPACE / "work/municipal_proposal_list_repair_2026-07-30"
 SAPPORO_RESULT = WORKSPACE / "work/sapporo_current_procurement_2026-07-30/result.json"
 OPERATOR_ROUTE_OVERRIDES = WORKSPACE / "data/north_operator_route_overrides_v1.json"
+NAGOYA_RESULT = WORKSPACE / "work/nagoya_department_recruitment_2026-07-30/result.json"
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -495,6 +496,80 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
         })
 
 
+def apply_nagoya_department_overlay(items: list[dict]) -> None:
+    if not NAGOYA_RESULT.exists():
+        return
+    result = json.loads(NAGOYA_RESULT.read_text(encoding="utf-8"))
+    if (
+        result.get("schema_version") != "navicus_nagoya_department_recruitment_v1"
+        or result.get("branch_count") != 18
+        or result.get("visited_branch_count") != 18
+        or not result.get("row_conservation_pass")
+        or result.get("raw_html_persisted")
+    ):
+        return
+    target = next((item for item in items if item["issuer_id"] == "muni:231002"), None)
+    if target is None:
+        return
+    cases = result.get("cases") or []
+    existing_urls = current_pages_case_urls("muni:231002")
+    count = as_int(result.get("confirmed_case_count"))
+    branches = []
+    for branch in result.get("branch_results") or []:
+        branches.append({
+            "label": branch["label"],
+            "url": branch["url"],
+            "role": "department_recruitment_branch",
+            "case_count": as_int(branch.get("proposal_case_count")),
+            "visible_row_count": as_int(branch.get("visible_row_count")),
+            "scanned": True,
+            "details": [
+                {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                for case in branch.get("details") or []
+            ],
+        })
+    target.update({
+        "official_rows": count,
+        "details_reached": count,
+        "delta": count - target["pages_count"],
+        "conclusion": "OFFICIAL_BRANCHES_ENUMERATED",
+        "confidence": "high",
+        "root_url": result["crawl_root_url"],
+        "route": {
+            "root": {"url": result["crawl_root_url"], "label": "名古屋市 事業者向けのその他の募集"},
+            "branches": branches,
+        },
+        "checked_urls": [
+            {"url": result["crawl_root_url"], "label": "名古屋市 事業者向けのその他の募集"},
+        ] + [
+            {"url": branch["url"], "label": branch["label"]} for branch in branches
+        ] + [
+            {"url": case["official_url"], "label": case["title"]} for case in cases
+        ],
+        "missing_candidates": [
+            {"title": case["title"], "url": case["official_url"], "status": "局別公式一覧・詳細確認済み・Pages未収載"}
+            for case in cases if case.get("official_url") not in existing_urls
+        ],
+        "duplicate_groups": [],
+        "discovery_rounds": [
+            {"round": 1, "result": "総合募集ページ直下の18局・事務局ページをクロール対象として固定"},
+            {"round": 2, "result": f"18枝の公開{result.get('visible_unique_row_count', 0)}行を全件列挙し、各詳細本文を確認"},
+            {"round": 3, "result": f"プロポーザル等{count}件・対象外{result.get('explicit_exclusion_count', 0)}行へ保存的に分類"},
+        ],
+        "pagination_evidence": [{
+            "branch_count": result.get("branch_count"),
+            "visited_branch_count": result.get("visited_branch_count"),
+            "visible_unique_row_count": result.get("visible_unique_row_count"),
+            "confirmed_case_count": count,
+            "explicit_exclusion_count": result.get("explicit_exclusion_count"),
+            "row_conservation_pass": True,
+        }],
+        "observed_at": result.get("observed_at", ""),
+        "operator_root_override": True,
+        "operator_root_basis": "operator_supplied_18_department_branches",
+    })
+
+
 def main() -> None:
     scope = {row["issuer_id"]: row for row in load_csv(RUN / "target_scope.csv")}
     summaries: list[dict[str, str]] = []
@@ -548,6 +623,7 @@ def main() -> None:
     apply_full_list_repair_overlays(items)
     apply_sapporo_attachment_overlay(items)
     apply_operator_route_overrides(items)
+    apply_nagoya_department_overlay(items)
     counts = Counter(item["conclusion"] for item in items)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",
