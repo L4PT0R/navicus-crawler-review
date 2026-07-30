@@ -141,6 +141,20 @@ def test_recovery_merge_is_idempotent_by_case_id() -> None:
     assert twice == once
 
 
+def test_public_secret_redaction_is_recursive() -> None:
+    detected_value = "AI" + "za" + "A" * 35
+    payload = {
+        "items": [{"summary": f"scraped script: var key='{detected_value}'"}],
+        "safe": "unchanged",
+    }
+    redacted = MODULE.redact_public_secrets(payload)
+    assert detected_value not in json.dumps(redacted)
+    assert redacted["items"][0]["summary"] == (
+        "scraped script: var key='[REDACTED_GOOGLE_API_KEY]'"
+    )
+    assert redacted["safe"] == "unchanged"
+
+
 def _write_json(path: Path, value: object) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
 

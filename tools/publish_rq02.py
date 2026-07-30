@@ -36,6 +36,20 @@ ROUTE_DISPLAY = {
     "ROUTE_TERMINAL_EXTERNAL": "UNVERIFIED",
 }
 
+GOOGLE_API_KEY_RE = re.compile(r"AIza[0-9A-Za-z_-]{20,}")
+GOOGLE_API_KEY_REDACTION = "[REDACTED_GOOGLE_API_KEY]"
+
+
+def redact_public_secrets(value: object) -> object:
+    """Recursively remove credential-shaped literals from public artifacts."""
+    if isinstance(value, str):
+        return GOOGLE_API_KEY_RE.sub(GOOGLE_API_KEY_REDACTION, value)
+    if isinstance(value, list):
+        return [redact_public_secrets(child) for child in value]
+    if isinstance(value, dict):
+        return {key: redact_public_secrets(child) for key, child in value.items()}
+    return value
+
 
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -69,7 +83,7 @@ def read_dashboard_seed(path: Path) -> dict[str, Any]:
 
 def write_json(path: Path, value: object) -> None:
     path.write_text(
-        json.dumps(value, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(redact_public_secrets(value), ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
@@ -623,6 +637,7 @@ def main() -> None:
             "verified_zero_true_count": 0,
             "overlay_sha256": sha256(args.recovery_overlay_json.resolve()),
         }
+    seed = redact_public_secrets(seed)
     encoded = json.dumps(seed, ensure_ascii=False, separators=(",", ":"))
     rendered_index = (
         index_text[: match.start()]
