@@ -19,6 +19,12 @@ MITO_RESULT = WORKSPACE / "work/mito_citywide_recruitment_2026-07-30/result.json
 LIST_REPAIR_ROOT = WORKSPACE / "work/municipal_proposal_list_repair_2026-07-30"
 SAPPORO_RESULT = WORKSPACE / "work/sapporo_current_procurement_2026-07-30/result.json"
 OPERATOR_ROUTE_OVERRIDES = WORKSPACE / "data/north_operator_route_overrides_v1.json"
+FRESH_NO_GO_OVERRIDE_FILES = (
+    WORKSPACE / "data/north_no_go_root_repairs_v1.json",
+    WORKSPACE / "data/north_no_go_undercount_a_v1.json",
+    WORKSPACE / "data/north_no_go_undercount_b_v1.json",
+    WORKSPACE / "data/north_no_go_final_repairs_v1.json",
+)
 NAGOYA_RESULT = WORKSPACE / "work/nagoya_department_recruitment_2026-07-30/result.json"
 KANAGAWA_RSS_RESULT = WORKSPACE / "work/kanagawa_rss_frontier_2026-07-30/result.json"
 
@@ -33,6 +39,16 @@ def as_int(value: object) -> int:
         return int(value or 0)
     except (TypeError, ValueError):
         return 0
+
+
+def repair_checks_pass(checks: dict) -> bool:
+    return bool(checks) and (
+        checks.get("municipality_top_used_as_root") is False
+        and as_int(checks.get("empty_configured_branch_count")) == 0
+        and checks.get("result_pages_separated_from_cases") is True
+        and checks.get("question_answer_updates_separated_from_cases") is True
+        and checks.get("official_list_exhausted") is True
+    )
 
 
 def walk_records(value: object):
@@ -395,20 +411,37 @@ def _looks_like_case_detail(url: str, root_url: str, excluded: set[str]) -> bool
 
 def apply_operator_route_overrides(items: list[dict]) -> None:
     """Promote operator-confirmed list pages and demote result-only routes."""
-    if not OPERATOR_ROUTE_OVERRIDES.exists():
-        return
-    payload = json.loads(OPERATOR_ROUTE_OVERRIDES.read_text(encoding="utf-8"))
-    for override in payload.get("items") or []:
+    override_rows = []
+    for path in (OPERATOR_ROUTE_OVERRIDES, *FRESH_NO_GO_OVERRIDE_FILES):
+        if path.exists():
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            override_rows.extend(payload.get("items") or [])
+    for override in override_rows:
         target = next((item for item in items if item["issuer_id"] == override.get("issuer_id")), None)
         if target is None:
             continue
         root_url = override["root_url"]
         excluded = set(override.get("excluded_result_urls") or [])
         dropped = set(override.get("drop_urls") or [])
-        if override.get("observed_official_rows") is not None:
-            observed_rows = as_int(override["observed_official_rows"])
+        measurement = override.get("live_measurement") or {}
+        additional_specs = list(override.get("additional_current_roots") or [])
+        for surface in override.get("list_surfaces") or []:
+            if surface.get("url") and surface["url"] != root_url:
+                additional_specs.append({
+                    "url": surface["url"],
+                    "label": surface.get("label") or surface.get("role") or surface["url"],
+                    "role": surface.get("role") or "official_current_list",
+                })
+        measured_rows = (
+            measurement.get("logical_case_candidate_count")
+            if measurement.get("status") == "success"
+            else None
+        )
+        observed_value = override.get("observed_official_rows", measured_rows)
+        if observed_value is not None:
+            observed_rows = as_int(observed_value)
             target["official_rows"] = observed_rows
-            target["details_reached"] = min(as_int(target.get("details_reached")), observed_rows)
+            target["details_reached"] = observed_rows
             target["delta"] = observed_rows - as_int(target.get("pages_count"))
         checked = target.get("checked_urls") or []
         existing_primary_details = []
@@ -422,7 +455,16 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
         ]
         deduped_details = []
         seen_detail_urls = set()
-        primary_detail_candidates = existing_primary_details or inferred_details
+        audited_details = [
+            {"url": row["url"], "label": row.get("title") or row["url"]}
+            for row in override.get("audit_rows") or []
+            if row.get("role") == "case_candidate" and row.get("url")
+        ]
+        verified_details = [
+            {"url": url, "label": url}
+            for url in override.get("verified_detail_urls") or []
+        ]
+        primary_detail_candidates = audited_details or verified_details or existing_primary_details or inferred_details
         for detail in primary_detail_candidates:
             if detail["url"] not in seen_detail_urls:
                 seen_detail_urls.add(detail["url"])
@@ -436,7 +478,7 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
             "details": deduped_details,
         }
         branches = [primary_branch]
-        for branch in override.get("additional_current_roots") or []:
+        for branch in additional_specs:
             branches.append({
                 "label": branch["label"],
                 "url": branch["url"],
@@ -466,7 +508,7 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
             {"url": root_url, "label": override["root_label"]},
         ] + [
             {"url": branch["url"], "label": branch["label"]}
-            for branch in override.get("additional_current_roots") or []
+            for branch in additional_specs
         ] + [
             {"url": url, "label": "結果ページ（除外）"} for url in sorted(excluded)
         ] + [row for row in checked if row.get("url") not in dropped]
@@ -497,6 +539,16 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
         })
         if override.get("conclusion"):
             target["conclusion"] = override["conclusion"]
+        elif (
+            measurement.get("status") == "success"
+            and measurement.get("pagination_terminal_reached") is True
+            and repair_checks_pass(override.get("repair_checks") or {})
+        ):
+            target["conclusion"] = "OFFICIAL_LIST_ENUMERATED"
+        elif str(override.get("repair_status", "")).startswith("RESOLVED"):
+            target["conclusion"] = "OFFICIAL_BRANCHES_ENUMERATED"
+        elif override.get("audit_status") == "resolved":
+            target["conclusion"] = "OFFICIAL_LIST_ENUMERATED"
 
 
 def apply_nagoya_department_overlay(items: list[dict]) -> None:
