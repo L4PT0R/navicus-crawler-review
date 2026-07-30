@@ -27,10 +27,22 @@ FRESH_NO_GO_OVERRIDE_FILES = (
 )
 NAGOYA_RESULT = WORKSPACE / "work/nagoya_department_recruitment_2026-07-30/result.json"
 KANAGAWA_RSS_RESULT = WORKSPACE / "work/kanagawa_rss_frontier_2026-07-30/result.json"
+FULL_REAUDIT_ROOT = WORKSPACE / "work/full_north_reaudit/2026-07-31"
+FULL_REAUDIT_GROUPS = (
+    FULL_REAUDIT_ROOT / "priority_nagano_kawasaki_sagamihara.json",
+    FULL_REAUDIT_ROOT / "group_01_14.json",
+    FULL_REAUDIT_ROOT / "group_15_28.json",
+    FULL_REAUDIT_ROOT / "group_29_38.json",
+    FULL_REAUDIT_ROOT / "group_40_42_53.json",
+    FULL_REAUDIT_ROOT / "group_54_59_61_69.json",
+)
+APPROVED_UNMATERIALIZED_TERMINALS = {"shared:17:ishikawa_portal_discovery", "muni:172014"}
+APPROVED_SUPPLEMENTAL_TERMINALS = {"muni:121002", "shared:13:e_tokyo_joint_procurement"}
 ACCEPTED_CONCLUSIONS = {
     "EXACT_CONFIRMED", "OFFICIAL_LIST_ENUMERATED", "OFFICIAL_BRANCHES_ENUMERATED",
     "RSS_FRONTIER_CLASSIFIED", "RSS_FRONTIER_CONFIGURED",
     "OFFICIAL_FRONTIER_CONFIGURED", "EXTERNAL_SYSTEM_TERMINAL_CONFIRMED",
+    "FULL_LIST_REAUDIT_VERIFIED",
 }
 
 
@@ -104,6 +116,106 @@ def normalize_url(value: object) -> dict[str, str] | None:
                 "label": str(value.get("label") or value.get("title") or value.get("role") or url),
             }
     return None
+
+
+def full_reaudit_errors(row: dict) -> list[str]:
+    errors = list(row.get("errors") or [])
+    if row.get("public_end") is not True:
+        errors.append("public_end_not_confirmed")
+    if row.get("row_conservation_pass") is not True:
+        errors.append("row_conservation_failed")
+    if row.get("visible_row_count") != row.get("case_count", 0) + row.get("exclusion_count", 0):
+        errors.append("visible_row_count_not_conserved")
+    if row.get("case_count") != len(row.get("cases") or []):
+        errors.append("case_count_mismatch")
+    if row.get("exclusion_count") != len(row.get("exclusions") or []):
+        errors.append("exclusion_count_mismatch")
+    issuer_id = row.get("issuer_id")
+    unmaterialized = row.get("unmaterialized_terminal_rows") or []
+    if unmaterialized and issuer_id not in APPROVED_UNMATERIALIZED_TERMINALS:
+        errors.append(f"unmaterialized_terminal_rows_not_operator_approved:{len(unmaterialized)}")
+    terminal = row.get("terminal_exceptions") or []
+    if terminal and issuer_id not in APPROVED_SUPPLEMENTAL_TERMINALS | APPROVED_UNMATERIALIZED_TERMINALS:
+        errors.append(f"terminal_exception_not_operator_approved:{len(terminal)}")
+    return errors
+
+
+def apply_full_reaudit_overlays(items: list[dict]) -> None:
+    """Make the full-list row materialization the final audit authority."""
+    by_id = {item["issuer_id"]: item for item in items}
+    for path in FULL_REAUDIT_GROUPS:
+        if not path.exists():
+            continue
+        group = json.loads(path.read_text(encoding="utf-8"))
+        if group.get("schema_version") != "navicus_full_north_reaudit_group_v1":
+            continue
+        for row in group.get("items") or []:
+            target = by_id.get(row.get("issuer_id"))
+            if target is None:
+                continue
+            root_url = row.get("root_url") or target.get("root_url")
+            root_label = row.get("display_name") or target.get("display_name")
+            cases = row.get("cases") or []
+            exclusions = row.get("exclusions") or []
+            errors = full_reaudit_errors(row)
+            branches = []
+            raw_branches = row.get("branches") or [{"url": root_url, "role": "official_list"}]
+            for raw_branch in raw_branches:
+                branch_url = raw_branch.get("url") or root_url
+                branch_cases = [
+                    case for case in cases
+                    if case.get("source_list_url") == branch_url
+                    or (len(raw_branches) == 1 and case.get("source_list_url") in {None, "", root_url})
+                ]
+                branches.append({
+                    "label": raw_branch.get("label") or raw_branch.get("role") or branch_url,
+                    "url": branch_url,
+                    "role": raw_branch.get("role") or "official_list",
+                    "case_count": len(branch_cases),
+                    "scanned": True,
+                    "details": [
+                        {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                        for case in branch_cases if case.get("official_url")
+                    ],
+                })
+            assigned_urls = {detail["url"] for branch in branches for detail in branch["details"]}
+            unassigned = [case for case in cases if case.get("official_url") and case["official_url"] not in assigned_urls]
+            if unassigned:
+                branches.append({
+                    "label": "全行再監査・未分類枝", "url": root_url, "role": "full_reaudit_unclassified_branch",
+                    "case_count": len(unassigned), "scanned": True,
+                    "details": [{"label": case.get("title") or case["official_url"], "url": case["official_url"]} for case in unassigned],
+                })
+            target.update({
+                "conclusion": "FULL_REAUDIT_BLOCKED" if errors else "FULL_LIST_REAUDIT_VERIFIED",
+                "official_rows": len(cases),
+                "details_reached": sum(1 for case in cases if case.get("official_url") and case.get("official_url") != root_url),
+                "delta": len(cases) - target.get("pages_count", 0),
+                "confidence": "low" if errors else "high",
+                "root_url": root_url,
+                "route": {"root": {"url": root_url, "label": root_label}, "branches": branches},
+                "checked_urls": [{"url": root_url, "label": root_label}] + [
+                    {"url": case["official_url"], "label": case.get("title") or case["official_url"]}
+                    for case in cases if case.get("official_url") and case.get("official_url") != root_url
+                ],
+                "missing_candidates": [
+                    {"title": value.get("title") or f"未実体化終端行 {index}", "url": value.get("official_url") or value.get("url") or "", "status": value.get("reason") or "未実体化"}
+                    for index, value in enumerate(row.get("unmaterialized_terminal_rows") or [], 1)
+                ],
+                "duplicate_groups": [],
+                "pagination_evidence": [{
+                    "visible_row_count": row.get("visible_row_count"), "case_count": len(cases),
+                    "exclusion_count": len(exclusions), "row_conservation_pass": row.get("row_conservation_pass"),
+                    "public_end": row.get("public_end"), "terminal_exceptions": row.get("terminal_exceptions") or [],
+                }],
+                "observed_at": row.get("observed_at") or group.get("observed_at") or "",
+                "full_reaudit": {
+                    "status": "BLOCKED" if errors else "VERIFIED", "errors": errors,
+                    "visible_row_count": row.get("visible_row_count"), "case_count": len(cases),
+                    "exclusion_count": len(exclusions), "unmaterialized_terminal_rows": row.get("unmaterialized_terminal_rows") or [],
+                    "raw_html_persisted": False,
+                },
+            })
 
 
 def route_payload(record: dict, fallback_root: str, checked: list[dict[str, str]]) -> dict:
@@ -794,6 +906,7 @@ def main() -> None:
     apply_operator_route_overrides(items)
     apply_nagoya_department_overlay(items)
     apply_kanagawa_rss_frontier_overlay(items)
+    apply_full_reaudit_overlays(items)
     counts = Counter(item["conclusion"] for item in items)
     blocking_count = sum(count for conclusion, count in counts.items() if conclusion not in ACCEPTED_CONCLUSIONS)
     payload = {

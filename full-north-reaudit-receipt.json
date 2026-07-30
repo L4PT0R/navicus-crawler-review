@@ -1,0 +1,22 @@
+{
+  "schema_version": "navicus_full_north_reaudit_ledger_receipt_v1",
+  "updated_at": "2026-07-31T01:00:14+09:00",
+  "status": "NO-GO",
+  "target_issuer_count": 69,
+  "completed_issuer_count": 66,
+  "accepted_in_this_run": 66,
+  "rejected_issuer_count": 3,
+  "rejected": {
+    "shared:07:fukushima_portal_discovery": [
+      "terminal_exception_not_operator_approved:1"
+    ],
+    "shared:08:ibaraki_portal_discovery": [
+      "unmaterialized_terminal_rows_not_operator_approved:12",
+      "terminal_exception_not_operator_approved:1"
+    ],
+    "shared:14:kanagawa_joint_e_bidding": [
+      "unmaterialized_terminal_rows_not_operator_approved:1"
+    ]
+  },
+  "case_count": 5822
+}
