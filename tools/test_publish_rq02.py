@@ -327,3 +327,13 @@ def test_full_cli_is_order_independent_and_twice_idempotent(tmp_path: Path) -> N
         "回復案件 0",
     }
     assert "公開判定：GO" in (pages_ab / "index.html").read_text(encoding="utf-8")
+
+
+def test_public_dashboard_renders_crawl_roots_before_case_branches() -> None:
+    dashboard = MODULE_PATH.parent.parent / "index.html"
+    text = dashboard.read_text(encoding="utf-8")
+    assert "クロールした大元" in text
+    assert 'crawl_root:"クロール起点"' in text
+    assert "typeof raw===\"string\"" in text
+    assert "c.source_list_url" in text
+    assert "rootRegister" in text
