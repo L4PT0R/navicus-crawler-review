@@ -20,6 +20,7 @@ LIST_REPAIR_ROOT = WORKSPACE / "work/municipal_proposal_list_repair_2026-07-30"
 SAPPORO_RESULT = WORKSPACE / "work/sapporo_current_procurement_2026-07-30/result.json"
 OPERATOR_ROUTE_OVERRIDES = WORKSPACE / "data/north_operator_route_overrides_v1.json"
 NAGOYA_RESULT = WORKSPACE / "work/nagoya_department_recruitment_2026-07-30/result.json"
+KANAGAWA_RSS_RESULT = WORKSPACE / "work/kanagawa_rss_frontier_2026-07-30/result.json"
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -570,6 +571,96 @@ def apply_nagoya_department_overlay(items: list[dict]) -> None:
     })
 
 
+def apply_kanagawa_rss_frontier_overlay(items: list[dict]) -> None:
+    if not KANAGAWA_RSS_RESULT.exists():
+        return
+    result = json.loads(KANAGAWA_RSS_RESULT.read_text(encoding="utf-8"))
+    if (
+        result.get("schema_version") != "navicus_kanagawa_rss_frontier_v1"
+        or not result.get("row_conservation_pass")
+        or result.get("raw_html_persisted")
+    ):
+        return
+    target = next((item for item in items if item["issuer_id"] == "shared:14:kanagawa_joint_e_bidding"), None)
+    if target is None:
+        return
+    notices = result.get("proposal_notices") or []
+    results = result.get("proposal_result_updates") or []
+    count = len(notices) + len(results)
+    existing_urls = current_pages_case_urls(target["issuer_id"])
+    target.update({
+        "official_rows": count,
+        "details_reached": count,
+        "delta": count - target["pages_count"],
+        "conclusion": "RSS_FRONTIER_CLASSIFIED",
+        "confidence": "high" if not result.get("body_fetch_failure_count") else "medium",
+        "root_url": result["rss_url"],
+        "route": {
+            "root": {"url": result["rss_url"], "label": "神奈川県 全庁新着RSS"},
+            "branches": [
+                {
+                    "label": "本文でプロポーザル・企画提案を確認",
+                    "url": result["rss_url"],
+                    "role": "rss_body_classified_proposal",
+                    "case_count": len(notices),
+                    "visible_row_count": result.get("frontier_item_count"),
+                    "scanned": True,
+                    "details": [
+                        {"label": row["title"], "url": row["official_url"]} for row in notices
+                    ],
+                },
+                {
+                    "label": "プロポーザル結果更新",
+                    "url": result["rss_url"],
+                    "role": "rss_body_classified_result_update",
+                    "case_count": len(results),
+                    "scanned": True,
+                    "details": [
+                        {"label": row["title"], "url": row["official_url"]} for row in results
+                    ],
+                },
+                {
+                    "label": "本文分類対象外",
+                    "url": result["rss_url"],
+                    "role": "rss_body_classified_non_proposal",
+                    "case_count": result.get("non_proposal_count", 0),
+                    "scanned": True,
+                    "details": [],
+                },
+            ],
+        },
+        "checked_urls": [
+            {"url": result["rss_url"], "label": "神奈川県 全庁新着RSS"},
+        ] + [
+            {"url": row["official_url"], "label": row["title"]} for row in notices + results
+        ],
+        "missing_candidates": [
+            {"title": row["title"], "url": row["official_url"], "status": "RSS本文分類確認済み・Pages未収載"}
+            for row in notices if row.get("official_url") not in existing_urls
+        ],
+        "duplicate_groups": [],
+        "discovery_rounds": [
+            {"round": 1, "result": "県公式の全庁新着RSSを唯一の主frontierとして取得"},
+            {"round": 2, "result": f"RSS {result.get('frontier_item_count', 0)}項目の公式本文を全件取得。成功{result.get('body_fetch_success_count', 0)}・失敗{result.get('body_fetch_failure_count', 0)}"},
+            {"round": 3, "result": f"本文からプロポーザル等{count}件・対象外{result.get('non_proposal_count', 0)}件へ保存的に分類"},
+        ],
+        "pagination_evidence": [{
+            "frontier": result["rss_url"],
+            "rss_sha256": result.get("rss_sha256"),
+            "frontier_item_count": result.get("frontier_item_count"),
+            "body_fetch_success_count": result.get("body_fetch_success_count"),
+            "body_fetch_failure_count": result.get("body_fetch_failure_count"),
+            "proposal_notice_count": result.get("proposal_notice_count"),
+            "proposal_result_update_count": result.get("proposal_result_update_count"),
+            "non_proposal_count": result.get("non_proposal_count"),
+            "row_conservation_pass": True,
+        }],
+        "observed_at": result.get("observed_at", ""),
+        "operator_root_override": True,
+        "operator_root_basis": "operator_required_whole_government_rss_frontier",
+    })
+
+
 def main() -> None:
     scope = {row["issuer_id"]: row for row in load_csv(RUN / "target_scope.csv")}
     summaries: list[dict[str, str]] = []
@@ -624,6 +715,7 @@ def main() -> None:
     apply_sapporo_attachment_overlay(items)
     apply_operator_route_overrides(items)
     apply_nagoya_department_overlay(items)
+    apply_kanagawa_rss_frontier_overlay(items)
     counts = Counter(item["conclusion"] for item in items)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",

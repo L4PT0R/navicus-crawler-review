@@ -1,18 +1,19 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T13:18:34.548024Z",
+  "generated_at": "2026-07-30T13:32:03.451850Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4425,
+    "official_row_observation_count": 4426,
     "conclusion_counts": {
       "UNDERCOUNT_SUSPECTED": 41,
       "OFFICIAL_LIST_ENUMERATED": 3,
       "ROOT_INCOMPLETE": 18,
-      "PUBLIC_BOUNDARY_UNMEASURABLE": 4,
+      "PUBLIC_BOUNDARY_UNMEASURABLE": 3,
+      "RSS_FRONTIER_CLASSIFIED": 1,
       "EXACT_CONFIRMED": 1,
       "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1,
       "OFFICIAL_BRANCHES_ENUMERATED": 1
@@ -7243,128 +7244,100 @@
       "prefecture": "神奈川県",
       "display_name": "神奈川県公式共有調達ルート",
       "lane": "B2",
-      "conclusion": "PUBLIC_BOUNDARY_UNMEASURABLE",
+      "conclusion": "RSS_FRONTIER_CLASSIFIED",
       "pages_count": 2,
       "canonical_count": 2,
-      "official_rows": 0,
-      "details_reached": 2,
-      "delta": -2,
-      "confidence": "medium",
-      "root_url": "",
+      "official_rows": 1,
+      "details_reached": 1,
+      "delta": -1,
+      "confidence": "high",
+      "root_url": "https://www.pref.kanagawa.jp/prs/list.xml",
       "route": {
         "root": {
-          "url": "https://www.pref.kanagawa.jp/select/nyuusatsu.html",
-          "label": "https://www.pref.kanagawa.jp/select/nyuusatsu.html"
+          "url": "https://www.pref.kanagawa.jp/prs/list.xml",
+          "label": "神奈川県 全庁新着RSS"
         },
         "branches": [
           {
-            "label": "参加33団体",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "本文でプロポーザル・企画提案を確認",
+            "url": "https://www.pref.kanagawa.jp/prs/list.xml",
+            "role": "rss_body_classified_proposal",
+            "case_count": 1,
+            "visible_row_count": 200,
+            "scanned": true,
+            "details": [
+              {
+                "label": "企業庁施設のLED化を進める事業者を募集します",
+                "url": "https://www.pref.kanagawa.jp/docs/yt7/prs/r5344081.html"
+              }
+            ]
           },
           {
-            "label": "発注見通し",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "プロポーザル結果更新",
+            "url": "https://www.pref.kanagawa.jp/prs/list.xml",
+            "role": "rss_body_classified_result_update",
+            "case_count": 0,
+            "scanned": true,
+            "details": []
           },
           {
-            "label": "入札公告",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
-          },
-          {
-            "label": "入札結果",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "本文分類対象外",
+            "url": "https://www.pref.kanagawa.jp/prs/list.xml",
+            "role": "rss_body_classified_non_proposal",
+            "case_count": 199,
+            "scanned": true,
+            "details": []
           }
         ]
       },
       "checked_urls": [
         {
-          "url": "https://www.pref.kanagawa.jp/select/nyuusatsu.html",
-          "label": "https://www.pref.kanagawa.jp/select/nyuusatsu.html"
+          "url": "https://www.pref.kanagawa.jp/prs/list.xml",
+          "label": "神奈川県 全庁新着RSS"
         },
         {
-          "url": "https://www.pref.kanagawa.jp/docs/g7r/cnt/f417791/index.html",
-          "label": "https://www.pref.kanagawa.jp/docs/g7r/cnt/f417791/index.html"
-        },
-        {
-          "url": "https://nyusatsu.e-kanagawa.lg.jp/html/nyuusatsu_jouhou.html",
-          "label": "https://nyusatsu.e-kanagawa.lg.jp/html/nyuusatsu_jouhou.html"
-        },
-        {
-          "url": "https://nyusatsu.e-kanagawa.lg.jp/html/news.html",
-          "label": "https://nyusatsu.e-kanagawa.lg.jp/html/news.html"
-        },
-        {
-          "url": "https://nyusatsu.e-kanagawa.lg.jp/html/qa_nyusatsu.html",
-          "label": "https://nyusatsu.e-kanagawa.lg.jp/html/qa_nyusatsu.html"
-        },
-        {
-          "url": "https://www.pref.kanagawa.jp/docs/p3k/kaigan/r8_experiment_koubo.html",
-          "label": "https://www.pref.kanagawa.jp/docs/p3k/kaigan/r8_experiment_koubo.html"
-        },
-        {
-          "url": "https://www.pref.kanagawa.jp/docs/s6d/r8_site_movie_proposal.html",
-          "label": "https://www.pref.kanagawa.jp/docs/s6d/r8_site_movie_proposal.html"
+          "url": "https://www.pref.kanagawa.jp/docs/yt7/prs/r5344081.html",
+          "label": "企業庁施設のLED化を進める事業者を募集します"
         }
       ],
-      "missing_candidates": [],
+      "missing_candidates": [
+        {
+          "title": "企業庁施設のLED化を進める事業者を募集します",
+          "url": "https://www.pref.kanagawa.jp/docs/yt7/prs/r5344081.html",
+          "status": "RSS本文分類確認済み・Pages未収載"
+        }
+      ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypotheses": [
-            "県調達ハブと既存2 detailを確認"
-          ],
-          "checked_urls": [
-            "https://www.pref.kanagawa.jp/select/nyuusatsu.html",
-            "https://www.pref.kanagawa.jp/docs/p3k/kaigan/r8_experiment_koubo.html",
-            "https://www.pref.kanagawa.jp/docs/s6d/r8_site_movie_proposal.html"
-          ],
-          "result": "PARTIAL"
+          "result": "県公式の全庁新着RSSを唯一の主frontierとして取得"
         },
         {
           "round": 2,
-          "hypotheses": [
-            "共同システム参加団体・団体selector・全件検索仕様を確認"
-          ],
-          "checked_urls": [
-            "https://www.pref.kanagawa.jp/docs/g7r/cnt/f417791/index.html",
-            "https://nyusatsu.e-kanagawa.lg.jp/html/nyuusatsu_jouhou.html"
-          ],
-          "result": "PARTIAL"
+          "result": "RSS 200項目の公式本文を全件取得。成功200・失敗0"
         },
         {
           "round": 3,
-          "hypotheses": [
-            "発注団体横断検索、pagination、公開終了条件を確認"
-          ],
-          "checked_urls": [
-            "https://nyusatsu.e-kanagawa.lg.jp/html/news.html",
-            "https://nyusatsu.e-kanagawa.lg.jp/html/qa_nyusatsu.html"
-          ],
-          "result": "BLOCKED"
+          "result": "本文からプロポーザル等1件・対象外199件へ保存的に分類"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://nyusatsu.e-kanagawa.lg.jp/html/nyuusatsu_jouhou.html",
-          "blank_search_means_all": true,
-          "selector_required": true,
-          "get_only_measurement_complete": false
-        },
-        {
-          "url": "https://nyusatsu.e-kanagawa.lg.jp/html/qa_nyusatsu.html",
-          "public_end_rule": "申請受付締切後に公告公開終了の可能性",
-          "historical_completeness": false
+          "frontier": "https://www.pref.kanagawa.jp/prs/list.xml",
+          "rss_sha256": "5dcd330a9a8d54974a69bf7ff0d3f4c9dc0a195e8656c075a3f9cd4874774b0c",
+          "frontier_item_count": 200,
+          "body_fetch_success_count": 200,
+          "body_fetch_failure_count": 0,
+          "proposal_notice_count": 1,
+          "proposal_result_update_count": 0,
+          "non_proposal_count": 199,
+          "row_conservation_pass": true
         }
       ],
-      "observed_at": "2026-07-30T10:41:26Z"
+      "observed_at": "2026-07-30",
+      "operator_root_override": true,
+      "operator_root_basis": "operator_required_whole_government_rss_frontier"
     },
     {
       "issuer_id": "muni:151009",
