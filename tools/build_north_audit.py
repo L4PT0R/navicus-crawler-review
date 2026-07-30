@@ -421,6 +421,12 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
         if target is None:
             continue
         root_url = override["root_url"]
+        root_branch = next(
+            (branch for branch in override.get("branches") or [] if branch.get("url") == root_url),
+            {},
+        )
+        root_label = override.get("root_label") or f'{override.get("display_name", target["display_name"])} 公式調達起点'
+        root_role = override.get("root_role") or root_branch.get("role") or "official_current_procurement_root"
         excluded = set(override.get("excluded_result_urls") or [])
         dropped = set(override.get("drop_urls") or [])
         measurement = override.get("live_measurement") or {}
@@ -432,12 +438,22 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
                     "label": surface.get("label") or surface.get("role") or surface["url"],
                     "role": surface.get("role") or "official_current_list",
                 })
+        for branch in override.get("branches") or []:
+            if branch.get("url") and branch["url"] != root_url:
+                additional_specs.append({
+                    "url": branch["url"],
+                    "label": branch.get("label") or branch.get("role") or branch["url"],
+                    "role": branch.get("role") or "official_current_list",
+                })
         measured_rows = (
             measurement.get("logical_case_candidate_count")
             if measurement.get("status") == "success"
             else None
         )
-        observed_value = override.get("observed_official_rows", measured_rows)
+        observed_value = override.get(
+            "observed_official_rows",
+            measured_rows if measured_rows is not None else root_branch.get("official_rows"),
+        )
         if observed_value is not None:
             observed_rows = as_int(observed_value)
             target["official_rows"] = observed_rows
@@ -470,9 +486,9 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
                 seen_detail_urls.add(detail["url"])
                 deduped_details.append(detail)
         primary_branch = {
-            "label": override["root_label"],
+            "label": root_label,
             "url": root_url,
-            "role": override["root_role"],
+            "role": root_role,
             "case_count": target.get("official_rows", 0),
             "scanned": bool(target.get("official_rows", 0)),
             "details": deduped_details,
@@ -505,7 +521,7 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
                 "details": [],
             })
         ordered_checked = [
-            {"url": root_url, "label": override["root_label"]},
+            {"url": root_url, "label": root_label},
         ] + [
             {"url": branch["url"], "label": branch["label"]}
             for branch in additional_specs
@@ -522,7 +538,7 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
         target.update({
             "root_url": root_url,
             "route": {
-                "root": {"url": root_url, "label": override["root_label"]},
+                "root": {"url": root_url, "label": root_label},
                 "branches": branches,
             },
             "checked_urls": unique_checked,

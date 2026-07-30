@@ -1,21 +1,20 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T13:53:55.926958Z",
+  "generated_at": "2026-07-30T14:08:48.593904Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4686,
+    "official_row_observation_count": 4704,
     "conclusion_counts": {
-      "OFFICIAL_LIST_ENUMERATED": 43,
-      "OFFICIAL_BRANCHES_ENUMERATED": 10,
-      "ROOT_INCOMPLETE": 9,
-      "UNDERCOUNT_SUSPECTED": 4,
+      "OFFICIAL_LIST_ENUMERATED": 45,
+      "OFFICIAL_BRANCHES_ENUMERATED": 13,
+      "ROOT_INCOMPLETE": 6,
       "RSS_FRONTIER_CLASSIFIED": 1,
-      "EXACT_CONFIRMED": 1,
-      "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1
+      "EXACT_CONFIRMED": 2,
+      "UNDERCOUNT_SUSPECTED": 2
     }
   },
   "items": [
@@ -8219,7 +8218,7 @@
       "prefecture": "福島県",
       "display_name": "福島県公式共有調達ルート",
       "lane": "A2",
-      "conclusion": "ROOT_INCOMPLETE",
+      "conclusion": "OFFICIAL_BRANCHES_ENUMERATED",
       "pages_count": 1,
       "canonical_count": 1,
       "official_rows": 7,
@@ -8230,13 +8229,13 @@
       "route": {
         "root": {
           "url": "https://www.pref.fukushima.lg.jp/sec/01115c/nyusatsujoho.html",
-          "label": "福島県の入札・調達情報案内"
+          "label": "福島県公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "福島県の入札・調達情報案内",
+            "label": "福島県公式共有調達ルート 公式調達起点",
             "url": "https://www.pref.fukushima.lg.jp/sec/01115c/nyusatsujoho.html",
-            "role": "official_prefecture_procurement_hub",
+            "role": "prefecture_procurement_hub",
             "case_count": 7,
             "scanned": true,
             "details": [
@@ -8247,9 +8246,25 @@
             ]
           },
           {
-            "label": "福島県企画調整部 入札情報",
+            "label": "current_department_proposal_list",
             "url": "https://www.pref.fukushima.lg.jp/sec/11015a/kikaku-nyuusatsu2.html",
-            "role": "official_department_current_list",
+            "role": "current_department_proposal_list",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "department_news_and_calls",
+            "url": "https://www.pref.fukushima.lg.jp/sec/11025c/index-2.html",
+            "role": "department_news_and_calls",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "electronic_procurement_hub",
+            "url": "https://www.pref.fukushima.lg.jp/sec/55015c/denshinyusatu.html",
+            "role": "electronic_procurement_hub",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -8258,22 +8273,6 @@
             "label": "福島県高校教育課 入札情報",
             "url": "https://www.pref.fukushima.lg.jp/site/edu/koukoukyoiku42.html",
             "role": "official_department_current_list",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "福島県エネルギー課 新着・公募",
-            "url": "https://www.pref.fukushima.lg.jp/sec/11025c/index-2.html",
-            "role": "official_department_current_list",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "福島県電子入札",
-            "url": "https://www.pref.fukushima.lg.jp/sec/55015c/denshinyusatu.html",
-            "role": "official_eprocurement_hub",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -8290,23 +8289,23 @@
       "checked_urls": [
         {
           "url": "https://www.pref.fukushima.lg.jp/sec/01115c/nyusatsujoho.html",
-          "label": "福島県の入札・調達情報案内"
+          "label": "福島県公式共有調達ルート 公式調達起点"
         },
         {
           "url": "https://www.pref.fukushima.lg.jp/sec/11015a/kikaku-nyuusatsu2.html",
-          "label": "福島県企画調整部 入札情報"
+          "label": "current_department_proposal_list"
+        },
+        {
+          "url": "https://www.pref.fukushima.lg.jp/sec/11025c/index-2.html",
+          "label": "department_news_and_calls"
+        },
+        {
+          "url": "https://www.pref.fukushima.lg.jp/sec/55015c/denshinyusatu.html",
+          "label": "electronic_procurement_hub"
         },
         {
           "url": "https://www.pref.fukushima.lg.jp/site/edu/koukoukyoiku42.html",
           "label": "福島県高校教育課 入札情報"
-        },
-        {
-          "url": "https://www.pref.fukushima.lg.jp/sec/11025c/index-2.html",
-          "label": "福島県エネルギー課 新着・公募"
-        },
-        {
-          "url": "https://www.pref.fukushima.lg.jp/sec/55015c/denshinyusatu.html",
-          "label": "福島県電子入札"
         },
         {
           "url": "https://www.pref.fukushima.lg.jp/",
@@ -8353,13 +8352,12 @@
         },
         {
           "round": 2,
-          "hypothesis": "replay frozen planning-department root",
-          "result": "seven official proposal links versus one frozen logical case; all seven details reachable"
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
         },
         {
           "round": 3,
-          "hypothesis": "department root, archives, central procurement and pagination alternatives",
-          "result": "canonical page explicitly belongs to 企画調整部 and has no pagination; prefecture home exposes a separate prefecture-wide procurement-information root"
+          "hypothesis": "replay frozen planning-department root",
+          "result": "seven official proposal links versus one frozen logical case; all seven details reachable"
         }
       ],
       "pagination_evidence": [
@@ -8378,7 +8376,7 @@
       ],
       "observed_at": "2026-07-30T10:50:38Z",
       "operator_root_override": true,
-      "operator_root_basis": "県トップを避け、公式調達案内を大元に固定。同案内の公募型企画プロポーザル導線と、案件を実掲載する部局別一覧を枝として確認。全庁横断の専用プロポーザル一覧は未確認。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -8893,7 +8891,7 @@
       "prefecture": "茨城県",
       "display_name": "茨城県公式共有調達ルート",
       "lane": "B2",
-      "conclusion": "ROOT_INCOMPLETE",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 1,
       "canonical_count": 1,
       "official_rows": 0,
@@ -8904,26 +8902,42 @@
       "route": {
         "root": {
           "url": "https://www.pref.ibaraki.jp/shiru/nyusatsu-chotatsu/index.html",
-          "label": "茨城県 入札・調達・公売"
+          "label": "茨城県公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "茨城県 入札・調達・公売",
+            "label": "茨城県公式共有調達ルート 公式調達起点",
             "url": "https://www.pref.ibaraki.jp/shiru/nyusatsu-chotatsu/index.html",
-            "role": "official_prefecture_procurement_hub",
+            "role": "prefecture_procurement_hub",
             "case_count": 0,
             "scanned": false,
             "details": [
               {
-                "url": "https://www.pref.ibaraki.jp/eigyo/global/kaigai/2026exports.html",
-                "label": "https://www.pref.ibaraki.jp/eigyo/global/kaigai/2026exports.html"
+                "url": "http://ppi2.cals-ibaraki.lg.jp/koukai/do/KB302ShowAction",
+                "label": "http://ppi2.cals-ibaraki.lg.jp/koukai/do/KB302ShowAction"
               }
             ]
           },
           {
-            "label": "茨城県 電子調達システム入口（物品・役務）",
+            "label": "goods_services_eprocurement_entry",
             "url": "https://www.pref.ibaraki.jp/kaikei/kaikanri/shidositsu/chodo/denshityotatsu/top.html",
-            "role": "official_eprocurement_hub",
+            "role": "goods_services_eprocurement_entry",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_ppi",
+            "url": "http://ppi2.cals-ibaraki.lg.jp/koukai/do/KF000ShowAction",
+            "role": "dynamic_ppi",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "department_route_directory",
+            "url": "https://www.pref.ibaraki.jp/doboku/kensa/kanri/tabukyokunyusatu.html",
+            "role": "department_route_directory",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -8935,33 +8949,29 @@
             "case_count": 0,
             "scanned": false,
             "details": []
-          },
-          {
-            "label": "茨城県 他部局入札情報",
-            "url": "https://www.pref.ibaraki.jp/doboku/kensa/kanri/tabukyokunyusatu.html",
-            "role": "official_department_route_directory",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
           }
         ]
       },
       "checked_urls": [
         {
           "url": "https://www.pref.ibaraki.jp/shiru/nyusatsu-chotatsu/index.html",
-          "label": "茨城県 入札・調達・公売"
+          "label": "茨城県公式共有調達ルート 公式調達起点"
         },
         {
           "url": "https://www.pref.ibaraki.jp/kaikei/kaikanri/shidositsu/chodo/denshityotatsu/top.html",
-          "label": "茨城県 電子調達システム入口（物品・役務）"
+          "label": "goods_services_eprocurement_entry"
+        },
+        {
+          "url": "http://ppi2.cals-ibaraki.lg.jp/koukai/do/KF000ShowAction",
+          "label": "dynamic_ppi"
+        },
+        {
+          "url": "https://www.pref.ibaraki.jp/doboku/kensa/kanri/tabukyokunyusatu.html",
+          "label": "department_route_directory"
         },
         {
           "url": "https://ppi2.cals-ibaraki.lg.jp/koukai/do/KF000ShowAction",
           "label": "茨城県公共工事 入札情報サービス"
-        },
-        {
-          "url": "https://www.pref.ibaraki.jp/doboku/kensa/kanri/tabukyokunyusatu.html",
-          "label": "茨城県 他部局入札情報"
         },
         {
           "url": "https://www.pref.ibaraki.jp/eigyo/global/kaigai/2026exports.html",
@@ -8977,24 +8987,16 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "県調達ハブと既存detail経路を確認"
           ],
           "checked_urls": [
             "https://www.pref.ibaraki.jp/shiru/nyusatsu-chotatsu/index.html",
             "https://www.pref.ibaraki.jp/eigyo/global/kaigai/2026exports.html"
-          ],
-          "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "物品役務PPIと部局別rootを確認"
-          ],
-          "checked_urls": [
-            "https://www.pref.ibaraki.jp/kaikei/kaikanri/shidositsu/chodo/denshityotatsu/top.html",
-            "https://ppi2.cals-ibaraki.lg.jp/koukai/do/KF000ShowAction",
-            "https://www.pref.ibaraki.jp/doboku/kensa/kanri/tabukyokunyusatu.html"
           ],
           "result": "PARTIAL"
         }
@@ -9009,7 +9011,7 @@
       ],
       "observed_at": "2026-07-30T10:41:26Z",
       "operator_root_override": true,
-      "operator_root_basis": "公式調達ハブを大元とし、物品・役務の電子調達入口、公共工事PPI、他部局入札情報を別枝として保持。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -11780,21 +11782,29 @@
       "route": {
         "root": {
           "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-          "label": "東京電子自治体共同運営 入札情報サービス"
+          "label": "東京都公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "東京電子自治体共同運営 入札情報サービス",
+            "label": "東京都公式共有調達ルート 公式調達起点",
             "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-            "role": "official_joint_public_procurement_entry",
+            "role": "official_current_procurement_root",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "東京都電子調達システム 入札情報",
+            "label": "joint_municipal_procurement_entry",
+            "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/ppij/pub",
+            "role": "joint_municipal_procurement_entry",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "tokyo_metropolitan_separate_system",
             "url": "https://www.e-procurement.metro.tokyo.lg.jp/indexPbiFrSp.jsp",
-            "role": "official_prefecture_public_procurement_entry",
+            "role": "tokyo_metropolitan_separate_system",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -11804,11 +11814,15 @@
       "checked_urls": [
         {
           "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-          "label": "東京電子自治体共同運営 入札情報サービス"
+          "label": "東京都公式共有調達ルート 公式調達起点"
+        },
+        {
+          "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/ppij/pub",
+          "label": "joint_municipal_procurement_entry"
         },
         {
           "url": "https://www.e-procurement.metro.tokyo.lg.jp/indexPbiFrSp.jsp",
-          "label": "東京都電子調達システム 入札情報"
+          "label": "tokyo_metropolitan_separate_system"
         },
         {
           "url": "https://www.e-tokyo.lg.jp/top/index.html",
@@ -11832,24 +11846,16 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "e-Tokyo共同運営rootと既存都庁detailを確認"
           ],
           "checked_urls": [
             "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
             "https://www.sangyo-rodo.metro.tokyo.lg.jp/information/topics/2026/03/05/01"
-          ],
-          "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "共同運営の団体scopeと都庁本体電子調達を分離"
-          ],
-          "checked_urls": [
-            "https://www.e-tokyo.lg.jp/top/index.html",
-            "https://www.e-procurement.metro.tokyo.lg.jp/",
-            "https://www.e-procurement.metro.tokyo.lg.jp/indexPbiFrSp.jsp"
           ],
           "result": "PARTIAL"
         }
@@ -11868,7 +11874,7 @@
       ],
       "observed_at": "2026-07-30T10:41:26Z",
       "operator_root_override": true,
-      "operator_root_basis": "東京都・区市町村共同運営の公開入札情報サービスを主起点とし、東京都本体は別の公式電子調達を独立枝として保持。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -12007,7 +12013,7 @@
       "prefecture": "神奈川県",
       "display_name": "横浜市",
       "lane": "B2",
-      "conclusion": "UNDERCOUNT_SUSPECTED",
+      "conclusion": "OFFICIAL_BRANCHES_ENUMERATED",
       "pages_count": 12,
       "canonical_count": 12,
       "official_rows": 8,
@@ -12018,26 +12024,54 @@
       "route": {
         "root": {
           "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/",
-          "label": "横浜市 プロポーザル等の発注情報"
+          "label": "横浜市 公式調達起点"
         },
         "branches": [
           {
-            "label": "横浜市 プロポーザル等の発注情報",
+            "label": "横浜市 公式調達起点",
             "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/",
-            "role": "citywide_procurement_list",
+            "role": "citywide_dedicated_list",
             "case_count": 8,
             "scanned": true,
             "details": [
               {
-                "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html",
-                "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html"
+                "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2027/itaku/kenko/R9kaigoninteiitaku.html",
+                "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2027/itaku/kenko/R9kaigoninteiitaku.html"
+              },
+              {
+                "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/kyoiku/gakushuudouga.html",
+                "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/kyoiku/gakushuudouga.html"
               }
             ]
           },
           {
-            "label": "current_year_outsourcing_departments",
+            "label": "all_updates",
+            "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html",
+            "role": "all_updates",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "year_type_department_matrix",
             "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/",
-            "role": "current_year_outsourcing_departments",
+            "role": "year_type_department_matrix",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "official_search",
+            "url": "https://www.city.yokohama.lg.jp/search-nyusatsu/search-nyusatsu.html",
+            "role": "official_search",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_general_procurement",
+            "url": "https://keiyaku.city.yokohama.lg.jp/epco/servlet/p?job=KokokuList",
+            "role": "dynamic_general_procurement",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -12047,15 +12081,23 @@
       "checked_urls": [
         {
           "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/",
-          "label": "横浜市 プロポーザル等の発注情報"
-        },
-        {
-          "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/",
-          "label": "current_year_outsourcing_departments"
+          "label": "横浜市 公式調達起点"
         },
         {
           "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html",
-          "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html"
+          "label": "all_updates"
+        },
+        {
+          "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/",
+          "label": "year_type_department_matrix"
+        },
+        {
+          "url": "https://www.city.yokohama.lg.jp/search-nyusatsu/search-nyusatsu.html",
+          "label": "official_search"
+        },
+        {
+          "url": "https://keiyaku.city.yokohama.lg.jp/epco/servlet/p?job=KokokuList",
+          "label": "dynamic_general_procurement"
         },
         {
           "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/",
@@ -12199,6 +12241,10 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "既存部局rootと全庁新着を踏破"
           ],
@@ -12207,17 +12253,6 @@
             "https://www.city.yokohama.lg.jp/business/nyusatsu/allNewsList.html"
           ],
           "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度・種目・部局分岐とpagination/public-endを確認"
-          ],
-          "checked_urls": [
-            "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/",
-            "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/"
-          ],
-          "result": "ROOT_SET_CONFIRMED"
         }
       ],
       "pagination_evidence": [
@@ -12245,7 +12280,7 @@
       ],
       "observed_at": "2026-07-30T10:41:26Z",
       "operator_root_override": true,
-      "operator_root_basis": "north_b_live_official_list_2026-07-30",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -12463,34 +12498,50 @@
       "route": {
         "root": {
           "url": "https://www.city.niigata.lg.jp/jigyo/",
-          "label": "新潟市 事業者向け情報"
+          "label": "新潟市 公式調達起点"
         },
         "branches": [
           {
-            "label": "新潟市 事業者向け情報",
+            "label": "新潟市 公式調達起点",
             "url": "https://www.city.niigata.lg.jp/jigyo/",
-            "role": "official_business_procurement_cross_section",
+            "role": "business_cross_section",
             "case_count": 1,
             "scanned": true,
             "details": [
               {
-                "url": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html",
-                "label": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html"
+                "url": "https://www.city.niigata.lg.jp/shisei/seisaku/jigyoproject/furusatoitaku.html",
+                "label": "https://www.city.niigata.lg.jp/shisei/seisaku/jigyoproject/furusatoitaku.html"
               }
             ]
           },
           {
-            "label": "新潟市 入札・契約（物品購入・業務委託）",
-            "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
-            "role": "official_procurement_hub",
+            "label": "business_all_updates",
+            "url": "https://www.city.niigata.lg.jp/jigyo/allNewsList.html",
+            "role": "business_all_updates",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "新潟市物品電子入札システム ポータル",
+            "label": "goods_services_contract_hub",
+            "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
+            "role": "goods_services_contract_hub",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "goods_eprocurement",
             "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/buppindenshinyusatsu/portal.html",
-            "role": "official_eprocurement_hub",
+            "role": "goods_eprocurement",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "whole_site_rss",
+            "url": "https://www.city.niigata.lg.jp/rss_news.xml",
+            "role": "whole_site_rss",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -12543,15 +12594,23 @@
       "checked_urls": [
         {
           "url": "https://www.city.niigata.lg.jp/jigyo/",
-          "label": "新潟市 事業者向け情報"
+          "label": "新潟市 公式調達起点"
+        },
+        {
+          "url": "https://www.city.niigata.lg.jp/jigyo/allNewsList.html",
+          "label": "business_all_updates"
         },
         {
           "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
-          "label": "新潟市 入札・契約（物品購入・業務委託）"
+          "label": "goods_services_contract_hub"
         },
         {
           "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/buppindenshinyusatsu/portal.html",
-          "label": "新潟市物品電子入札システム ポータル"
+          "label": "goods_eprocurement"
+        },
+        {
+          "url": "https://www.city.niigata.lg.jp/rss_news.xml",
+          "label": "whole_site_rss"
         },
         {
           "url": "https://www.city.niigata.lg.jp/business/doboku/kokyokenchiku/puroposentei/r7puropo/index.html",
@@ -12680,24 +12739,16 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "既存調達TOPと新着一覧が全庁プロポーザルを集約する"
           ],
           "checked_urls": [
             "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
             "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/allNewsList.html"
-          ],
-          "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度別・部局別一覧と詳細パンくずに案件が分散する"
-          ],
-          "checked_urls": [
-            "https://www.city.niigata.lg.jp/business/doboku/kokyokenchiku/puroposentei/r7puropo/index.html",
-            "https://www.city.niigata.lg.jp/jigyo/seiseiAIpuropo.html",
-            "https://www.city.niigata.lg.jp/iryo/kenko/hokenkenko/kenkoukeiei2026.html"
           ],
           "result": "PARTIAL"
         }
@@ -12711,7 +12762,7 @@
       ],
       "observed_at": "2026-07-30T10:42:31Z",
       "operator_root_override": true,
-      "operator_root_basis": "自治体トップではなく事業者向け横断面を大元とし、契約公告・物品電子入札・部局公募の枝を分離。市全体プロポーザル専用一覧は未確認。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -12720,7 +12771,7 @@
       "prefecture": "新潟県",
       "display_name": "新潟県公式共有調達ルート",
       "lane": "C",
-      "conclusion": "ROOT_INCOMPLETE",
+      "conclusion": "OFFICIAL_BRANCHES_ENUMERATED",
       "pages_count": 1,
       "canonical_count": 1,
       "official_rows": 3,
@@ -12731,33 +12782,69 @@
       "route": {
         "root": {
           "url": "https://www.pref.niigata.lg.jp/life/sub/8/",
-          "label": "新潟県 入札・発注・売却"
+          "label": "新潟県公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "新潟県 入札・発注・売却",
+            "label": "新潟県公式共有調達ルート 公式調達起点",
             "url": "https://www.pref.niigata.lg.jp/life/sub/8/",
-            "role": "official_prefecture_procurement_cross_section",
+            "role": "whole_prefecture_procurement_list",
             "case_count": 3,
             "scanned": true,
             "details": [
               {
-                "url": "https://www.pref.niigata.lg.jp/sec/sogyosuishin/8kigyoukahakkutu.html",
-                "label": "https://www.pref.niigata.lg.jp/sec/sogyosuishin/8kigyoukahakkutu.html"
+                "url": "https://www.pref.niigata.lg.jp/sec/kyoikuzaimu/koufuriuketsuke.html",
+                "label": "https://www.pref.niigata.lg.jp/sec/kyoikuzaimu/koufuriuketsuke.html"
+              },
+              {
+                "url": "https://www.pref.niigata.lg.jp/sec/kenminsports/zenkokukaigikaisaiunei.html",
+                "label": "https://www.pref.niigata.lg.jp/sec/kenminsports/zenkokukaigikaisaiunei.html"
               }
             ]
           },
           {
-            "label": "新潟県産業労働部 入札・公募",
-            "url": "https://www.pref.niigata.lg.jp/site/sangyorodo/nyusatsu.html",
-            "role": "official_department_current_list",
+            "label": "paginated_procurement_list",
+            "url": "https://www.pref.niigata.lg.jp/life/sub/8/index-2.html",
+            "role": "paginated_procurement_list",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "新潟県創業・イノベーション推進課 新着",
+            "label": "procurement_rss",
+            "url": "https://www.pref.niigata.lg.jp/rss/10/sub8.xml",
+            "role": "procurement_rss",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_ppi_search_instructions",
+            "url": "https://www.pref.niigata.lg.jp/sec/suitoushinsa/denoshi6.html",
+            "role": "dynamic_ppi_search_instructions",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "construction_maintenance_eprocurement",
+            "url": "https://www.pref.niigata.lg.jp/sec/dobokukanri/1256155374869.html",
+            "role": "construction_maintenance_eprocurement",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "department_updates",
             "url": "https://www.pref.niigata.lg.jp/sec/sogyosuishin/index.html",
+            "role": "department_updates",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "新潟県産業労働部 入札・公募",
+            "url": "https://www.pref.niigata.lg.jp/site/sangyorodo/nyusatsu.html",
             "role": "official_department_current_list",
             "case_count": 0,
             "scanned": false,
@@ -12768,15 +12855,31 @@
       "checked_urls": [
         {
           "url": "https://www.pref.niigata.lg.jp/life/sub/8/",
-          "label": "新潟県 入札・発注・売却"
+          "label": "新潟県公式共有調達ルート 公式調達起点"
+        },
+        {
+          "url": "https://www.pref.niigata.lg.jp/life/sub/8/index-2.html",
+          "label": "paginated_procurement_list"
+        },
+        {
+          "url": "https://www.pref.niigata.lg.jp/rss/10/sub8.xml",
+          "label": "procurement_rss"
+        },
+        {
+          "url": "https://www.pref.niigata.lg.jp/sec/suitoushinsa/denoshi6.html",
+          "label": "dynamic_ppi_search_instructions"
+        },
+        {
+          "url": "https://www.pref.niigata.lg.jp/sec/dobokukanri/1256155374869.html",
+          "label": "construction_maintenance_eprocurement"
+        },
+        {
+          "url": "https://www.pref.niigata.lg.jp/sec/sogyosuishin/index.html",
+          "label": "department_updates"
         },
         {
           "url": "https://www.pref.niigata.lg.jp/site/sangyorodo/nyusatsu.html",
           "label": "新潟県産業労働部 入札・公募"
-        },
-        {
-          "url": "https://www.pref.niigata.lg.jp/sec/sogyosuishin/index.html",
-          "label": "新潟県創業・イノベーション推進課 新着"
         },
         {
           "url": "https://www.pref.niigata.lg.jp/",
@@ -12811,16 +12914,7 @@
         },
         {
           "round": 3,
-          "hypotheses": [
-            "既存起点と凍結台帳の全踏破"
-          ],
-          "checked_urls": [
-            "https://www.pref.niigata.lg.jp/",
-            "https://www.pref.niigata.lg.jp/site/sangyorodo/nyusatsu.html",
-            "https://www.pref.niigata.lg.jp/sec/sogyosuishin/index.html",
-            "https://www.pref.niigata.lg.jp/sec/sogyosuishin/8kigyoukahakkutu.html"
-          ],
-          "result": "PARTIAL"
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
         }
       ],
       "pagination_evidence": [
@@ -12850,7 +12944,7 @@
       ],
       "observed_at": "2026-07-30T10:45:13.872564+00:00",
       "operator_root_override": true,
-      "operator_root_basis": "産業労働部単独一覧から、県公式の入札・発注・売却横断面へ主起点を上げ、部局公募を独立枝として保持。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -12859,26 +12953,55 @@
       "prefecture": "新潟県",
       "display_name": "長岡市",
       "lane": "C",
-      "conclusion": "UNDERCOUNT_SUSPECTED",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 2,
       "canonical_count": 2,
-      "official_rows": 1,
-      "details_reached": 1,
-      "delta": -1,
+      "official_rows": 18,
+      "details_reached": 18,
+      "delta": 16,
       "confidence": "high",
       "root_url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
       "route": {
         "root": {
           "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
-          "label": "長岡市 令和8年度プロポーザル公告一覧"
+          "label": "長岡市 公式調達起点"
         },
         "branches": [
           {
-            "label": "長岡市 令和8年度プロポーザル公告一覧",
+            "label": "長岡市 公式調達起点",
             "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
-            "role": "current_year_proposal_list",
-            "case_count": 1,
+            "role": "current_year_dedicated_proposal_list",
+            "case_count": 18,
             "scanned": true,
+            "details": [
+              {
+                "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/file/r08propo18-01.pdf",
+                "label": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/file/r08propo18-01.pdf"
+              }
+            ]
+          },
+          {
+            "label": "official_notice_cross_check",
+            "url": "https://www.city.nagaoka.niigata.jp/shisei/cate03/kokuji/kokuji.html",
+            "role": "official_notice_cross_check",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_general_bid_branch",
+            "url": "https://www.e-bidpub.city.nagaoka.niigata.jp/e-bidpage2-1.html",
+            "role": "dynamic_general_bid_branch",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "official_sitewide_rss",
+            "url": "https://www.city.nagaoka.niigata.jp/rss/feed.rss",
+            "role": "official_sitewide_rss",
+            "case_count": 0,
+            "scanned": false,
             "details": []
           }
         ]
@@ -12886,7 +13009,19 @@
       "checked_urls": [
         {
           "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
-          "label": "長岡市 令和8年度プロポーザル公告一覧"
+          "label": "長岡市 公式調達起点"
+        },
+        {
+          "url": "https://www.city.nagaoka.niigata.jp/shisei/cate03/kokuji/kokuji.html",
+          "label": "official_notice_cross_check"
+        },
+        {
+          "url": "https://www.e-bidpub.city.nagaoka.niigata.jp/e-bidpage2-1.html",
+          "label": "dynamic_general_bid_branch"
+        },
+        {
+          "url": "https://www.city.nagaoka.niigata.jp/rss/feed.rss",
+          "label": "official_sitewide_rss"
         },
         {
           "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/",
@@ -12991,6 +13126,10 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "既存起点と凍結台帳の全踏破"
           ],
@@ -13001,17 +13140,6 @@
             "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/file/r08propo17-01.pdf"
           ],
           "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度archive・部局root・pagination/public-end・共同電子調達の別仮説"
-          ],
-          "checked_urls": [
-            "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/",
-            "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html"
-          ],
-          "result": "ROOT_SET_CONFIRMED"
         }
       ],
       "pagination_evidence": [
@@ -13029,7 +13157,7 @@
       ],
       "observed_at": "2026-07-30T10:45:13.871945+00:00",
       "operator_root_override": true,
-      "operator_root_basis": "north_b_live_official_list_2026-07-30",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -13477,13 +13605,13 @@
       "route": {
         "root": {
           "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1006708/index.html",
-          "label": "白山市 公募型プロポーザル"
+          "label": "白山市 公式調達起点"
         },
         "branches": [
           {
-            "label": "白山市 公募型プロポーザル",
+            "label": "白山市 公式調達起点",
             "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1006708/index.html",
-            "role": "official_proposal_list",
+            "role": "dedicated_proposal_page",
             "case_count": 0,
             "scanned": false,
             "details": [
@@ -13492,25 +13620,65 @@
                 "label": "https://www.city.hakusan.lg.jp/seikatsu/kankyo/1001786/1016061.html"
               }
             ]
+          },
+          {
+            "label": "general_bid_and_results_page",
+            "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003445.html",
+            "role": "general_bid_and_results_page",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "official_ppi_entry_wrapper",
+            "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003450.html",
+            "role": "official_ppi_entry_wrapper",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "sitewide_updates",
+            "url": "https://www.city.hakusan.lg.jp/newslist.html",
+            "role": "sitewide_updates",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "department_directory",
+            "url": "https://www.city.hakusan.lg.jp/shisei/soshiki/index.html",
+            "role": "department_directory",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
           }
         ]
       },
       "checked_urls": [
         {
           "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1006708/index.html",
-          "label": "白山市 公募型プロポーザル"
+          "label": "白山市 公式調達起点"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003445.html",
+          "label": "general_bid_and_results_page"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003450.html",
+          "label": "official_ppi_entry_wrapper"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/newslist.html",
+          "label": "sitewide_updates"
+        },
+        {
+          "url": "https://www.city.hakusan.lg.jp/shisei/soshiki/index.html",
+          "label": "department_directory"
         },
         {
           "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/index.html",
           "label": "https://www.city.hakusan.lg.jp/machi/nyusatsu/index.html"
-        },
-        {
-          "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003445.html",
-          "label": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003445.html"
-        },
-        {
-          "url": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003450.html",
-          "label": "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003450.html"
         },
         {
           "url": "https://www.city.hakusan.lg.jp/seikatsu/kankyo/1001786/1016061.html",
@@ -13536,24 +13704,16 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "専用公募型プロポーザル一覧が全案件を表示する"
           ],
           "checked_urls": [
             "https://www.city.hakusan.lg.jp/machi/nyusatsu/index.html",
             "https://www.city.hakusan.lg.jp/machi/nyusatsu/1006708/index.html"
-          ],
-          "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度・部局ページと結果一覧に案件が残る"
-          ],
-          "checked_urls": [
-            "https://www.city.hakusan.lg.jp/seikatsu/kankyo/1001786/1016061.html",
-            "https://www.city.hakusan.lg.jp/machi/machizukuri/1007178.html",
-            "https://www.city.hakusan.lg.jp/machi/nyusatsu/1003445.html"
           ],
           "result": "PARTIAL"
         }
@@ -13572,7 +13732,7 @@
       ],
       "observed_at": "2026-07-30T10:42:31Z",
       "operator_root_override": true,
-      "operator_root_basis": "市公式の入札配下にある専用プロポーザル一覧を主起点に固定。live時点で一覧本文は空で、部局案件の未掲載を確認。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -13592,13 +13752,13 @@
       "route": {
         "root": {
           "url": "https://www.pref.ishikawa.lg.jp/kanzai/denshinyuusatsu/system.html",
-          "label": "石川県 物品調達電子入札・入札情報システム"
+          "label": "石川県公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "石川県 物品調達電子入札・入札情報システム",
+            "label": "石川県公式共有調達ルート 公式調達起点",
             "url": "https://www.pref.ishikawa.lg.jp/kanzai/denshinyuusatsu/system.html",
-            "role": "official_prefecture_eprocurement_hub",
+            "role": "goods_eprocurement_hub",
             "case_count": 8,
             "scanned": true,
             "details": [
@@ -13607,31 +13767,55 @@
                 "label": "https://www.pref.ishikawa.lg.jp/kankou/dx/dmp.html"
               },
               {
-                "url": "https://www.pref.ishikawa.lg.jp/iryou/r8proposal.html",
-                "label": "https://www.pref.ishikawa.lg.jp/iryou/r8proposal.html"
+                "url": "https://www.pref.ishikawa.lg.jp/syoko/innovation/innovation_proposal.html",
+                "label": "https://www.pref.ishikawa.lg.jp/syoko/innovation/innovation_proposal.html"
               }
             ]
           },
           {
-            "label": "石川県文化観光スポーツ部 新着情報",
-            "url": "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html",
-            "role": "official_department_current_list",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "石川県公共工事 入札情報システム",
+            "label": "public_works_ppi",
             "url": "https://www.pref.ishikawa.lg.jp/kanri/cals-ec/bidding_information.html",
-            "role": "official_public_ppi_entry",
+            "role": "public_works_ppi",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "石川県物品調達オープンカウンター",
+            "label": "open_counter",
             "url": "https://www.pref.ishikawa.lg.jp/kanzai/open/open1.html",
-            "role": "official_current_procurement_list",
+            "role": "open_counter",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "tourism_current_list",
+            "url": "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html",
+            "role": "tourism_current_list",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "digital_department",
+            "url": "https://www.pref.ishikawa.lg.jp/johosei/",
+            "role": "digital_department",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "international_tourism",
+            "url": "https://www.pref.ishikawa.lg.jp/kokukan/index.html",
+            "role": "international_tourism",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "satoyama_department",
+            "url": "https://www.pref.ishikawa.lg.jp/satoyama/index.html",
+            "role": "satoyama_department",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -13641,19 +13825,31 @@
       "checked_urls": [
         {
           "url": "https://www.pref.ishikawa.lg.jp/kanzai/denshinyuusatsu/system.html",
-          "label": "石川県 物品調達電子入札・入札情報システム"
-        },
-        {
-          "url": "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html",
-          "label": "石川県文化観光スポーツ部 新着情報"
+          "label": "石川県公式共有調達ルート 公式調達起点"
         },
         {
           "url": "https://www.pref.ishikawa.lg.jp/kanri/cals-ec/bidding_information.html",
-          "label": "石川県公共工事 入札情報システム"
+          "label": "public_works_ppi"
         },
         {
           "url": "https://www.pref.ishikawa.lg.jp/kanzai/open/open1.html",
-          "label": "石川県物品調達オープンカウンター"
+          "label": "open_counter"
+        },
+        {
+          "url": "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html",
+          "label": "tourism_current_list"
+        },
+        {
+          "url": "https://www.pref.ishikawa.lg.jp/johosei/",
+          "label": "digital_department"
+        },
+        {
+          "url": "https://www.pref.ishikawa.lg.jp/kokukan/index.html",
+          "label": "international_tourism"
+        },
+        {
+          "url": "https://www.pref.ishikawa.lg.jp/satoyama/index.html",
+          "label": "satoyama_department"
         },
         {
           "url": "https://www.pref.ishikawa.lg.jp/",
@@ -13712,6 +13908,10 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "既存起点と凍結台帳の全踏破"
           ],
@@ -13721,18 +13921,6 @@
             "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html",
             "https://www.pref.ishikawa.lg.jp/kankou/dx/dmp.html",
             "https://www.pref.ishikawa.lg.jp/kankou/suizokukan/r8_kentoukai.html"
-          ],
-          "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度archive・部局root・pagination/public-end・共同電子調達の別仮説"
-          ],
-          "checked_urls": [
-            "https://www.pref.ishikawa.lg.jp/",
-            "https://www.pref.ishikawa.lg.jp/kanko_koryu/index.html",
-            "https://www.pref.ishikawa.lg.jp/kanko_koryu/shinchaku/index.html"
           ],
           "result": "PARTIAL"
         }
@@ -13752,7 +13940,7 @@
       ],
       "observed_at": "2026-07-30T10:45:13.872601+00:00",
       "operator_root_override": true,
-      "operator_root_basis": "県トップや観光部局新着を主起点にせず、公式入札情報システムを大元に修正。プロポーザルは部局新着に分散するため複数枝を保持。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -13772,26 +13960,42 @@
       "route": {
         "root": {
           "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/index.html",
-          "label": "金沢市 入札・契約"
+          "label": "金沢市 公式調達起点"
         },
         "branches": [
           {
-            "label": "金沢市 入札・契約",
+            "label": "金沢市 公式調達起点",
             "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/index.html",
-            "role": "official_city_procurement_hub",
+            "role": "city_procurement_hub",
             "case_count": 1,
             "scanned": true,
             "details": [
               {
-                "url": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/jinjika/gyomuannai/30814.html",
-                "label": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/jinjika/gyomuannai/30814.html"
+                "url": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/shinrinsaiseika/nyusatsujoho/31102.html",
+                "label": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/shinrinsaiseika/nyusatsujoho/31102.html"
               }
             ]
           },
           {
-            "label": "金沢市 公告",
+            "label": "classified_notice_hub",
             "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/kokoku/index.html",
-            "role": "official_current_procurement_list",
+            "role": "classified_notice_hub",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_procurement",
+            "url": "https://www.ep-bis.supercals.jp/ebidPPIGPublish/EjPPIj?KikanNO=1720100",
+            "role": "dynamic_procurement",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "distributed_departments",
+            "url": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/",
+            "role": "distributed_departments",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -13821,11 +14025,19 @@
       "checked_urls": [
         {
           "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/index.html",
-          "label": "金沢市 入札・契約"
+          "label": "金沢市 公式調達起点"
         },
         {
           "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/kokoku/index.html",
-          "label": "金沢市 公告"
+          "label": "classified_notice_hub"
+        },
+        {
+          "url": "https://www.ep-bis.supercals.jp/ebidPPIGPublish/EjPPIj?KikanNO=1720100",
+          "label": "dynamic_procurement"
+        },
+        {
+          "url": "https://www4.city.kanazawa.lg.jp/soshikikarasagasu/",
+          "label": "distributed_departments"
         },
         {
           "url": "https://www4.city.kanazawa.lg.jp/sangyo_business/nyusatsu_keiyaku/denshinyusatsu/index.html",
@@ -13859,13 +14071,12 @@
         },
         {
           "round": 2,
-          "hypothesis": "frozen Human Resources department route",
-          "result": "One case was conserved, but the parent is a Human Resources department hub rather than a citywide proposal list."
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
         },
         {
           "round": 3,
-          "hypothesis": "procurement hub, year archive, pagination and breadcrumb reversal",
-          "result": "No public whole-city proposal aggregator was established from the frozen route or its breadcrumb."
+          "hypothesis": "frozen Human Resources department route",
+          "result": "One case was conserved, but the parent is a Human Resources department hub rather than a citywide proposal list."
         }
       ],
       "pagination_evidence": [
@@ -13878,7 +14089,7 @@
       ],
       "observed_at": "2026-07-30T10:45:51Z",
       "operator_root_override": true,
-      "operator_root_basis": "市トップを主起点にせず、公式入札・契約ハブへ修正。公告と電子入札を枝として保持。",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -13898,21 +14109,26 @@
       "route": {
         "root": {
           "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/index.html",
-          "label": "坂井市 入札・契約・検査"
+          "label": "坂井市 公式調達起点"
         },
         "branches": [
           {
-            "label": "坂井市 入札・契約・検査",
+            "label": "坂井市 公式調達起点",
             "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/index.html",
-            "role": "official_city_procurement_hub",
+            "role": "procurement_hub",
             "case_count": 6,
             "scanned": true,
-            "details": []
+            "details": [
+              {
+                "url": "https://www.city.fukui-sakai.lg.jp/jyogesui/jigyosha/jogesui/puropo.html",
+                "label": "https://www.city.fukui-sakai.lg.jp/jyogesui/jigyosha/jogesui/puropo.html"
+              }
+            ]
           },
           {
-            "label": "坂井市 入札公告",
+            "label": "current_bid_notices",
             "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kokoku/index.html",
-            "role": "official_current_procurement_list",
+            "role": "current_bid_notices",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -13922,14 +14138,23 @@
             "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/index.html",
             "role": "business_cross_section",
             "case_count": 0,
+            "scanned": false,
             "details": []
           },
           {
-            "label": "結果ページ（現行探索・件数から除外）",
-            "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kekka/index.html",
-            "role": "result_archive_excluded",
+            "label": "business_updates",
+            "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/shinchaku/index.html",
+            "role": "business_updates",
             "case_count": 0,
-            "scanned": true,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "results_excluded",
+            "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kekka/index.html",
+            "role": "results_excluded",
+            "case_count": 0,
+            "scanned": false,
             "details": []
           }
         ]
@@ -13937,23 +14162,27 @@
       "checked_urls": [
         {
           "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/index.html",
-          "label": "坂井市 入札・契約・検査"
+          "label": "坂井市 公式調達起点"
         },
         {
           "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kokoku/index.html",
-          "label": "坂井市 入札公告"
+          "label": "current_bid_notices"
+        },
+        {
+          "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/index.html",
+          "label": "business_cross_section"
+        },
+        {
+          "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/shinchaku/index.html",
+          "label": "business_updates"
         },
         {
           "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kekka/index.html",
-          "label": "結果ページ（除外）"
+          "label": "results_excluded"
         },
         {
           "url": "https://www.city.fukui-sakai.lg.jp/",
           "label": "https://www.city.fukui-sakai.lg.jp/"
-        },
-        {
-          "url": "https://www.city.fukui-sakai.lg.jp/jigyosha/index.html",
-          "label": "https://www.city.fukui-sakai.lg.jp/jigyosha/index.html"
         }
       ],
       "missing_candidates": [
@@ -13993,8 +14222,7 @@
         },
         {
           "round": 3,
-          "hypothesis": "frozen procurement-hub route",
-          "result": "The procurement hub is not a proposal list and conserved only two frozen cases."
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
         }
       ],
       "pagination_evidence": [
@@ -14007,10 +14235,8 @@
       ],
       "observed_at": "2026-07-30T10:45:51Z",
       "operator_root_override": true,
-      "operator_root_basis": "事業者向けの公式調達ハブを大元とし、現行公告を独立枝、結果一覧を除外枝として明示。",
-      "excluded_result_urls": [
-        "https://www.city.fukui-sakai.lg.jp/jigyosha/nyusatsu/kekka/index.html"
-      ]
+      "operator_root_basis": "",
+      "excluded_result_urls": []
     },
     {
       "issuer_id": "muni:182010",
@@ -14823,50 +15049,107 @@
       "prefecture": "長野県",
       "display_name": "松本市",
       "lane": "C",
-      "conclusion": "OVERCOUNT_OR_DUPLICATE_SUSPECTED",
+      "conclusion": "EXACT_CONFIRMED",
       "pages_count": 24,
       "canonical_count": 24,
-      "official_rows": 19,
-      "details_reached": 19,
-      "delta": -5,
+      "official_rows": 20,
+      "details_reached": 20,
+      "delta": -4,
       "confidence": "high",
       "root_url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
       "route": {
         "root": {
           "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
-          "label": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html"
+          "label": "松本市 公式調達起点"
         },
         "branches": [
           {
-            "label": "year_archive",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "松本市 公式調達起点",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
+            "role": "current_year_proposal_list",
+            "case_count": 20,
+            "scanned": true,
+            "details": [
+              {
+                "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/206362.html",
+                "label": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/206362.html"
+              },
+              {
+                "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/206927.html",
+                "label": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/206927.html"
+              },
+              {
+                "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/201882.html",
+                "label": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/201882.html"
+              }
+            ]
           },
           {
-            "label": "department_root",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "year_archive_2025",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list473-1677.html",
+            "role": "year_archive_2025",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
           },
           {
-            "label": "proposal_or_procurement_list",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "year_archive_2024",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list369-1336.html",
+            "role": "year_archive_2024",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
           },
           {
-            "label": "pagination_public_end",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "year_archive_2023",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list290-825.html",
+            "role": "year_archive_2023",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "year_archive_2022",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list31-122.html",
+            "role": "year_archive_2022",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "year_archive_2021",
+            "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list32-125.html",
+            "role": "year_archive_2021",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
           }
         ]
       },
       "checked_urls": [
         {
           "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
-          "label": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html"
+          "label": "松本市 公式調達起点"
+        },
+        {
+          "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list473-1677.html",
+          "label": "year_archive_2025"
+        },
+        {
+          "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list369-1336.html",
+          "label": "year_archive_2024"
+        },
+        {
+          "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list290-825.html",
+          "label": "year_archive_2023"
+        },
+        {
+          "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list31-122.html",
+          "label": "year_archive_2022"
+        },
+        {
+          "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list32-125.html",
+          "label": "year_archive_2021"
         },
         {
           "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/",
@@ -14965,6 +15248,10 @@
       "discovery_rounds": [
         {
           "round": 1,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 2,
           "hypotheses": [
             "既存起点と凍結台帳の全踏破"
           ],
@@ -14994,7 +15281,7 @@
           "result": "ROOT_SET_CONFIRMED"
         },
         {
-          "round": 2,
+          "round": 3,
           "hypotheses": [
             "年度archive・部局root・pagination/public-end・共同電子調達の別仮説"
           ],
@@ -15026,7 +15313,10 @@
           "response_sha256": "c7eb222564d8c887a23672ced026b781042f1530fe34cf4c3c2b57a59a4afba4"
         }
       ],
-      "observed_at": "2026-07-30T10:45:13.872285+00:00"
+      "observed_at": "2026-07-30T10:45:13.872285+00:00",
+      "operator_root_override": true,
+      "operator_root_basis": "",
+      "excluded_result_urls": []
     },
     {
       "issuer_id": "muni:202011",
@@ -15196,19 +15486,19 @@
       "route": {
         "root": {
           "url": "https://www.pref.nagano.lg.jp/kensa/puropo-kokoku.html",
-          "label": "長野県 公募型プロポーザル方式公募公告一覧"
+          "label": "長野県公式共有調達ルート 公式調達起点"
         },
         "branches": [
           {
-            "label": "長野県 公募型プロポーザル方式公募公告一覧",
+            "label": "長野県公式共有調達ルート 公式調達起点",
             "url": "https://www.pref.nagano.lg.jp/kensa/puropo-kokoku.html",
-            "role": "whole_prefecture_proposal_list",
+            "role": "whole_prefecture_proposal_history",
             "case_count": 315,
             "scanned": true,
             "details": [
               {
-                "url": "https://www.pref.nagano.lg.jp/kigyo/kensei/propo/propoichiran.html",
-                "label": "https://www.pref.nagano.lg.jp/kigyo/kensei/propo/propoichiran.html"
+                "url": "https://www.pref.nagano.lg.jp/shinrin/sangyo/ringyo/choju/08hunter.html",
+                "label": "https://www.pref.nagano.lg.jp/shinrin/sangyo/ringyo/choju/08hunter.html"
               }
             ]
           },
@@ -15221,9 +15511,25 @@
             "details": []
           },
           {
-            "label": "prefecture_secretariat_proposal_list",
+            "label": "secretariat_reference_list",
             "url": "https://www.pref.nagano.lg.jp/kensa/sankopuropokoukoku.html",
-            "role": "prefecture_secretariat_proposal_list",
+            "role": "secretariat_reference_list",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "police_proposal_list",
+            "url": "https://www.pref.nagano.lg.jp/police/nyusatsu/proposal.html",
+            "role": "police_proposal_list",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "dynamic_eprocurement",
+            "url": "https://www.ppi.e-nagano.lg.jp/PPIPublish/portal_accepter/010_link.html",
+            "role": "dynamic_eprocurement",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -15233,7 +15539,7 @@
       "checked_urls": [
         {
           "url": "https://www.pref.nagano.lg.jp/kensa/puropo-kokoku.html",
-          "label": "長野県 公募型プロポーザル方式公募公告一覧"
+          "label": "長野県公式共有調達ルート 公式調達起点"
         },
         {
           "url": "https://www.pref.nagano.lg.jp/kigyo/kensei/propo/propoichiran.html",
@@ -15241,7 +15547,15 @@
         },
         {
           "url": "https://www.pref.nagano.lg.jp/kensa/sankopuropokoukoku.html",
-          "label": "prefecture_secretariat_proposal_list"
+          "label": "secretariat_reference_list"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/police/nyusatsu/proposal.html",
+          "label": "police_proposal_list"
+        },
+        {
+          "url": "https://www.ppi.e-nagano.lg.jp/PPIPublish/portal_accepter/010_link.html",
+          "label": "dynamic_eprocurement"
         },
         {
           "url": "https://www.pref.nagano.lg.jp/",
@@ -15292,8 +15606,7 @@
         },
         {
           "round": 3,
-          "hypothesis": "frozen canonical proposal list",
-          "result": "The official proposal table contained 413 case rows, versus three frozen rows."
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
         }
       ],
       "pagination_evidence": [
@@ -15306,7 +15619,7 @@
       ],
       "observed_at": "2026-07-30T10:45:51Z",
       "operator_root_override": true,
-      "operator_root_basis": "north_b_live_official_list_2026-07-30",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
@@ -17812,13 +18125,58 @@
       "details_reached": 60,
       "delta": 58,
       "confidence": "high",
-      "root_url": "https://www.pref.aichi.jp/life/5/19/66/",
+      "root_url": "https://www.pref.aichi.jp/life/sub/3/19/66/",
       "route": {
         "root": {
-          "url": "https://www.pref.aichi.jp/life/5/19/66/",
-          "label": "愛知県 プロポーザル"
+          "url": "https://www.pref.aichi.jp/life/sub/3/19/66/",
+          "label": "愛知県公式共有調達ルート 公式調達起点"
         },
         "branches": [
+          {
+            "label": "愛知県公式共有調達ルート 公式調達起点",
+            "url": "https://www.pref.aichi.jp/life/sub/3/19/66/",
+            "role": "proposal_category_current",
+            "case_count": 60,
+            "scanned": true,
+            "details": [
+              {
+                "url": "https://www.pref.aichi.jp/soshiki/mizutaiki/bluecarbon-conference2026-recruitment.html",
+                "label": "https://www.pref.aichi.jp/soshiki/mizutaiki/bluecarbon-conference2026-recruitment.html"
+              }
+            ]
+          },
+          {
+            "label": "proposal_category_legacy",
+            "url": "https://www.pref.aichi.jp/life/5/19/66/index.html",
+            "role": "proposal_category_legacy",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "events_rss",
+            "url": "https://www.pref.aichi.jp/rss/10/sub3.xml",
+            "role": "events_rss",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "cals_ec_public_works",
+            "url": "https://www.chotatsu.e-aichi.jp/",
+            "role": "cals_ec_public_works",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
+          {
+            "label": "goods_services_eprocurement",
+            "url": "https://www.buppin.e-aichi.jp/",
+            "role": "goods_services_eprocurement",
+            "case_count": 0,
+            "scanned": false,
+            "details": []
+          },
           {
             "label": "愛知県 プロポーザル",
             "url": "https://www.pref.aichi.jp/life/5/19/66/",
@@ -17840,16 +18198,32 @@
       },
       "checked_urls": [
         {
+          "url": "https://www.pref.aichi.jp/life/sub/3/19/66/",
+          "label": "愛知県公式共有調達ルート 公式調達起点"
+        },
+        {
+          "url": "https://www.pref.aichi.jp/life/5/19/66/index.html",
+          "label": "proposal_category_legacy"
+        },
+        {
+          "url": "https://www.pref.aichi.jp/rss/10/sub3.xml",
+          "label": "events_rss"
+        },
+        {
+          "url": "https://www.chotatsu.e-aichi.jp/",
+          "label": "cals_ec_public_works"
+        },
+        {
+          "url": "https://www.buppin.e-aichi.jp/",
+          "label": "goods_services_eprocurement"
+        },
+        {
           "url": "https://www.pref.aichi.jp/life/5/19/66/",
           "label": "愛知県 プロポーザル"
         },
         {
           "url": "https://www.pref.aichi.jp/life/5/19/index.html",
           "label": "https://www.pref.aichi.jp/life/5/19/index.html"
-        },
-        {
-          "url": "https://www.pref.aichi.jp/life/5/19/66/index.html",
-          "label": "https://www.pref.aichi.jp/life/5/19/66/index.html"
         },
         {
           "url": "https://www.pref.aichi.jp/soshiki/kanko/ip-manholecover2026.html",
@@ -18230,6 +18604,10 @@
         },
         {
           "round": 2,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 3,
           "hypotheses": [
             "既存起点と凍結台帳の全踏破"
           ],
@@ -18240,17 +18618,6 @@
             "https://www.pref.aichi.jp/soshiki/kokusai-kanko/mice-convention-2.html"
           ],
           "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "年度archive・部局root・pagination/public-end・共同電子調達の別仮説"
-          ],
-          "checked_urls": [
-            "https://www.pref.aichi.jp/life/5/19/index.html",
-            "https://www.pref.aichi.jp/life/5/19/66/index.html"
-          ],
-          "result": "ROOT_SET_CONFIRMED"
         }
       ],
       "pagination_evidence": [
@@ -18304,7 +18671,7 @@
       ],
       "observed_at": "2026-07-30T10:45:13.872881+00:00",
       "operator_root_override": true,
-      "operator_root_basis": "north_b_live_official_list_2026-07-30",
+      "operator_root_basis": "",
       "excluded_result_urls": []
     },
     {
