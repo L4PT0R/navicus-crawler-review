@@ -18,6 +18,7 @@ OUT = REPO / "north-audit-data.json"
 MITO_RESULT = WORKSPACE / "work/mito_citywide_recruitment_2026-07-30/result.json"
 LIST_REPAIR_ROOT = WORKSPACE / "work/municipal_proposal_list_repair_2026-07-30"
 SAPPORO_RESULT = WORKSPACE / "work/sapporo_current_procurement_2026-07-30/result.json"
+OPERATOR_ROUTE_OVERRIDES = WORKSPACE / "data/north_operator_route_overrides_v1.json"
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -379,6 +380,121 @@ def apply_sapporo_attachment_overlay(items: list[dict]) -> None:
     })
 
 
+def _looks_like_case_detail(url: str, root_url: str, excluded: set[str]) -> bool:
+    if not url or url == root_url or url in excluded:
+        return False
+    path = re.sub(r"/+", "/", url.split("?", 1)[0].split("#", 1)[0])
+    if path.endswith(("/", "/index.html", "/index.php")):
+        return False
+    if re.search(r"/index_\d+\.html$", path):
+        return False
+    return bool(re.search(r"(?:/\d{4,}|/d\d+|\.html|\.htm|\.php)$", path))
+
+
+def apply_operator_route_overrides(items: list[dict]) -> None:
+    """Promote operator-confirmed list pages and demote result-only routes."""
+    if not OPERATOR_ROUTE_OVERRIDES.exists():
+        return
+    payload = json.loads(OPERATOR_ROUTE_OVERRIDES.read_text(encoding="utf-8"))
+    for override in payload.get("items") or []:
+        target = next((item for item in items if item["issuer_id"] == override.get("issuer_id")), None)
+        if target is None:
+            continue
+        root_url = override["root_url"]
+        excluded = set(override.get("excluded_result_urls") or [])
+        dropped = set(override.get("drop_urls") or [])
+        if override.get("observed_official_rows") is not None:
+            observed_rows = as_int(override["observed_official_rows"])
+            target["official_rows"] = observed_rows
+            target["details_reached"] = min(as_int(target.get("details_reached")), observed_rows)
+            target["delta"] = observed_rows - as_int(target.get("pages_count"))
+        checked = target.get("checked_urls") or []
+        existing_primary_details = []
+        for existing_branch in target.get("route", {}).get("branches") or []:
+            if existing_branch.get("url") == root_url:
+                existing_primary_details.extend(existing_branch.get("details") or [])
+        inferred_details = [
+            {"url": row["url"], "label": row.get("label") or row["url"]}
+            for row in checked
+            if _looks_like_case_detail(row.get("url", ""), root_url, excluded)
+        ]
+        deduped_details = []
+        seen_detail_urls = set()
+        primary_detail_candidates = existing_primary_details or inferred_details
+        for detail in primary_detail_candidates:
+            if detail["url"] not in seen_detail_urls:
+                seen_detail_urls.add(detail["url"])
+                deduped_details.append(detail)
+        primary_branch = {
+            "label": override["root_label"],
+            "url": root_url,
+            "role": override["root_role"],
+            "case_count": target.get("official_rows", 0),
+            "scanned": bool(target.get("official_rows", 0)),
+            "details": deduped_details,
+        }
+        branches = [primary_branch]
+        for branch in override.get("additional_current_roots") or []:
+            branches.append({
+                "label": branch["label"],
+                "url": branch["url"],
+                "role": branch["role"],
+                "case_count": 0,
+                "scanned": False,
+                "details": [],
+            })
+        if not override.get("only_current_root"):
+            for branch in target.get("route", {}).get("branches") or []:
+                url = branch.get("url", "")
+                if not url or url == root_url or url in excluded or url in dropped:
+                    continue
+                if any(url == existing.get("url") for existing in branches):
+                    continue
+                branches.append(branch)
+        for result_url in sorted(excluded):
+            branches.append({
+                "label": "結果ページ（現行探索・件数から除外）",
+                "url": result_url,
+                "role": "result_archive_excluded",
+                "case_count": 0,
+                "scanned": True,
+                "details": [],
+            })
+        ordered_checked = [
+            {"url": root_url, "label": override["root_label"]},
+        ] + [
+            {"url": branch["url"], "label": branch["label"]}
+            for branch in override.get("additional_current_roots") or []
+        ] + [
+            {"url": url, "label": "結果ページ（除外）"} for url in sorted(excluded)
+        ] + [row for row in checked if row.get("url") not in dropped]
+        unique_checked = []
+        seen_checked = set()
+        for row in ordered_checked:
+            if row["url"] and row["url"] not in seen_checked:
+                seen_checked.add(row["url"])
+                unique_checked.append(row)
+        previous_rounds = target.get("discovery_rounds") or []
+        target.update({
+            "root_url": root_url,
+            "route": {
+                "root": {"url": root_url, "label": override["root_label"]},
+                "branches": branches,
+            },
+            "checked_urls": unique_checked,
+            "discovery_rounds": [{
+                "round": 1,
+                "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止",
+            }] + [
+                {**round_row, "round": index + 2}
+                for index, round_row in enumerate(previous_rounds[:2])
+            ],
+            "operator_root_override": True,
+            "operator_root_basis": override.get("operator_basis", ""),
+            "excluded_result_urls": sorted(excluded),
+        })
+
+
 def main() -> None:
     scope = {row["issuer_id"]: row for row in load_csv(RUN / "target_scope.csv")}
     summaries: list[dict[str, str]] = []
@@ -431,6 +547,7 @@ def main() -> None:
     apply_mito_live_overlay(items)
     apply_full_list_repair_overlays(items)
     apply_sapporo_attachment_overlay(items)
+    apply_operator_route_overrides(items)
     counts = Counter(item["conclusion"] for item in items)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",
