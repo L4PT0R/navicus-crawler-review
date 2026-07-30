@@ -1,6 +1,6 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T14:08:48.593904Z",
+  "generated_at": "2026-07-30T14:23:27.175268Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
@@ -11778,33 +11778,33 @@
       "details_reached": 1,
       "delta": -1,
       "confidence": "high",
-      "root_url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
+      "root_url": "https://www.my.metro.tokyo.lg.jp/rss/-/asset_publisher/rijn/rss",
       "route": {
         "root": {
-          "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-          "label": "東京都公式共有調達ルート 公式調達起点"
+          "url": "https://www.my.metro.tokyo.lg.jp/rss/-/asset_publisher/rijn/rss",
+          "label": "東京都 全庁新着RSS"
         },
         "branches": [
           {
-            "label": "東京都公式共有調達ルート 公式調達起点",
-            "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-            "role": "official_current_procurement_root",
+            "label": "東京都 全庁新着RSS",
+            "url": "https://www.my.metro.tokyo.lg.jp/rss/-/asset_publisher/rijn/rss",
+            "role": "whole_metropolitan_government_rss_frontier",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "joint_municipal_procurement_entry",
-            "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/ppij/pub",
-            "role": "joint_municipal_procurement_entry",
+            "label": "事業者向け募集・公募検索（高精度補助）",
+            "url": "https://www.my.metro.tokyo.lg.jp/business/search/?category=188514",
+            "role": "high_precision_business_recruitment_search",
             "case_count": 0,
             "scanned": false,
             "details": []
           },
           {
-            "label": "tokyo_metropolitan_separate_system",
-            "url": "https://www.e-procurement.metro.tokyo.lg.jp/indexPbiFrSp.jsp",
-            "role": "tokyo_metropolitan_separate_system",
+            "label": "東京都電子調達（調達案件補助）",
+            "url": "https://www.e-procurement.metro.tokyo.lg.jp/",
+            "role": "supplemental_metropolitan_eprocurement",
             "case_count": 0,
             "scanned": false,
             "details": []
@@ -11813,28 +11813,16 @@
       },
       "checked_urls": [
         {
-          "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/cmn/tmg/cmn/jsp/indexQ.jsp",
-          "label": "東京都公式共有調達ルート 公式調達起点"
+          "url": "https://www.my.metro.tokyo.lg.jp/rss/-/asset_publisher/rijn/rss",
+          "label": "東京都 全庁新着RSS"
         },
         {
-          "url": "https://www.e-tokyo.lg.jp/choutatu_ppij/ppij/pub",
-          "label": "joint_municipal_procurement_entry"
-        },
-        {
-          "url": "https://www.e-procurement.metro.tokyo.lg.jp/indexPbiFrSp.jsp",
-          "label": "tokyo_metropolitan_separate_system"
-        },
-        {
-          "url": "https://www.e-tokyo.lg.jp/top/index.html",
-          "label": "https://www.e-tokyo.lg.jp/top/index.html"
+          "url": "https://www.my.metro.tokyo.lg.jp/business/search/?category=188514",
+          "label": "事業者向け募集・公募検索（高精度補助）"
         },
         {
           "url": "https://www.e-procurement.metro.tokyo.lg.jp/",
-          "label": "https://www.e-procurement.metro.tokyo.lg.jp/"
-        },
-        {
-          "url": "https://www.sangyo-rodo.metro.tokyo.lg.jp/information/topics/2026/03/05/01",
-          "label": "https://www.sangyo-rodo.metro.tokyo.lg.jp/information/topics/2026/03/05/01"
+          "label": "東京都電子調達（調達案件補助）"
         }
       ],
       "missing_candidates": [],
