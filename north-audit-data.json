@@ -1,18 +1,17 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T13:32:03.451850Z",
+  "generated_at": "2026-07-30T13:43:24.067243Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4426,
+    "official_row_observation_count": 5056,
     "conclusion_counts": {
       "UNDERCOUNT_SUSPECTED": 41,
-      "OFFICIAL_LIST_ENUMERATED": 3,
+      "OFFICIAL_LIST_ENUMERATED": 6,
       "ROOT_INCOMPLETE": 18,
-      "PUBLIC_BOUNDARY_UNMEASURABLE": 3,
       "RSS_FRONTIER_CLASSIFIED": 1,
       "EXACT_CONFIRMED": 1,
       "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1,
@@ -2068,7 +2067,7 @@
       "prefecture": "岩手県",
       "display_name": "岩手県公式共有調達ルート",
       "lane": "A1",
-      "conclusion": "PUBLIC_BOUNDARY_UNMEASURABLE",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 2,
       "canonical_count": 2,
       "official_rows": 701,
@@ -3296,7 +3295,7 @@
       "prefecture": "秋田県",
       "display_name": "秋田県公式共有調達ルート",
       "lane": "A1",
-      "conclusion": "PUBLIC_BOUNDARY_UNMEASURABLE",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 1,
       "canonical_count": 1,
       "official_rows": 191,
@@ -5819,35 +5818,44 @@
       "prefecture": "埼玉県",
       "display_name": "埼玉県公式共有調達ルート",
       "lane": "B3",
-      "conclusion": "PUBLIC_BOUNDARY_UNMEASURABLE",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 1,
       "canonical_count": 1,
-      "official_rows": 0,
+      "official_rows": 630,
       "details_reached": 2,
-      "delta": -1,
+      "delta": 629,
       "confidence": "low",
-      "root_url": "",
+      "root_url": "https://www.pref.saitama.lg.jp/a0212/kense/tetsuzuki/nyusatsu/buppin/index.html",
       "route": {
         "root": {
-          "url": "https://www.pref.saitama.lg.jp/",
-          "label": "https://www.pref.saitama.lg.jp/"
+          "url": "https://www.pref.saitama.lg.jp/a0212/kense/tetsuzuki/nyusatsu/buppin/index.html",
+          "label": "埼玉県 物品・委託等"
         },
         "branches": [
           {
-            "label": "https://www.pref.saitama.lg.jp/a0212/densinyusatsu",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
-          },
-          {
-            "label": "department pages",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "埼玉県 物品・委託等",
+            "url": "https://www.pref.saitama.lg.jp/a0212/kense/tetsuzuki/nyusatsu/buppin/index.html",
+            "role": "whole_prefecture_goods_and_services_procurement_list",
+            "case_count": 630,
+            "scanned": true,
+            "details": [
+              {
+                "url": "https://www.pref.saitama.lg.jp/a0508/trustohozen-koubo2026.html",
+                "label": "https://www.pref.saitama.lg.jp/a0508/trustohozen-koubo2026.html"
+              },
+              {
+                "url": "https://www.pref.saitama.lg.jp/omiya-park/omiya-enchi/enchi2026.html",
+                "label": "https://www.pref.saitama.lg.jp/omiya-park/omiya-enchi/enchi2026.html"
+              }
+            ]
           }
         ]
       },
       "checked_urls": [
+        {
+          "url": "https://www.pref.saitama.lg.jp/a0212/kense/tetsuzuki/nyusatsu/buppin/index.html",
+          "label": "埼玉県 物品・委託等"
+        },
         {
           "url": "https://www.pref.saitama.lg.jp/",
           "label": "https://www.pref.saitama.lg.jp/"
@@ -5881,6 +5889,10 @@
       "discovery_rounds": [
         {
           "round": 1,
+          "result": "オペレーター確認済みの専用一覧をクロール起点へ昇格。自治体・県トップからの探索を廃止"
+        },
+        {
+          "round": 2,
           "hypotheses": [
             "existing electronic procurement hub can expose a public issuer-scoped list"
           ],
@@ -5890,7 +5902,7 @@
           "result": "BLOCKED"
         },
         {
-          "round": 2,
+          "round": 3,
           "hypotheses": [
             "department official pages reveal valid cases outside the single frozen case"
           ],
@@ -5899,17 +5911,6 @@
             "https://www.pref.saitama.lg.jp/omiya-park/omiya-enchi/enchi2026.html"
           ],
           "result": "PARTIAL"
-        },
-        {
-          "round": 3,
-          "hypotheses": [
-            "organization and joint-procurement routes still lack a reproducible unauthenticated issuer selector/public end"
-          ],
-          "checked_urls": [
-            "https://www.pref.saitama.lg.jp/a0212/densinyusatsu",
-            "https://www.pref.saitama.lg.jp/"
-          ],
-          "result": "BLOCKED"
         }
       ],
       "pagination_evidence": [
@@ -5919,7 +5920,10 @@
           "public_end_confirmed": false
         }
       ],
-      "observed_at": "2026-07-30T10:39:34Z"
+      "observed_at": "2026-07-30T10:39:34Z",
+      "operator_root_override": true,
+      "operator_root_basis": "user_supplied",
+      "excluded_result_urls": []
     },
     {
       "issuer_id": "muni:112038",

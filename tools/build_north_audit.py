@@ -495,6 +495,8 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
             "operator_root_basis": override.get("operator_basis", ""),
             "excluded_result_urls": sorted(excluded),
         })
+        if override.get("conclusion"):
+            target["conclusion"] = override["conclusion"]
 
 
 def apply_nagoya_department_overlay(items: list[dict]) -> None:
