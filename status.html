@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>NAVICUS ループ稼働状況</title>
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#12243a;--line:#263b52;--text:#e9f1f8;--muted:#90a5b9;--accent:#24c5d9;--ok:#52d38b;--warn:#f5bf55;--bad:#f17171}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0,#11334b 0,transparent 30rem),var(--bg);color:var(--text);font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}a{color:var(--accent)}main{width:min(1120px,calc(100% - 32px));margin:auto;padding:24px 0 64px}.nav{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:52px}.nav a{text-decoration:none}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:22px;align-items:end;margin-bottom:28px}.hero h1{font-size:clamp(34px,7vw,70px);line-height:1.04;letter-spacing:-.045em;margin:.18em 0}.hero p{color:var(--muted);max-width:720px}.decision{padding:20px;border:1px solid rgba(245,191,85,.45);border-radius:16px;background:rgba(245,191,85,.08)}.decision b{display:block;color:var(--warn);font-size:28px}.decision span{color:var(--muted)}.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:24px 0}.metric{padding:18px;background:var(--panel)}.metric span{display:block;color:var(--muted);font-size:11px}.metric b{display:block;margin-top:3px;font-size:25px}.metric.ok b{color:var(--ok)}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin:38px 0 12px}.section-head h2{font-size:20px;margin:0}.section-head span{color:var(--muted);font-size:12px}.gates{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.gate{position:relative;padding:20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,var(--panel),#091625);overflow:hidden}.gate::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--warn)}.gate.go::before{background:var(--ok)}.gate.blocked::before{background:var(--bad)}.gate-head{display:flex;justify-content:space-between;gap:12px}.gate-id{display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;color:var(--accent);font-weight:800}.badge{height:max-content;padding:3px 8px;border:1px solid var(--line);border-radius:999px;color:var(--warn);font-size:10px}.go .badge{color:var(--ok)}.blocked .badge{color:var(--bad)}.gate h3{margin:14px 0 5px}.gate p{color:var(--muted);margin:0}.gate dl{display:grid;grid-template-columns:1fr auto;gap:5px 12px;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}.gate dt{color:var(--muted)}.gate dd{margin:0}.next{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}.panel{padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.panel h3{margin-top:0}.panel ul{margin:0;padding-left:20px}.panel li+li{margin-top:6px}.time{font-size:22px;color:var(--warn)}.safety{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.safety span{padding:5px 9px;border:1px solid rgba(82,211,139,.35);border-radius:999px;color:var(--ok);font-size:11px}.error{padding:18px;border:1px solid var(--bad);color:var(--bad)}footer{margin-top:42px;color:var(--muted);font-size:11px}@media(max-width:760px){main{width:min(100% - 24px,1120px)}.nav{margin-bottom:34px}.hero,.next{grid-template-columns:1fr}.strip{grid-template-columns:1fr}.gates{grid-template-columns:1fr}.section-head{display:block}.section-head span{display:block;margin-top:4px}}
+    body{overflow-x:hidden}.nav{flex-wrap:wrap}.hero>*,.gate,.panel{min-width:0}
+    .gate dl{grid-template-columns:minmax(90px,.4fr) minmax(0,1fr)}
+    .gate dd,.time{overflow-wrap:anywhere}.gate dd{text-align:right}
+    .timeline{position:relative;display:grid;gap:0;margin-top:4px}.timeline::before{content:"";position:absolute;left:15px;top:18px;bottom:18px;width:1px;background:var(--line)}.event{position:relative;display:grid;grid-template-columns:32px minmax(0,1fr);gap:16px;padding:13px 0}.event-dot{z-index:1;width:31px;height:31px;border:7px solid var(--bg);border-radius:50%;background:var(--warn);box-shadow:0 0 0 1px var(--line)}.event.done .event-dot{background:var(--ok)}.event.blocked .event-dot{background:var(--bad)}.event.superseded{opacity:.66}.event-body{padding:0 0 13px;border-bottom:1px solid var(--line)}.event-head{display:flex;justify-content:space-between;gap:16px}.event h3{margin:0;font-size:15px}.event time{color:var(--muted);font-size:11px;white-space:nowrap}.event p{margin:5px 0 0;color:var(--muted)}
+    @media(max-width:760px){.nav{align-items:flex-start}.nav a:last-child{margin-left:auto}}
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="nav"><a href="index.html">← 全国クローラー検証台帳</a><span><a href="#current">現在地</a>　<a href="#history">ループ経過</a>　<a href="route-quality.html">経路P2一覧</a></span></nav>
+    <section class="hero" id="current">
+      <div><div class="eyebrow">NAVICUS loop watchdog</div><h1>確定結果と<br>次のゲート</h1><p>確定済みのRQ-02と、後続の回復・再観測ループを分離して表示します。未解決ゲートがある限り、最終状態は安全側のNO-GOです。</p></div>
+      <div class="decision"><span>総合判定</span><b id="overall">読込中</b><span id="overallDetail">公開ステータスを確認しています。</span></div>
+    </section>
+    <section class="strip" id="summary"></section>
+    <div class="section-head"><h2>ゲート別の現在地</h2><span id="updated">更新時刻 —</span></div>
+    <section class="gates" id="gates"></section>
+    <div class="section-head" id="history"><h2>今回のループ経過</h2><span>旧判定と更新後の判定を時系列で表示</span></div>
+    <section class="panel"><div class="timeline" id="timeline"></div></section>
+    <div class="section-head"><h2>次の再開条件</h2><span>時刻だけで自動GOにはなりません</span></div>
+    <section class="next">
+      <article class="panel"><h3>次回観測可能時刻</h3><div class="time" id="nextTime">—</div><div class="safety" id="safety"></div></article>
+      <article class="panel"><h3>GOに必要な条件</h3><ul id="conditions"></ul></article>
+    </section>
+    <footer>公開用JSON: <a href="loop-status.json">loop-status.json</a> / 内部スレッドID、ローカルパス、SHA receiptは公開対象外です。</footer>
+  </main>
+  <script>
+    const esc=value=>String(value??"—").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+    const severity=value=>`P0 ${value?.P0??0} / P1 ${value?.P1??0} / P2 ${value?.P2??0}`;
+    fetch("loop-status.json",{cache:"no-store"}).then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json()}).then(data=>{
+      document.getElementById("overall").textContent=(data.overall?.decision||"NO_GO").replaceAll("_","-");
+      document.getElementById("overallDetail").textContent=data.overall?.detail||"";
+      document.getElementById("updated").textContent=`更新 ${data.updated_at||"不明"}`;
+      document.getElementById("summary").innerHTML=`<div class="metric ok"><span>RQ-02 内容判定</span><b>${esc(data.rq02?.circle)} / ${esc(data.rq02?.target)} ○</b></div><div class="metric"><span>停止ゲート</span><b>${esc(data.overall?.stop_gate)}</b></div><div class="metric"><span>最終公開判定</span><b>${esc((data.overall?.decision||"NO_GO").replaceAll("_","-"))}</b></div>`;
+      document.getElementById("gates").innerHTML=(data.gates||[]).map(gate=>{const css=gate.status==="GO"?"go":gate.status==="BLOCKED"?"blocked":"";const routeRows=gate.blocked!=null?`<dt>BLOCKED</dt><dd>${esc(gate.blocked)}</dd><dt>第2観測待ち</dt><dd>${esc(gate.needs_second_observation)}</dd>`:"";return `<article class="gate ${css}"><div class="gate-head"><span class="gate-id">${esc(gate.id)}</span><span class="badge">${esc(gate.status)}</span></div><h3>${esc(gate.label)}</h3><p>${esc(gate.detail)}</p><dl><dt>判定</dt><dd>${esc(gate.decision)}</dd>${routeRows}${gate.severity?`<dt>severity</dt><dd>${esc(severity(gate.severity))}</dd>`:""}</dl></article>`}).join("");
+      document.getElementById("timeline").innerHTML=(data.history||[]).map(event=>{const css=event.status==="DONE"?"done":event.status==="BLOCKED"?"blocked":event.status==="SUPERSEDED"?"superseded":"";return `<article class="event ${css}"><span class="event-dot" aria-hidden="true"></span><div class="event-body"><div class="event-head"><h3>${esc(event.title)}</h3><time>${esc(event.at)}</time></div><p>${esc(event.detail)}</p></div></article>`}).join("");
+      document.getElementById("nextTime").textContent=data.next_action?.next_observation_at||"新証拠待ち";
+      document.getElementById("conditions").innerHTML=(data.next_action?.conditions||[]).map(item=>`<li>${esc(item)}</li>`).join("");
+      const safety=data.safety||{};document.getElementById("safety").innerHTML=`<span>watchdog GET ${esc(safety.watchdog_live_gets)}</span><span>待機迂回 ${safety.meter_or_24h_bypass?"あり":"なし"}</span><span>承認捏造 ${safety.operator_approval_invented?"あり":"なし"}</span>`;
+    }).catch(error=>{document.getElementById("summary").innerHTML=`<div class="error">ステータスの読込に失敗しました: ${esc(error.message)}</div>`;document.getElementById("overall").textContent="UNKNOWN"});
+  </script>
+</body>
+</html>

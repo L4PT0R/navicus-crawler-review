@@ -20,6 +20,8 @@
 ## 公開ファイル
 
 - `index.html`: 全139発注者の案件・一覧・補完経路
+- `status.html`: RQ-02確定結果、後続回復ループの現在ゲート、今回の時系列
+- `loop-status.json`: 内部識別子を除外した公開用ループ状態
 - `route-quality.html`: 安全側に残した47経路
 - `final-audit.json`: 独立Sol監査
 - `loop-state.json`: 最終ループ状態
@@ -47,3 +49,15 @@
   町・村は対象外です。
 
 機械可読な修正内容は `scope-correction.json` にあります。
+
+## ループ状態の更新
+
+監視正本から公開可能な判定・件数だけを抽出します。内部スレッドID、
+ローカルパス、SHA receiptは公開しません。
+
+```bash
+python tools/publish_loop_status.py \
+  --watchdog ../../work/crawler_recovery_2026-07-29/loop_watchdog/latest_status.json \
+  --rq02-state loop-state.json \
+  --out loop-status.json
+```
