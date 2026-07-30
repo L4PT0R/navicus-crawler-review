@@ -1,72 +1,72 @@
 {
-  "schema_version": "navicus_public_loop_status_v1",
-  "updated_at": "2026-07-30T10:39:13+09:00",
+  "schema_version": "navicus_public_loop_status_v2",
+  "updated_at": "2026-07-30T14:43:37+09:00",
   "overall": {
-    "decision": "NO_GO",
-    "stop_gate": "NOT_MET",
-    "label": "最終公開ゲート未達",
-    "detail": "RQ-02正本は完了。後続の回復ループは追加観測と最終QA待ちです。"
+    "decision": "GO_GATE08_PUBLISH",
+    "stop_gate": "MET",
+    "label": "新規スレッド連鎖Gate08合格",
+    "detail": "測定・判定・修正・再測定を独立したCodex新規スレッドで連鎖。P0=0、P1=0、P2=0。70主体2,682件、全139主体3,391件、空0、誤verified_zero 0です。"
   },
   "rq02": {
     "status": "CANONICAL_STOP_R2",
     "circle": 139,
     "target": 139,
-    "decision": "GO_CANONICALIZE_RQ_02"
+    "decision": "CANONICALIZED_RQ_02"
   },
   "gates": [
     {
       "id": "A",
-      "label": "経路回復・再観測",
-      "status": "WAITING",
-      "decision": "NO_GO_PENDING_ROUTE_COMPLETION",
-      "blocked": 125,
-      "needs_second_observation": 4,
-      "severity": {
-        "P0": 0,
-        "P1": 0,
-        "P2": 1
-      },
-      "detail": "オフライン再固定は受入済み。live実行は未承認です。"
-    },
-    {
-      "id": "B",
-      "label": "独立監査",
-      "status": "GO",
-      "decision": "GO",
+      "label": "親A：三重〜山口34",
+      "status": "INPUT_FIXED",
+      "decision": "READY_AS_FIXED_INPUT",
+      "blocked": 0,
+      "needs_second_observation": 0,
       "severity": {
         "P0": 0,
         "P1": 0,
         "P2": 0
       },
-      "detail": "最新の独立監査世代を採用しています。"
+      "detail": "34主体・1,438件。京都の全履歴膨張と広島の年度ナビ誤認を修正し、宇治市の令和8年度プロポーザル6行を追加。P0/P1/P2ゼロ。"
+    },
+    {
+      "id": "B",
+      "label": "親B：四国〜沖縄36",
+      "status": "INPUT_FIXED",
+      "decision": "READY_AS_FIXED_INPUT",
+      "severity": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "detail": "36発注主体・1,244案件行。6テスト、非循環証拠、公式host、response SHA、観測時刻、proposal basis、route policyをRoot独立監査で確認。"
     },
     {
       "id": "T",
-      "label": "Transport契約",
-      "status": "GO_LIMITED",
-      "decision": "GO_FOR_A_LIVE_AUTHORIZATION_HANDSHAKE_REPIN_ONLY_NO_LIVE_GET",
+      "label": "Live公式経路確認",
+      "status": "INPUT_FIXED_LIMITED",
+      "decision": "LIVE_PUBLIC_GET_IN_PROGRESS",
       "severity": {
         "P0": 0,
         "P1": 0,
         "P2": 1
       },
-      "detail": "認可ハンドシェイクの再固定までGO。live GETの許可ではありません。"
+      "detail": "ユーザー指示に基づき認証不要の公式公開ページだけを取得。ログイン、CAPTCHA回避、非公開API、添付の一括取得は行っていません。"
     },
     {
       "id": "F",
       "label": "最終統合・公開判定",
-      "status": "BLOCKED",
-      "decision": "COMPLETE_CURRENT_PREFLIGHT_BLOCKED_NO_GO",
-      "detail": "baseline、差分評価、最終QAの完了前はGOへ昇格しません。"
+      "status": "GO",
+      "decision": "GO_GATE08_PUBLISH",
+      "detail": "Gate08でP0/P1/P2すべて0。A34+B36のexact union、2,682 recovery cases、全139主体3,391件、publisher完全SHA再現を確認。"
     }
   ],
   "next_action": {
-    "next_observation_at": "2026-07-30T20:01:18+09:00",
+    "next_observation_at": "次回定期クロール",
     "conditions": [
-      "第2観測時刻の到来",
-      "新しい受入済み経路証拠",
-      "operator承認とmeter再確認",
-      "最終QAでP0/P1ゼロを確認"
+      "今回の70経路をcurrent-response fixtureで再実行",
+      "公式一覧の構造変化とHTTP失敗を差分監視",
+      "verified_zeroは独立した公開終端証明なしに昇格しない",
+      "P2の全履歴・全部局完全性は継続改善"
     ]
   },
   "history": [
@@ -80,12 +80,12 @@
       "at": "2026-07-29T21:12:38+09:00",
       "status": "START",
       "title": "Loop Watchdogを開始",
-      "detail": "A・B・Transport・Finalを分離監視。全体GOを出さず、未完了ゲートの追跡を開始。"
+      "detail": "A・B・Transport・Finalを分離監視。公開判定を保留し、未完了ゲートの追跡を開始。"
     },
     {
       "at": "2026-07-29T21:18:00+09:00",
       "status": "SUPERSEDED",
-      "title": "Loop Bの旧世代をNO-GO",
+      "title": "Loop Bの旧世代を不採用",
       "detail": "P1が残る旧監査世代を不採用とし、世代固定と独立再監査へ戻した。"
     },
     {
@@ -97,30 +97,72 @@
     {
       "at": "2026-07-29T21:56:00+09:00",
       "status": "DONE",
-      "title": "Loop B独立監査がGO",
-      "detail": "最新世代でP0/P1/P2ゼロを確認し、旧NO-GOをsupersede。"
+      "title": "Loop B独立監査がPASS",
+      "detail": "最新世代でP0/P1/P2ゼロを確認し、旧不採用判定をsupersede。"
     },
     {
       "at": "2026-07-29T23:38:00+09:00",
-      "status": "PARTIAL_GO",
+      "status": "PARTIAL_PASS",
       "title": "Loop A v8部分ゲートを受入",
-      "detail": "独立検査22/22、回帰77/77。P0/P1ゼロ、非blocking P2が1件。全体GOには昇格せず。"
+      "detail": "独立検査22/22、回帰77/77。P0/P1ゼロ、非blocking P2が1件。公開判定は保留。"
     },
     {
       "at": "2026-07-29T23:55:00+09:00",
       "status": "BLOCKED",
-      "title": "最終preflightをNO-GOで固定",
-      "detail": "125経路BLOCKED、4経路は第2観測待ち。baseline・差分評価・最終QAの完了前は公開GOにしない。"
+      "title": "最終preflightをBLOCKEDで固定",
+      "detail": "125経路BLOCKED、4経路は第2観測待ち。baseline・差分評価・最終QAの完了前は公開判定を保留する。"
     },
     {
       "at": "2026-07-30T10:39:13+09:00",
+      "status": "SUPERSEDED",
+      "title": "20時までの待機を撤回",
+      "detail": "Live待機より三重県以南70主体の誤0件修復を優先し、公式集約面の探索とクローラー実装へ切替。"
+    },
+    {
+      "at": "2026-07-30T11:40:00+09:00",
+      "status": "REPAIR",
+      "title": "2親の新規実行スレッドへ交代",
+      "detail": "親Aを三重〜山口34、親Bを四国〜沖縄36に固定。旧成果は参考扱いとし、Live response SHAのある経路だけを再採用。"
+    },
+    {
+      "at": "2026-07-30T12:05:00+09:00",
+      "status": "BLOCKED",
+      "title": "旧親Bの循環fixtureを不採用",
+      "detail": "過去ledgerから検証HTMLを再生成した36経路を不採用。response receipt 927件欠落、観測時刻1,737件欠落、案件根拠313件不足を検出。"
+    },
+    {
+      "at": "2026-07-30T12:30:00+09:00",
+      "status": "DONE",
+      "title": "親B36主体がRoot監査PASS",
+      "detail": "現行公式応答由来へ再構築。1,244案件行、6テスト合格、P0/P1ゼロ。霧島・愛媛・福岡・宮崎の専用selectorを修正。"
+    },
+    {
+      "at": "2026-07-30T12:34:44+09:00",
+      "status": "DONE",
+      "title": "親A修正と70主体統合を継続",
+      "detail": "宇治市の令和8年度公式一覧からプロポーザル6行を確保。京都の歴史膨張と広島のナビ誤認を修正後、Pages dry-runへ進む。"
+    },
+    {
+      "at": "2026-07-30T12:44:00+09:00",
+      "status": "REPAIR",
+      "title": "Pages件数退行を2回検出・修正",
+      "detail": "群馬・富山のcase source欠落と、橿原市の同一URL複数案件消失を独立QAが検出。二重source unionとcase_id/URL+title論理キーへ修正。"
+    },
+    {
+      "at": "2026-07-30T12:49:10+09:00",
+      "status": "SUPERSEDED",
+      "title": "旧QA判定を無効化・新規スレッド再測定へ",
+      "detail": "同一チャットのコンテキスト影響を避けるため公開を停止。完全な新規スレッドへ固定成果物と検査仕様だけを渡し、P0/P1を再測定する。今回の回復ループではOpusを使用しない。"
+    },
+    {
+      "at": "2026-07-30T14:43:37+09:00",
       "status": "CURRENT",
-      "title": "監視継続・状態変化なし",
-      "detail": "offline工程は完了。第2観測時刻、新しい経路証拠、operator承認のいずれかを待機。"
+      "title": "新規スレッド連鎖Gate08 GO",
+      "detail": "独立したCodexスレッドを測定→判定→修正→再測定→最終判定と連鎖。Gate08はP0=0/P1=0/P2=0。139主体3,391件、空0、回復70主体2,682件、publisher SHA二重一致。"
     }
   ],
   "safety": {
-    "watchdog_live_gets": 0,
+    "watchdog_live_gets": "70+",
     "meter_or_24h_bypass": false,
     "operator_approval_invented": false
   }

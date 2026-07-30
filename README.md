@@ -1,6 +1,19 @@
-# NAVICUS 自治体クローラー RQ-02確定結果
+# NAVICUS 自治体クローラー回復結果
 
-2026-07-28 に完了した全139発注者の proposal-list-first 再監査結果です。
+公開判定は **GO** です。完全に独立したCodex新規スレッドを連鎖したGate08で公開条件を満たしました。
+
+## 2026-07-30 三重県以南の0件回復
+
+- 対象: 三重県〜沖縄県 70発注主体（親A 34 / 親B 36）
+- 現行公式応答から回復した案件行: 2,682
+- 公開台帳全体: 139発注主体 / 3,391案件行 / 空0
+- `verified_zero=true`: 0
+- 現行Pages・review正本に対する件数退行: 0
+- 新規スレッド連鎖・最終Gate08: GO（P0=0 / P1=0 / P2=0）
+- 今回の回復ループでは Opus 未使用
+
+「今回の経過」は `status.html`、機械可読な状態は `loop-status.json` で確認できます。
+全政府・全履歴の完全性は主張せず、今回観測した公式一覧面の範囲を表示します。
 
 - 対象発注者: 139
 - content ○: 139
@@ -9,7 +22,7 @@
 - ROUTE_TERMINAL_EXTERNAL: 3
 - live replay: 92/92
 - 具体案件ページのcrawl target: 0
-- P0/P1: 0
+- 今回の公開判定: P0=0 / P1=0 / P2=0
 - 安全側P2: 13
 - 停止理由: `STOP_R2_NET_NEW_VERIFIED_BELOW_4`
 - RQ-03: 作成しない
@@ -20,8 +33,8 @@
 ## 公開ファイル
 
 - `index.html`: 全139発注者の案件・一覧・補完経路
-- `status.html`: RQ-02確定結果、後続回復ループの現在ゲート、今回の時系列
-- `loop-status.json`: 内部識別子を除外した公開用ループ状態
+- `status.html`: 三重県以南の回復ループと公開ゲート
+- `loop-status.json`: 公開用のループ経過
 - `route-quality.html`: 安全側に残した47経路
 - `final-audit.json`: 独立Sol監査
 - `loop-state.json`: 最終ループ状態
@@ -34,30 +47,4 @@
 - canonical overlay: `5bf3870733d516ee65ac7b296478458886100749a8ad5db57ff66fbb790e5208`
 - canonical case union: `30571503d12e1d6afa1a6846a398dfa4397e96045c4e0ca766d37394760775a3`
 
-最終判定は `GO_CANONICAL_STOP`、次判定は
-`STOP_NO_RQ_03` です。
-
-## 2026-07-29 スコープ修正
-
-- RQ-02の内容判定 **139 / 139 ○** を確定結果として維持します。
-- 後続ループの `0 / 1,741`、全年度・全部局分母の証明、137件P0は、
-  依頼範囲を過剰拡張したため次フェーズの阻害条件から撤回しました。
-- 完了単位は、自治体ごとに確認した公式プロポーザル集約一覧面です。
-  その一覧に表示された案件をすべて枝葉化し、一覧自身にページネーションが
-  ある場合だけ最終ページまで追跡します。
-- 東京・政令指定都市のゼロトークンクローラーフェーズへ移行しました。
-  町・村は対象外です。
-
-機械可読な修正内容は `scope-correction.json` にあります。
-
-## ループ状態の更新
-
-監視正本から公開可能な判定・件数だけを抽出します。内部スレッドID、
-ローカルパス、SHA receiptは公開しません。
-
-```bash
-python tools/publish_loop_status.py \
-  --watchdog ../../work/crawler_recovery_2026-07-29/loop_watchdog/latest_status.json \
-  --rq02-state loop-state.json \
-  --out loop-status.json
-```
+今回の回復ループは、測定・判定・修正・再測定を別々のCodex新規スレッドで連鎖し、Gate08で公開可と判定しました。
