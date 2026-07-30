@@ -12,6 +12,16 @@ MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
 
 
+def test_dashboard_preserves_issuer_list_position_when_opening_detail() -> None:
+    html = MODULE_PATH.parent.parent.joinpath("index.html").read_text(encoding="utf-8")
+    assert "function captureListPosition()" in html
+    assert "function restoreListPosition(restoreWindow = false)" in html
+    assert "captureListPosition();" in html
+    assert "restoreListPosition(false);" in html
+    assert "restoreListPosition(true);" in html
+    assert "window.scrollTo(0, listWindowScrollY);" in html
+
+
 def test_merge_preserves_source_case_when_rq02_is_empty() -> None:
     source = [
         {
