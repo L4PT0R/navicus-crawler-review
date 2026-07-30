@@ -1,17 +1,17 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T11:41:10.095882Z",
+  "generated_at": "2026-07-30T12:09:32.006401Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4286,
+    "official_row_observation_count": 4296,
     "conclusion_counts": {
-      "UNDERCOUNT_SUSPECTED": 40,
+      "UNDERCOUNT_SUSPECTED": 41,
       "EXACT_CONFIRMED": 4,
-      "ROOT_INCOMPLETE": 19,
+      "ROOT_INCOMPLETE": 18,
       "PUBLIC_BOUNDARY_UNMEASURABLE": 5,
       "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1
     }
@@ -3020,123 +3020,264 @@
       "prefecture": "茨城県",
       "display_name": "水戸市",
       "lane": "B4",
-      "conclusion": "ROOT_INCOMPLETE",
+      "conclusion": "UNDERCOUNT_SUSPECTED",
       "pages_count": 1,
       "canonical_count": 1,
-      "official_rows": 0,
-      "details_reached": 3,
-      "delta": -1,
-      "confidence": "medium",
-      "root_url": "",
+      "official_rows": 10,
+      "details_reached": 10,
+      "delta": 9,
+      "confidence": "high",
+      "root_url": "https://www.city.mito.lg.jp/soshiki/list5-2.html",
       "route": {
         "root": {
-          "url": "https://www.city.mito.lg.jp/",
-          "label": "https://www.city.mito.lg.jp/"
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-2.html",
+          "label": "水戸市 全庁『募集』カテゴリ"
         },
         "branches": [
           {
-            "label": "雇用・労働支援",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "募集カテゴリ 1ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-1.html",
+            "role": "pagination",
+            "case_count": 2,
+            "scanned": true,
+            "details": [
+              {
+                "label": "国補内原駅北出会いの広場公園遊具改築工事に係る公募型プロポーザルを実施しました",
+                "url": "https://www.city.mito.lg.jp/page/127948.html"
+              },
+              {
+                "label": "東部公園スポレクゾーンサッカー場人工芝設置工事に係る公募型プロポーザルを実施しました",
+                "url": "https://www.city.mito.lg.jp/page/124878.html"
+              }
+            ]
           },
           {
-            "label": "教育委員会",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "募集カテゴリ 2ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-2.html",
+            "role": "pagination",
+            "case_count": 2,
+            "scanned": true,
+            "details": [
+              {
+                "label": "（7月7日更新）水戸市創業機運醸成・フォローアップ事業業務委託 公募型プロポーザル実施について",
+                "url": "https://www.city.mito.lg.jp/page/123289.html"
+              },
+              {
+                "label": "【7月7日更新】動画を活用した子育て世帯向けシティプロモーション業務委託 プロポーザル実施について",
+                "url": "https://www.city.mito.lg.jp/page/128421.html"
+              }
+            ]
           },
           {
-            "label": "環境保全課",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "募集カテゴリ 3ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-3.html",
+            "role": "pagination",
+            "case_count": 0,
+            "scanned": true,
+            "details": []
           },
           {
-            "label": "産業振興",
-            "url": "",
-            "role": "branch",
-            "case_count": 0
+            "label": "募集カテゴリ 4ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-4.html",
+            "role": "pagination",
+            "case_count": 3,
+            "scanned": true,
+            "details": [
+              {
+                "label": "水戸で「働く」暮らし体験事業（ふるさとワーキングホリデー・水戸） 企画運営業務委託プロポーザル実施について",
+                "url": "https://www.city.mito.lg.jp/page/126905.html"
+              },
+              {
+                "label": "清掃工場「えこみっと」における発電電力の自己託送等に関するプロポーザルを実施します（令和8年6月17日更新）",
+                "url": "https://www.city.mito.lg.jp/page/126722.html"
+              },
+              {
+                "label": "【事業者を選定しました】水戸市電気自動車用充電設備更新等業務に係るプロポーザルを実施します",
+                "url": "https://www.city.mito.lg.jp/page/122370.html"
+              }
+            ]
+          },
+          {
+            "label": "募集カテゴリ 5ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-5.html",
+            "role": "pagination",
+            "case_count": 0,
+            "scanned": true,
+            "details": []
+          },
+          {
+            "label": "募集カテゴリ 6ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-6.html",
+            "role": "pagination",
+            "case_count": 2,
+            "scanned": true,
+            "details": [
+              {
+                "label": "【事業者を選定しました】水戸城公式ガイドブック制作業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.mito.lg.jp/site/education/98831.html"
+              },
+              {
+                "label": "【事業者を選定しました】水戸市電気自動車充電設備設置等業務に係るプロポーザルを実施します",
+                "url": "https://www.city.mito.lg.jp/page/98692.html"
+              }
+            ]
+          },
+          {
+            "label": "募集カテゴリ 7ページ目",
+            "url": "https://www.city.mito.lg.jp/soshiki/list5-7.html",
+            "role": "pagination",
+            "case_count": 1,
+            "scanned": true,
+            "details": [
+              {
+                "label": "電子契約サービス導入プロポーザル実施について",
+                "url": "https://www.city.mito.lg.jp/page/34970.html"
+              }
+            ]
           }
         ]
       },
       "checked_urls": [
         {
-          "url": "https://www.city.mito.lg.jp/life/sub/13/29/",
-          "label": "https://www.city.mito.lg.jp/life/sub/13/29/"
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-2.html",
+          "label": "募集カテゴリ 2ページ目"
         },
         {
-          "url": "https://www.city.mito.lg.jp/life/sub/13/",
-          "label": "https://www.city.mito.lg.jp/life/sub/13/"
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-1.html",
+          "label": "募集カテゴリ 1ページ目"
         },
         {
-          "url": "https://www.city.mito.lg.jp/soshiki/list8-1.html",
-          "label": "https://www.city.mito.lg.jp/soshiki/list8-1.html"
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-3.html",
+          "label": "募集カテゴリ 3ページ目"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-4.html",
+          "label": "募集カテゴリ 4ページ目"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-5.html",
+          "label": "募集カテゴリ 5ページ目"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-6.html",
+          "label": "募集カテゴリ 6ページ目"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/soshiki/list5-7.html",
+          "label": "募集カテゴリ 7ページ目"
         },
         {
           "url": "https://www.city.mito.lg.jp/page/123289.html",
-          "label": "https://www.city.mito.lg.jp/page/123289.html"
+          "label": "（7月7日更新）水戸市創業機運醸成・フォローアップ事業業務委託 公募型プロポーザル実施について"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/128421.html",
+          "label": "【7月7日更新】動画を活用した子育て世帯向けシティプロモーション業務委託 プロポーザル実施について"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/127948.html",
+          "label": "国補内原駅北出会いの広場公園遊具改築工事に係る公募型プロポーザルを実施しました"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/124878.html",
+          "label": "東部公園スポレクゾーンサッカー場人工芝設置工事に係る公募型プロポーザルを実施しました"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/126905.html",
+          "label": "水戸で「働く」暮らし体験事業（ふるさとワーキングホリデー・水戸） 企画運営業務委託プロポーザル実施について"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/126722.html",
+          "label": "清掃工場「えこみっと」における発電電力の自己託送等に関するプロポーザルを実施します（令和8年6月17日更新）"
         },
         {
           "url": "https://www.city.mito.lg.jp/page/122370.html",
-          "label": "https://www.city.mito.lg.jp/page/122370.html"
+          "label": "【事業者を選定しました】水戸市電気自動車用充電設備更新等業務に係るプロポーザルを実施します"
         },
         {
           "url": "https://www.city.mito.lg.jp/site/education/98831.html",
-          "label": "https://www.city.mito.lg.jp/site/education/98831.html"
+          "label": "【事業者を選定しました】水戸城公式ガイドブック制作業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/98692.html",
+          "label": "【事業者を選定しました】水戸市電気自動車充電設備設置等業務に係るプロポーザルを実施します"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/page/34970.html",
+          "label": "電子契約サービス導入プロポーザル実施について"
         }
       ],
       "missing_candidates": [
         {
-          "title": "未収載候補",
-          "url": "",
-          "status": "要確認"
+          "title": "【7月7日更新】動画を活用した子育て世帯向けシティプロモーション業務委託 プロポーザル実施について",
+          "url": "https://www.city.mito.lg.jp/page/128421.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "国補内原駅北出会いの広場公園遊具改築工事に係る公募型プロポーザルを実施しました",
+          "url": "https://www.city.mito.lg.jp/page/127948.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "東部公園スポレクゾーンサッカー場人工芝設置工事に係る公募型プロポーザルを実施しました",
+          "url": "https://www.city.mito.lg.jp/page/124878.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "水戸で「働く」暮らし体験事業（ふるさとワーキングホリデー・水戸） 企画運営業務委託プロポーザル実施について",
+          "url": "https://www.city.mito.lg.jp/page/126905.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "清掃工場「えこみっと」における発電電力の自己託送等に関するプロポーザルを実施します（令和8年6月17日更新）",
+          "url": "https://www.city.mito.lg.jp/page/126722.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "【事業者を選定しました】水戸市電気自動車用充電設備更新等業務に係るプロポーザルを実施します",
+          "url": "https://www.city.mito.lg.jp/page/122370.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "【事業者を選定しました】水戸城公式ガイドブック制作業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.mito.lg.jp/site/education/98831.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "【事業者を選定しました】水戸市電気自動車充電設備設置等業務に係るプロポーザルを実施します",
+          "url": "https://www.city.mito.lg.jp/page/98692.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
+        },
+        {
+          "title": "電子契約サービス導入プロポーザル実施について",
+          "url": "https://www.city.mito.lg.jp/page/34970.html",
+          "status": "公式詳細確認済み・Pages未収載候補"
         }
       ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypothesis": "既存route registry起点を全踏破",
-          "checked_urls": [
-            "https://www.city.mito.lg.jp/life/sub/13/29/",
-            "https://www.city.mito.lg.jp/page/123289.html"
-          ],
-          "result": "既存起点は雇用・労働支援の部局カテゴリで、現観測時のプロポーザル案件行は0"
+          "result": "ユーザー指定の全庁『募集』カテゴリを起点として採用"
         },
         {
           "round": 2,
-          "hypothesis": "年度・部局・パンくず別root",
-          "checked_urls": [
-            "https://www.city.mito.lg.jp/life/sub/13/",
-            "https://www.city.mito.lg.jp/site/education/98831.html",
-            "https://www.city.mito.lg.jp/page/122370.html"
-          ],
-          "result": "教育委員会・環境保全課・産業振興系に詳細が分散し、単一全庁一覧を確認できず"
+          "result": "公開ページ1〜7を全踏破し209行を保存則で分類"
         },
         {
           "round": 3,
-          "hypothesis": "公式全体起点・別年度・サイト内検索の独立仮説",
-          "checked_urls": [
-            "https://www.city.mito.lg.jp/soshiki/list8-1.html",
-            "https://www.city.mito.lg.jp/page/118876.html",
-            "https://www.city.mito.lg.jp/page/119925.html",
-            "https://www.city.mito.lg.jp/site/education/115805.html",
-            "https://www.city.mito.lg.jp/page/101220.html",
-            "https://www.city.mito.lg.jp/page/99953.html"
-          ],
-          "result": "検索で想起した過去詳細5件はlive GETで404。発注者全体の有限公開境界を確定できずmanual queue対象"
+          "result": "候補10件すべての同一公式ホスト詳細でプロポーザル方式を確認"
         }
       ],
       "pagination_evidence": [
         {
-          "root": "https://www.city.mito.lg.jp/life/sub/13/29/",
-          "next_link": false,
-          "public_end_observed": true,
-          "meaning": "部局カテゴリの末尾であり全庁境界ではない"
+          "visited_page_count": 7,
+          "pagination_terminal": true,
+          "visible_unique_row_count": 209,
+          "row_conservation_pass": true
         }
       ],
-      "observed_at": "2026-07-30T19:45:08+09:00"
+      "observed_at": "2026-07-30"
     },
     {
       "issuer_id": "shared:08:ibaraki_portal_discovery",

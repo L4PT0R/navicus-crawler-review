@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,6 +15,7 @@ REPO = Path(__file__).resolve().parents[1]
 WORKSPACE = REPO.parents[1]
 RUN = WORKSPACE / "work/mie_north_case_count_reaudit_2026-07-30/run_01"
 OUT = REPO / "north-audit-data.json"
+MITO_RESULT = WORKSPACE / "work/mito_citywide_recruitment_2026-07-30/result.json"
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -115,6 +117,86 @@ def route_payload(record: dict, fallback_root: str, checked: list[dict[str, str]
     return {"root": root, "branches": branches[:20]}
 
 
+def current_pages_case_urls(issuer_id: str) -> set[str]:
+    html_text = (REPO / "index.html").read_text(encoding="utf-8")
+    match = re.search(r'<script id="seed-data" type="application/json">(.*?)</script>', html_text, re.S)
+    if not match:
+        return set()
+    seed = json.loads(match.group(1))
+    item = next((row for row in seed.get("items", []) if row.get("issuer_id") == issuer_id), {})
+    return {str(case.get("official_url") or "") for case in item.get("cases", []) if case.get("official_url")}
+
+
+def apply_mito_live_overlay(items: list[dict]) -> None:
+    if not MITO_RESULT.exists():
+        return
+    result = json.loads(MITO_RESULT.read_text(encoding="utf-8"))
+    if result.get("issuer_id") != "muni:082015" or not result.get("row_conservation_pass"):
+        return
+    target = next((item for item in items if item["issuer_id"] == "muni:082015"), None)
+    if target is None:
+        return
+    cases = result.get("cases") or []
+    grouped: dict[str, list[dict]] = {}
+    for case in cases:
+        grouped.setdefault(case.get("source_page_url") or result["crawl_root_url"], []).append(case)
+    def page_number(url: str) -> int:
+        match = re.search(r"list5-(\d+)\.html", url)
+        return int(match.group(1)) if match else 999
+    branches = []
+    for page_url in sorted(result.get("visited_pages", []), key=page_number):
+        page_cases = grouped.get(page_url, [])
+        number = page_number(page_url)
+        branches.append({
+            "label": f"募集カテゴリ {number}ページ目" if number != 999 else "募集カテゴリ",
+            "url": page_url,
+            "role": "pagination",
+            "case_count": len(page_cases),
+            "scanned": True,
+            "details": [
+                {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                for case in page_cases
+            ],
+        })
+    existing_urls = current_pages_case_urls("muni:082015")
+    target.update({
+        "official_rows": result.get("confirmed_case_count", 0),
+        "details_reached": result.get("confirmed_case_count", 0),
+        "delta": result.get("confirmed_case_count", 0) - target["pages_count"],
+        "conclusion": "UNDERCOUNT_SUSPECTED",
+        "confidence": "high",
+        "root_url": result["crawl_root_url"],
+        "route": {
+            "root": {"url": result["crawl_root_url"], "label": "水戸市 全庁『募集』カテゴリ"},
+            "branches": branches,
+        },
+        "checked_urls": [
+            {"url": url, "label": f"募集カテゴリ {page_number(url)}ページ目"}
+            for url in result.get("visited_pages", [])
+        ] + [
+            {"url": case["official_url"], "label": case["title"]}
+            for case in cases
+        ],
+        "missing_candidates": [
+            {"title": case["title"], "url": case["official_url"], "status": "公式詳細確認済み・Pages未収載候補"}
+            for case in cases if case.get("official_url") not in existing_urls
+        ],
+        "duplicate_groups": [],
+        "discovery_rounds": [
+            {"round": 1, "result": "ユーザー指定の全庁『募集』カテゴリを起点として採用"},
+            {"round": 2, "result": "公開ページ1〜7を全踏破し209行を保存則で分類"},
+            {"round": 3, "result": "候補10件すべての同一公式ホスト詳細でプロポーザル方式を確認"},
+        ],
+        "pagination_evidence": [{
+            "visited_page_count": result.get("visited_page_count"),
+            "pagination_terminal": result.get("pagination_terminal"),
+            "visible_unique_row_count": result.get("visible_unique_row_count"),
+            "row_conservation_pass": result.get("row_conservation_pass"),
+        }],
+        "observed_at": result.get("observed_at", ""),
+    })
+
+
 def main() -> None:
     scope = {row["issuer_id"]: row for row in load_csv(RUN / "target_scope.csv")}
     summaries: list[dict[str, str]] = []
@@ -164,6 +246,7 @@ def main() -> None:
             "observed_at": record.get("observed_at", ""),
         })
     items.sort(key=lambda row: (row["prefecture_code"], row["display_name"]))
+    apply_mito_live_overlay(items)
     counts = Counter(item["conclusion"] for item in items)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",
