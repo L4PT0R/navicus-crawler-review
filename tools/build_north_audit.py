@@ -16,6 +16,8 @@ WORKSPACE = REPO.parents[1]
 RUN = WORKSPACE / "work/mie_north_case_count_reaudit_2026-07-30/run_01"
 OUT = REPO / "north-audit-data.json"
 MITO_RESULT = WORKSPACE / "work/mito_citywide_recruitment_2026-07-30/result.json"
+LIST_REPAIR_ROOT = WORKSPACE / "work/municipal_proposal_list_repair_2026-07-30"
+SAPPORO_RESULT = WORKSPACE / "work/sapporo_current_procurement_2026-07-30/result.json"
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -86,12 +88,15 @@ def route_payload(record: dict, fallback_root: str, checked: list[dict[str, str]
     root = normalize_url(root_value) or normalize_url(fallback_root) or (checked[0] if checked else None)
     branches: list[dict] = []
     if isinstance(graph, dict):
-        for branch in graph.get("branches") or []:
+        pending_branches = list(graph.get("branches") or [])
+        while pending_branches:
+            branch = pending_branches.pop(0)
             if isinstance(branch, str):
                 branches.append({"label": branch, "url": "", "role": "branch", "case_count": 0})
                 continue
             if not isinstance(branch, dict):
                 continue
+            pending_branches.extend(child for child in (branch.get("children") or []) if isinstance(child, (dict, str)))
             url_item = normalize_url(branch)
             details = branch.get("case_details")
             detail_urls = []
@@ -102,7 +107,7 @@ def route_payload(record: dict, fallback_root: str, checked: list[dict[str, str]
                 "url": (url_item or {}).get("url", ""),
                 "role": str(branch.get("role") or "branch"),
                 "case_count": as_int(branch.get("rows") or branch.get("case_count") or (len(detail_urls) if detail_urls else 0)),
-                "details": detail_urls[:12],
+                "details": detail_urls,
             })
     if not branches and root:
         branch_sources = checked[1:6] or [root]
@@ -114,7 +119,7 @@ def route_payload(record: dict, fallback_root: str, checked: list[dict[str, str]
                 "case_count": as_int(record.get("official_list_case_count")) if index == 0 else 0,
                 "details": [],
             })
-    return {"root": root, "branches": branches[:20]}
+    return {"root": root, "branches": branches}
 
 
 def current_pages_case_urls(issuer_id: str) -> set[str]:
@@ -197,6 +202,183 @@ def apply_mito_live_overlay(items: list[dict]) -> None:
     })
 
 
+def apply_full_list_repair_overlays(items: list[dict]) -> None:
+    """Replace frozen/current-only counts with conserved official-list results."""
+    if not LIST_REPAIR_ROOT.exists():
+        return
+    for result_path in sorted(LIST_REPAIR_ROOT.glob("*.json")):
+        result = json.loads(result_path.read_text(encoding="utf-8"))
+        if result.get("schema_version") != "navicus_municipal_proposal_list_v1":
+            continue
+        if not result.get("row_conservation_pass") or result.get("raw_html_persisted"):
+            continue
+        target = next((item for item in items if item["issuer_id"] == result.get("issuer_id")), None)
+        if target is None:
+            continue
+        cases = result.get("cases") or []
+        existing_urls = current_pages_case_urls(target["issuer_id"])
+        reached = as_int(result.get("detail_reached_count"))
+        confirmed = as_int(result.get("detail_proposal_confirmed_count"))
+        total = as_int(result.get("proposal_list_case_count"))
+        conclusion = "OFFICIAL_LIST_ENUMERATED"
+        # Dedicated official-list membership is sufficient for the audit count;
+        # body keyword confirmation is a separate content-quality signal because
+        # official sub-sites may use a different main-content container.
+        if result.get("detail_check_enabled") and reached < total:
+            conclusion = "DETAIL_REVIEW_REQUIRED"
+        target.update({
+            "official_rows": total,
+            "details_reached": reached,
+            "delta": total - target["pages_count"],
+            "conclusion": conclusion,
+            "confidence": "high" if result.get("detail_check_enabled") and reached == total else "medium",
+            "root_url": result["crawl_root_url"],
+            "route": {
+                "root": {"url": result["official_entry_url"], "label": f"{result['display_name']}公式サイト"},
+                "branches": [{
+                    "label": result.get("root_scope") or "全庁公式一覧",
+                    "url": result["crawl_root_url"],
+                    "role": "whole_site_proposal_category",
+                    "case_count": total,
+                    "scanned": True,
+                    "details": [
+                        {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                        for case in cases
+                    ],
+                }],
+            },
+            "checked_urls": [
+                {"url": result["crawl_root_url"], "label": result.get("root_scope") or "全庁公式一覧"},
+            ] + [
+                {"url": case["official_url"], "label": case["title"]} for case in cases
+            ],
+            "missing_candidates": [
+                {"title": case["title"], "url": case["official_url"], "status": "公式一覧掲載・Pages未収載"}
+                for case in cases if case.get("official_url") not in existing_urls
+            ],
+            "duplicate_groups": [],
+            "discovery_rounds": [
+                {"round": 1, "result": "既知案件ではなく、自治体公式一覧そのものを母集団として固定"},
+                {"round": 2, "result": f"表示{result.get('visible_unique_row_count', 0)}行を、プロポーザル{total}件・対象外{result.get('non_proposal_row_count', 0)}行へ保存的に分類"},
+                {"round": 3, "result": f"案件詳細へ{reached}/{total}件到達し、方式確認{confirmed}/{total}件"},
+            ],
+            "pagination_evidence": [{
+                "visible_unique_row_count": result.get("visible_unique_row_count"),
+                "proposal_list_case_count": total,
+                "non_proposal_row_count": result.get("non_proposal_row_count"),
+                "row_conservation_pass": True,
+                "frozen_case_seed_used": False,
+            }],
+            "observed_at": result.get("observed_at", ""),
+        })
+
+
+def apply_sapporo_attachment_overlay(items: list[dict]) -> None:
+    if not SAPPORO_RESULT.exists():
+        return
+    result = json.loads(SAPPORO_RESULT.read_text(encoding="utf-8"))
+    if (
+        result.get("schema_version") != "navicus_sapporo_current_procurement_v1"
+        or not result.get("row_conservation_pass")
+        or result.get("document_raw_saved")
+    ):
+        return
+    target = next((item for item in items if item["issuer_id"] == "muni:011002"), None)
+    if target is None:
+        return
+    city_root, policy_root = result["current_root_urls"]
+    city_cases = [case for case in result.get("cases", []) if case.get("source_list_url") == city_root]
+    policy_cases = [case for case in result.get("cases", []) if case.get("source_list_url") == policy_root]
+    proposal_count = as_int(result.get("citywide_proposal_occurrence_count"))
+    selected_document = result.get("selected_document_url") or ""
+    individual_city_cases = [case for case in city_cases if case.get("official_url") and case.get("official_url") != selected_document]
+    attempts = result.get("attachment_attempts") or []
+    attachment_details = [
+        {"label": f"{attempt.get('kind', '').upper()} {attempt.get('status', '')}", "url": attempt.get("url", "")}
+        for attempt in attempts if attempt.get("url")
+    ]
+    archive_branches = [
+        {
+            "label": "政策企画部・年度別結果（現行件数から除外）",
+            "url": archive,
+            "role": "result_archive",
+            "case_count": 0,
+            "scanned": True,
+            "details": [],
+        }
+        for archive in result.get("result_archive_urls") or []
+    ]
+    target.update({
+        "official_rows": proposal_count,
+        "details_reached": len({case.get("official_url") for case in individual_city_cases if case.get("official_url")}),
+        "delta": proposal_count - target["pages_count"],
+        "conclusion": "ROOT_INCOMPLETE",
+        "confidence": "high",
+        "root_url": city_root,
+        "route": {
+            "root": {"url": "https://www.city.sapporo.jp/", "label": "札幌市公式サイト"},
+            "branches": [
+                {
+                    "label": f"市長部局全体・現在公募 → {result.get('selected_document_kind', '').upper()}本文{result.get('citywide_document_row_count', 0)}行",
+                    "url": city_root,
+                    "role": "whole_site_current_procurement_attachment_list",
+                    "case_count": proposal_count,
+                    "scanned": True,
+                    "details": [
+                        {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                        for case in city_cases
+                    ],
+                },
+                {
+                    "label": "政策企画部・現在案件（部局限定）",
+                    "url": policy_root,
+                    "role": "department_proposal_list",
+                    "case_count": as_int(result.get("policy_proposal_occurrence_count")),
+                    "scanned": True,
+                    "details": [
+                        {"label": case.get("title") or case.get("official_url"), "url": case.get("official_url")}
+                        for case in policy_cases
+                    ],
+                },
+            ] + archive_branches,
+        },
+        "checked_urls": [
+            {"url": city_root, "label": "市長部局全体・公募中案件一覧"},
+            {"url": policy_root, "label": "政策企画部・現在案件"},
+        ] + attachment_details + [
+            {"url": url, "label": "政策企画部・年度別結果（除外）"}
+            for url in result.get("result_archive_urls") or []
+        ] + [
+            {"url": case["official_url"], "label": case["title"]} for case in policy_cases
+        ],
+        "missing_candidates": [
+            {
+                "title": case.get("title") or "添付文書内案件",
+                "url": selected_document,
+                "status": "PDF/Excel本文から抽出・個別案件URLの確定が必要",
+            }
+            for case in city_cases if case.get("official_url") == selected_document
+        ],
+        "duplicate_groups": [],
+        "discovery_rounds": [
+            {"round": 1, "result": "ipankyousou.htmlを政策企画部の現在案件枝として固定し、R7/R6結果URLを現行探索から除外"},
+            {"round": 2, "result": f"市長部局全体のippan-koubo添付を{result.get('selected_document_kind', '').upper()}から本文抽出"},
+            {"round": 3, "result": f"添付{result.get('citywide_document_row_count', 0)}行から公募型企画競争{proposal_count}件を分類。個別詳細URLの完全到達は継続課題"},
+        ],
+        "pagination_evidence": [{
+            "selected_document_url": selected_document,
+            "selected_document_kind": result.get("selected_document_kind"),
+            "document_sha256": result.get("document_sha256"),
+            "citywide_document_row_count": result.get("citywide_document_row_count"),
+            "citywide_proposal_occurrence_count": proposal_count,
+            "citywide_non_proposal_count": result.get("citywide_non_proposal_count"),
+            "row_conservation_pass": True,
+            "result_archives_excluded": result.get("result_archives_seen_and_excluded"),
+        }],
+        "observed_at": result.get("observed_at", ""),
+    })
+
+
 def main() -> None:
     scope = {row["issuer_id"]: row for row in load_csv(RUN / "target_scope.csv")}
     summaries: list[dict[str, str]] = []
@@ -236,10 +418,10 @@ def main() -> None:
             "details_reached": as_int(summary.get("official_detail_reached_count")),
             "delta": as_int(summary.get("delta")),
             "confidence": summary.get("confidence", "unknown"),
-            "root_url": meta.get("root_url", ""),
-            "route": route_payload(record, meta.get("root_url", ""), checked),
-            "checked_urls": checked[:30],
-            "missing_candidates": missing[:30],
+            "root_url": meta.get("canonical_crawl_target_url", ""),
+            "route": route_payload(record, meta.get("canonical_crawl_target_url", ""), checked),
+            "checked_urls": checked,
+            "missing_candidates": missing,
             "duplicate_groups": (record.get("duplicate_groups") or [])[:12],
             "discovery_rounds": (record.get("discovery_rounds") or [])[:3],
             "pagination_evidence": (record.get("pagination_evidence") or [])[:20],
@@ -247,6 +429,8 @@ def main() -> None:
         })
     items.sort(key=lambda row: (row["prefecture_code"], row["display_name"]))
     apply_mito_live_overlay(items)
+    apply_full_list_repair_overlays(items)
+    apply_sapporo_attachment_overlay(items)
     counts = Counter(item["conclusion"] for item in items)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",

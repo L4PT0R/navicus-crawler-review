@@ -1,18 +1,19 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T12:09:32.006401Z",
+  "generated_at": "2026-07-30T12:54:50.846895Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
   "summary": {
     "issuer_count": 69,
     "pages_count": 405,
-    "official_row_observation_count": 4296,
+    "official_row_observation_count": 4414,
     "conclusion_counts": {
       "UNDERCOUNT_SUSPECTED": 41,
-      "EXACT_CONFIRMED": 4,
+      "OFFICIAL_LIST_ENUMERATED": 3,
       "ROOT_INCOMPLETE": 18,
       "PUBLIC_BOUNDARY_UNMEASURABLE": 5,
+      "EXACT_CONFIRMED": 1,
       "OVERCOUNT_OR_DUPLICATE_SUSPECTED": 1
     }
   },
@@ -201,33 +202,222 @@
       "prefecture": "北海道",
       "display_name": "旭川市",
       "lane": "A3",
-      "conclusion": "EXACT_CONFIRMED",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 2,
       "canonical_count": 2,
-      "official_rows": 2,
-      "details_reached": 2,
-      "delta": 0,
+      "official_rows": 49,
+      "details_reached": 49,
+      "delta": 47,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html",
       "route": {
         "root": {
           "url": "https://www.city.asahikawa.hokkaido.jp/",
-          "label": "https://www.city.asahikawa.hokkaido.jp/"
+          "label": "旭川市公式サイト"
         },
         "branches": [
           {
-            "label": "委託・賃貸借 list",
+            "label": "全庁の委託・賃貸借公開一覧（混合調達）",
             "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html",
-            "role": "委託・賃貸借 list",
-            "case_count": 2,
+            "role": "whole_site_proposal_category",
+            "case_count": 49,
+            "scanned": true,
             "details": [
               {
-                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084447.html",
-                "label": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084447.html"
+                "label": "【募集】防災啓発用ＶＲ動画作成業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084520.html"
               },
               {
-                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084438.html",
-                "label": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084438.html"
+                "label": "(募集)令和8年度旭川市情報発信動画制作業務公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084447.html"
+              },
+              {
+                "label": "【終了しました】旭川市街頭防犯カメラ整備業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084086.html"
+              },
+              {
+                "label": "（募集）旭川市ＳＮＳ運用自走化支援業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084438.html"
+              },
+              {
+                "label": "【終了しました】令和8年度 神居古潭 魔神伝説ＡＲ整備事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083945.html"
+              },
+              {
+                "label": "【終了しました】年末調整業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084024.html"
+              },
+              {
+                "label": "【公募終了・結果公表】人材マネジメントシステム構築等業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/20000000/20150000/d084021.html"
+              },
+              {
+                "label": "【終了しました】R8未来の起業家を育てる起業体験等プログラム事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11220/d083823.html"
+              },
+              {
+                "label": "【終了しました】スタートアップ支援施設構想検討プロジェクト事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11221/d083827.html"
+              },
+              {
+                "label": "旭川市運動部活動地域展開ホームページ作成等業務委託指名型プロポーザルの審査結果について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084112.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市次世代窓口「旭川モデル」構築業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d083612.html"
+              },
+              {
+                "label": "【結果公表】令和8年度居場所づくり事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083811.html"
+              },
+              {
+                "label": "【終了しました】令和8年度「あさいち」開催業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/501/502/d083846.html"
+              },
+              {
+                "label": "【終了しました】旭川中核企業成長支援事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/501/508/d083845.html"
+              },
+              {
+                "label": "【結果公表】女性デジタルクリエイティブ人材育成事業に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083800.html"
+              },
+              {
+                "label": "（結果公表）「中核市サミット2026in旭川」開催業務公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083485.html"
+              },
+              {
+                "label": "(公募終了・結果公表)買物公園広場化等実装業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/18000000/65100001/d083376.html"
+              },
+              {
+                "label": "（結果公表）「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d083023.html"
+              },
+              {
+                "label": "【公募終了・結果発表】粗大ごみ収集配車管理システム開発業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082729.html"
+              },
+              {
+                "label": "「旭川市子育てガイドブック」2026年度版協働発行事業実施に係る公募型プロポーザル参加事業者の募集",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082677.html"
+              },
+              {
+                "label": "旭川市民文化会館管理等業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083187.html"
+              },
+              {
+                "label": "旭川市民文化会館舞台設備操作等業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083185.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市災害時緊急情報配信システム整備業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081852.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市企業情報提供サイト改修等業務公募型プロポーザル実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081809.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市税・国保等の帳票印刷に係るBPO業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081677.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市統合型GIS・公開型GIS導入業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081532.html"
+              },
+              {
+                "label": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d081259.html"
+              },
+              {
+                "label": "(結果公表)令和7年度「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d080915.html"
+              },
+              {
+                "label": "旭川市図書館情報システム賃貸借業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081262.html"
+              },
+              {
+                "label": "(公募終了・結果公表)旭川市ふるさと納税返礼品支援等業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081142.html"
+              },
+              {
+                "label": "あさひかわの除排雪周知啓発強化業務に係る公募型プロポーザルの実施について【公募終了・結果発表】",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d080223.html"
+              },
+              {
+                "label": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/55000000/55100000/d080051.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市史デジタルアーカイブ構築業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/329/348/363/d079752.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市BPO導入可能性調査業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d079600.html"
+              },
+              {
+                "label": "積雪状況監視・通報システム構築運用業務に係る公募型プロポーザルの実施について【公募終了・結果発表】",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079847.html"
+              },
+              {
+                "label": "【公募終了・結果発表】旭川市総合窓口改革企画・試行業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079366.html"
+              },
+              {
+                "label": "ＡＩを活用した旭川市民生委員児童委員活動支援等業務公募型プロポーザルの公募について【結果の公表】",
+                "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d079517.html"
+              },
+              {
+                "label": "令和6年度 旭川市地域企業魅力発見支援業務公募型プロポーザル実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077354.html"
+              },
+              {
+                "label": "広告入り窓口用封筒無償提供業務に係る公募型プロポーザルの実施について（募集は終了しました）（結果について公表します）",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079014.html"
+              },
+              {
+                "label": "【結果の公表】旭川市おやこサポート事業実施業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078967.html"
+              },
+              {
+                "label": "(終了)旭川市地域見守りアプリ開発業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078407.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市AIチャットボット構築運用業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077377.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市学校施設照明ＬＥＤ化（ＥＳＣＯ事業）業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077639.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市遠隔窓口構築運用業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077368.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市次世代総合窓口グランドデザイン作成支援業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077267.html"
+              },
+              {
+                "label": "【公募終了・結果公表】ＡＩ文字起こしツール賃貸借業務に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077286.html"
+              },
+              {
+                "label": "【公募終了・結果公表】旭川市業務改善分析・支援業務委託に係る公募型プロポーザルの実施について",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077284.html"
+              },
+              {
+                "label": "旭川市科学館展示製作設置業務公募型プロポーザルの実施について（終了）",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d076741.html"
+              },
+              {
+                "label": "旭川市地域情報共有プラットフォーム開発業務に係る公募型プロポーザルの実施について(終了)",
+                "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d075747.html"
               }
             ]
           }
@@ -235,45 +425,468 @@
       },
       "checked_urls": [
         {
-          "url": "https://www.city.asahikawa.hokkaido.jp/",
-          "label": "https://www.city.asahikawa.hokkaido.jp/"
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html",
+          "label": "全庁の委託・賃貸借公開一覧（混合調達）"
         },
         {
-          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html",
-          "label": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html"
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084520.html",
+          "label": "【募集】防災啓発用ＶＲ動画作成業務委託に係る公募型プロポーザルの実施について"
         },
         {
           "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084447.html",
-          "label": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084447.html"
+          "label": "(募集)令和8年度旭川市情報発信動画制作業務公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084086.html",
+          "label": "【終了しました】旭川市街頭防犯カメラ整備業務委託に係る公募型プロポーザルの実施について"
         },
         {
           "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084438.html",
-          "label": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d084438.html"
+          "label": "（募集）旭川市ＳＮＳ運用自走化支援業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083945.html",
+          "label": "【終了しました】令和8年度 神居古潭 魔神伝説ＡＲ整備事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084024.html",
+          "label": "【終了しました】年末調整業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/20000000/20150000/d084021.html",
+          "label": "【公募終了・結果公表】人材マネジメントシステム構築等業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11220/d083823.html",
+          "label": "【終了しました】R8未来の起業家を育てる起業体験等プログラム事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11221/d083827.html",
+          "label": "【終了しました】スタートアップ支援施設構想検討プロジェクト事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084112.html",
+          "label": "旭川市運動部活動地域展開ホームページ作成等業務委託指名型プロポーザルの審査結果について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d083612.html",
+          "label": "【公募終了・結果公表】旭川市次世代窓口「旭川モデル」構築業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083811.html",
+          "label": "【結果公表】令和8年度居場所づくり事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/501/502/d083846.html",
+          "label": "【終了しました】令和8年度「あさいち」開催業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/501/508/d083845.html",
+          "label": "【終了しました】旭川中核企業成長支援事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083800.html",
+          "label": "【結果公表】女性デジタルクリエイティブ人材育成事業に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083485.html",
+          "label": "（結果公表）「中核市サミット2026in旭川」開催業務公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/18000000/65100001/d083376.html",
+          "label": "(公募終了・結果公表)買物公園広場化等実装業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d083023.html",
+          "label": "（結果公表）「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082729.html",
+          "label": "【公募終了・結果発表】粗大ごみ収集配車管理システム開発業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082677.html",
+          "label": "「旭川市子育てガイドブック」2026年度版協働発行事業実施に係る公募型プロポーザル参加事業者の募集"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083187.html",
+          "label": "旭川市民文化会館管理等業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083185.html",
+          "label": "旭川市民文化会館舞台設備操作等業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081852.html",
+          "label": "【公募終了・結果公表】旭川市災害時緊急情報配信システム整備業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081809.html",
+          "label": "【公募終了・結果公表】旭川市企業情報提供サイト改修等業務公募型プロポーザル実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081677.html",
+          "label": "【公募終了・結果公表】旭川市税・国保等の帳票印刷に係るBPO業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081532.html",
+          "label": "【公募終了・結果公表】旭川市統合型GIS・公開型GIS導入業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d081259.html",
+          "label": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d080915.html",
+          "label": "(結果公表)令和7年度「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081262.html",
+          "label": "旭川市図書館情報システム賃貸借業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081142.html",
+          "label": "(公募終了・結果公表)旭川市ふるさと納税返礼品支援等業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d080223.html",
+          "label": "あさひかわの除排雪周知啓発強化業務に係る公募型プロポーザルの実施について【公募終了・結果発表】"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/55000000/55100000/d080051.html",
+          "label": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/329/348/363/d079752.html",
+          "label": "【公募終了・結果公表】旭川市史デジタルアーカイブ構築業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d079600.html",
+          "label": "【公募終了・結果公表】旭川市BPO導入可能性調査業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079847.html",
+          "label": "積雪状況監視・通報システム構築運用業務に係る公募型プロポーザルの実施について【公募終了・結果発表】"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079366.html",
+          "label": "【公募終了・結果発表】旭川市総合窓口改革企画・試行業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d079517.html",
+          "label": "ＡＩを活用した旭川市民生委員児童委員活動支援等業務公募型プロポーザルの公募について【結果の公表】"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077354.html",
+          "label": "令和6年度 旭川市地域企業魅力発見支援業務公募型プロポーザル実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079014.html",
+          "label": "広告入り窓口用封筒無償提供業務に係る公募型プロポーザルの実施について（募集は終了しました）（結果について公表します）"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078967.html",
+          "label": "【結果の公表】旭川市おやこサポート事業実施業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078407.html",
+          "label": "(終了)旭川市地域見守りアプリ開発業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077377.html",
+          "label": "【公募終了・結果公表】旭川市AIチャットボット構築運用業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077639.html",
+          "label": "【公募終了・結果公表】旭川市学校施設照明ＬＥＤ化（ＥＳＣＯ事業）業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077368.html",
+          "label": "【公募終了・結果公表】旭川市遠隔窓口構築運用業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077267.html",
+          "label": "【公募終了・結果公表】旭川市次世代総合窓口グランドデザイン作成支援業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077286.html",
+          "label": "【公募終了・結果公表】ＡＩ文字起こしツール賃貸借業務に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077284.html",
+          "label": "【公募終了・結果公表】旭川市業務改善分析・支援業務委託に係る公募型プロポーザルの実施について"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d076741.html",
+          "label": "旭川市科学館展示製作設置業務公募型プロポーザルの実施について（終了）"
+        },
+        {
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d075747.html",
+          "label": "旭川市地域情報共有プラットフォーム開発業務に係る公募型プロポーザルの実施について(終了)"
         }
       ],
-      "missing_candidates": [],
+      "missing_candidates": [
+        {
+          "title": "【募集】防災啓発用ＶＲ動画作成業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084520.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】旭川市街頭防犯カメラ整備業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084086.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】令和8年度 神居古潭 魔神伝説ＡＲ整備事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083945.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】年末調整業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084024.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】人材マネジメントシステム構築等業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/20000000/20150000/d084021.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】R8未来の起業家を育てる起業体験等プログラム事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11220/d083823.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】スタートアップ支援施設構想検討プロジェクト事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/364/11218/11221/d083827.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市運動部活動地域展開ホームページ作成等業務委託指名型プロポーザルの審査結果について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d084112.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市次世代窓口「旭川モデル」構築業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d083612.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【結果公表】令和8年度居場所づくり事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083811.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】令和8年度「あさいち」開催業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/501/502/d083846.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【終了しました】旭川中核企業成長支援事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/501/508/d083845.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【結果公表】女性デジタルクリエイティブ人材育成事業に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/42000000/25500001/d083800.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "（結果公表）「中核市サミット2026in旭川」開催業務公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083485.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "(公募終了・結果公表)買物公園広場化等実装業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/18000000/65100001/d083376.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "（結果公表）「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d083023.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果発表】粗大ごみ収集配車管理システム開発業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082729.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "「旭川市子育てガイドブック」2026年度版協働発行事業実施に係る公募型プロポーザル参加事業者の募集",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d082677.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市民文化会館管理等業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083187.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市民文化会館舞台設備操作等業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d083185.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市災害時緊急情報配信システム整備業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081852.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市企業情報提供サイト改修等業務公募型プロポーザル実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081809.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市税・国保等の帳票印刷に係るBPO業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081677.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市統合型GIS・公開型GIS導入業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081532.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d081259.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "(結果公表)令和7年度「こうほう旭川市民」編集等業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15000000/15300000/d080915.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市図書館情報システム賃貸借業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d081262.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "(公募終了・結果公表)旭川市ふるさと納税返礼品支援等業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d081142.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "あさひかわの除排雪周知啓発強化業務に係る公募型プロポーザルの実施について【公募終了・結果発表】",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d080223.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【結果公表】社会貢献型旭川産農産物販路拡大業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/55000000/55100000/d080051.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市史デジタルアーカイブ構築業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/kurashi/329/348/363/d079752.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市BPO導入可能性調査業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d079600.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "積雪状況監視・通報システム構築運用業務に係る公募型プロポーザルの実施について【公募終了・結果発表】",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079847.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果発表】旭川市総合窓口改革企画・試行業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079366.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "ＡＩを活用した旭川市民生委員児童委員活動支援等業務公募型プロポーザルの公募について【結果の公表】",
+          "url": "https://www.city.asahikawa.hokkaido.jp/10013/10015/d079517.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和6年度 旭川市地域企業魅力発見支援業務公募型プロポーザル実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077354.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "広告入り窓口用封筒無償提供業務に係る公募型プロポーザルの実施について（募集は終了しました）（結果について公表します）",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d079014.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【結果の公表】旭川市おやこサポート事業実施業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078967.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "(終了)旭川市地域見守りアプリ開発業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d078407.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市AIチャットボット構築運用業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077377.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市学校施設照明ＬＥＤ化（ＥＳＣＯ事業）業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077639.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市遠隔窓口構築運用業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077368.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市次世代総合窓口グランドデザイン作成支援業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d077267.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】ＡＩ文字起こしツール賃貸借業務に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077286.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "【公募終了・結果公表】旭川市業務改善分析・支援業務委託に係る公募型プロポーザルの実施について",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/574/15500000/20170000/d077284.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市科学館展示製作設置業務公募型プロポーザルの実施について（終了）",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d076741.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "旭川市地域情報共有プラットフォーム開発業務に係る公募型プロポーザルの実施について(終了)",
+          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/d075747.html",
+          "status": "公式一覧掲載・Pages未収載"
+        }
+      ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypothesis": "frozen canonical proposal-list route",
-          "result": "The current/open proposal rows relevant to the frozen case scope are the information-video and SNS self-operation support procurements; both details were reached."
+          "result": "既知案件ではなく、自治体公式一覧そのものを母集団として固定"
         },
         {
           "round": 2,
-          "hypothesis": "whole-site procurement hub, department root, year/archive and pagination",
-          "result": "The 委託・賃貸借 category is the stable public list; it mixes ended historical rows inline, exposes no next-page control, and both current target rows resolve to 広報広聴課 details."
+          "result": "表示72行を、プロポーザル49件・対象外23行へ保存的に分類"
+        },
+        {
+          "round": 3,
+          "result": "案件詳細へ49/49件到達し、方式確認49/49件"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://www.city.asahikawa.hokkaido.jp/500/565/566/5681/index.html",
-          "next_control": false,
-          "archive_mode": "ended and historical rows remain inline",
-          "public_end": "visible list end reached"
+          "visible_unique_row_count": 72,
+          "proposal_list_case_count": 49,
+          "non_proposal_row_count": 23,
+          "row_conservation_pass": true,
+          "frozen_case_seed_used": false
         }
       ],
-      "observed_at": "2026-07-30T10:41:22Z"
+      "observed_at": "2026-07-30"
     },
     {
       "issuer_id": "muni:011002",
@@ -284,112 +897,347 @@
       "conclusion": "ROOT_INCOMPLETE",
       "pages_count": 3,
       "canonical_count": 3,
-      "official_rows": 7,
-      "details_reached": 7,
-      "delta": 4,
+      "official_rows": 51,
+      "details_reached": 48,
+      "delta": 48,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/ippan-koubo.html",
       "route": {
         "root": {
-          "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou.html",
-          "label": "department proposal list"
+          "url": "https://www.city.sapporo.jp/",
+          "label": "札幌市公式サイト"
         },
         "branches": [
           {
-            "label": "central procurement hub",
-            "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/index.html",
-            "role": "proposal_or_procurement_list",
-            "case_count": 7,
-            "details": []
+            "label": "市長部局全体・現在公募 → EXCEL本文309行",
+            "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/ippan-koubo.html",
+            "role": "whole_site_current_procurement_attachment_list",
+            "case_count": 51,
+            "scanned": true,
+            "details": [
+              {
+                "label": "令和８年度ドローンを活用したヒグマ出没対策実証業務",
+                "url": "https://www.city.sapporo.jp/kurashi/animal/choju/kuma/keiyaku.html"
+              },
+              {
+                "label": "札幌市ユニバーサルツーリズム需要喚起業務",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/jigyousya/r8utpr.html"
+              },
+              {
+                "label": "令和８年度札幌市移住促進地域おこし協力隊募集・採用及び活動支援業務",
+                "url": "https://city.sapporo.jp/kikaku/miraisousei/kyouryokutai.html"
+              },
+              {
+                "label": "2040年を見据えたまちづくりのあり方の検討に向けた調査・研究等業務",
+                "url": "https://city.sapporo.jp/kikaku/choso/2040.html"
+              },
+              {
+                "label": "令和8年度 新さっぽろ駅周辺エリアにおける公共サインの掲出に係る検討業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/sogokotsu/nyusatsu/r8-19.html"
+              },
+              {
+                "label": "令和８年度さっぽろ連携中枢都市圏移住促進等業務",
+                "url": "https://city.sapporo.jp/kikaku/proposal/r8iju.html"
+              },
+              {
+                "label": "札幌市における関係人口施策の在り方に関する調査・分析等業務（公募型企画競争）",
+                "url": "https://city.sapporo.jp/kikaku/miraisousei/proposal-kankeijinko.html"
+              },
+              {
+                "label": "札幌市半導体設計産業海外案件受託促進に向けた実態調査業務",
+                "url": "https://www.city.sapporo.jp/keizai/keiyaku/miraiit/semicon_kaigair8.html"
+              },
+              {
+                "label": "令和８年度札幌市総合防災訓練防災イベント企画運営業務",
+                "url": "https://www.city.sapporo.jp/kikikanri/keiyakujoho/r8keiyaku/bousai_event2027.html"
+              },
+              {
+                "label": "令和８年度新たな公共交通システム先進技術等調査・検討業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/sogokotsu/nyusatsu/r8-18.html"
+              },
+              {
+                "label": "都心部における観光バスの路上駐停車に関する現況調査・分析業務",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/jigyousya/chartered-bus-zone-survey.html"
+              },
+              {
+                "label": "令和８年度終活イベント開催業務 （公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kenko/wellness/bochi_kasou/uneikeikaku/syuukatsu/r8event.html"
+              },
+              {
+                "label": "札幌市における地域スポーツ・文化クラブ活動管理運営等支援業務",
+                "url": "https://www.city.sapporo.jp/kyoiku/gakku/bukatsu-model.html"
+              },
+              {
+                "label": "令和８年度札幌市在宅医療におけるオンライン診療導入促進に係る実証試験業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kenko/wellness/keiyakujoho/koubogatakikaku/r8_zaitaku_online_shinryo_jisshosiken.html"
+              },
+              {
+                "label": "札幌市母子父子寡婦福祉資金貸付金債権回収等業務",
+                "url": "https://www.city.sapporo.jp/kodomo/kosodate/boshisaiken2026.html"
+              },
+              {
+                "label": "令和8年度宿泊業人材確保サポート業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/jigyousya/r8jinzaikakuho.html"
+              },
+              {
+                "label": "令和8年度対日直接投資誘致に係る情報発信事業実施業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/keiyaku/kaigaitosiyuti/r8tainitityokusetutosiyutinikakaruzyohohasshinzissigyomu.html"
+              },
+              {
+                "label": "令和8年度創成川上空歩行者動線検討業務 （公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/sogokotsu/nyusatsu/r8-16.html"
+              },
+              {
+                "label": "札幌ならではのエンタメ・クリエイティブ分野を中心とした都市ブランドの確立に向けた調査・研究等業務",
+                "url": "https://city.sapporo.jp/kikaku/choso/entame.html"
+              },
+              {
+                "label": "令和８年度（2026年度）札幌市障害福祉サービス事業所管理者等研修企画運営業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/shogaifukushi/keiyakujoho/ippankyoso/uneishien.html"
+              },
+              {
+                "label": "令和８年度札幌市下水道事業の官民連携手法に係る検討業務",
+                "url": "https://www.city.sapporo.jp/gesui/keiyaku/r8nendo/8238.html"
+              },
+              {
+                "label": "札幌市市有施設照明LED化事業（文化・福祉施設ほかブロック）",
+                "url": "https://www.city.sapporo.jp/kankyo/energy/proposal/syoumeiled.html"
+              },
+              {
+                "label": "札幌市市有施設照明LED化事業（市民利用施設ほかブロック）",
+                "url": "https://www.city.sapporo.jp/kankyo/energy/proposal/syoumeiled.html"
+              },
+              {
+                "label": "札幌市市有施設照明LED化事業（スポーツ施設ほかブロック）",
+                "url": "https://www.city.sapporo.jp/kankyo/energy/proposal/syoumeiled.html"
+              },
+              {
+                "label": "令和８年度もみじ台地域における新たな移動手段導入可能性検討業務",
+                "url": "https://www.city.sapporo.jp/keikaku/momiji_mobility_propo.html"
+              },
+              {
+                "label": "令和８年度定山渓アクティビティコンテンツ開発調査業務（公募型企画競争）",
+                "url": "https://city.sapporo.jp/keizai/kanko/activitysurvey.html"
+              },
+              {
+                "label": "札幌市における電力調達及び再エネ電力導入拡大スキーム検討業務",
+                "url": "https://www.city.sapporo.jp/kankyo/energy/proposal/saienedenryokudonyu.html"
+              },
+              {
+                "label": "海外メディアを活用した金融系外国企業等誘致に資する情報発信業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/gx/media2026.html"
+              },
+              {
+                "label": "「ＧＸ／ＡＩ 金融」普及啓発イベントの企画・運営等業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/gx/btoc.html"
+              },
+              {
+                "label": "令和8年度ごみ減量実践事業企画運営業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/seiso/gomi/genryo/jissen_proposal_r8.html"
+              },
+              {
+                "label": "札幌市ユニバーサルツーリズム人材育成セミナー開催支援業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/jigyousya/r8universaltourism.html"
+              },
+              {
+                "label": "令和８・９年度もみじ台地域土地利用再編検討業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keikaku/momiji_jigyoka_propo.html"
+              },
+              {
+                "label": "札幌市公衆無線LAN更改業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/jigyousya/r8wi-fi_renewal.html"
+              },
+              {
+                "label": "令和8年度宿泊業人材定着支援業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/news2/r8zinnzaiteityaku.html"
+              },
+              {
+                "label": "令和８年度家庭教育普及啓発業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kyoiku/shogaikyoiku/renke/kakyopuropo.html"
+              },
+              {
+                "label": "札幌市企業経営動向調査（令和８年度上期・下期）実施業務",
+                "url": "https://www.city.sapporo.jp/keizai/keiyaku/doukouchosa/2026.html"
+              },
+              {
+                "label": "令和8年度札幌市宿泊施設及び観光施設受入環境整備補助金活用促進等業務",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/news2/r8hozyokinnkatuyou.html"
+              },
+              {
+                "label": "令和８年度 アドベンチャートラベル等に対応するガイド育成・活躍支援業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/news2/r8_adventuretravel.html"
+              },
+              {
+                "label": "令和８年度もみじ台地域３Ｄ都市モデル整備・活用推進業務 （公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keikaku/r8_momiji_3dmodel_propo.html"
+              },
+              {
+                "label": "地域における観光資源開発・おもてなし推進支援業",
+                "url": "https://www.city.sapporo.jp/keizai/kanko/news2/r8omotenasi.html"
+              },
+              {
+                "label": "令和８年度 駐車場施策に係る調査検討業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/sogokotsu/nyusatsu/r8-12.html"
+              },
+              {
+                "label": "令和8年度（2026年度）札幌市障害福祉サービス魅力発信業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/shogaifukushi/keiyakujoho/kikakukyoso/uneishien.html"
+              },
+              {
+                "label": "令和８～９年度 里塚斎場再整備に係る整備可能性調査検討業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kenko/wellness/keiyakujoho/koubogatakikaku/r8-9_satozukasaiseibi.html"
+              },
+              {
+                "label": "令和８年度札幌ゆきだるマンプロジェクト運営業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kensetsu/yuki/jigyosha/yukidaruman_r8.html"
+              },
+              {
+                "label": "令和８年度札幌市ＩＴ企業グローバルパートナーシップ構築支援業務（ビジネスマッチング支援）（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/keiyaku/miraiit/business-matching_r8.html"
+              },
+              {
+                "label": "令和８年度札幌市ＩＴ企業グローバルパートナーシップ構築支援業務（契約締結支援、ブリッジＳＥ派遣支援）（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/keiyaku/miraiit/contract-bridge-se_r8.html"
+              },
+              {
+                "label": "令和8年度 金融系外国企業等誘致・プロモーション業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/keizai/gx/finance-attraction2026.html"
+              },
+              {
+                "label": "令和８年度３D都市モデルを活用した雪対策デジタルツインの実装に向けた基礎検討業（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kensetsu/yuki/jigyosha/digitaltwin-r8.html"
+              },
+              {
+                "label": "「（仮称）さっぽろ子育てアプリ」導入及び運用業務（公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/kodomo-mirai/nyuusatsu/sapporokosodate_app.html"
+              },
+              {
+                "label": "令和８年度新たな公共交通システム調査・検討業務 （公募型企画競争）",
+                "url": "https://www.city.sapporo.jp/sogokotsu/nyusatsu/r8-11.html"
+              }
+            ]
           },
           {
-            "label": "year archive",
+            "label": "政策企画部・現在案件（部局限定）",
+            "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou.html",
+            "role": "department_proposal_list",
+            "case_count": 5,
+            "scanned": true,
+            "details": [
+              {
+                "label": "「札幌ならではのエンタメ・クリエイティブ分野を中心とした都市ブランドの確立に向けた調査・研究等業務」公募型企画競争の実施について",
+                "url": "https://www.city.sapporo.jp/kikaku/choso/entame.html"
+              },
+              {
+                "label": "「札幌市における関係人口施策の在り方に関する調査・分析等業務」公募型企画競争の実施について",
+                "url": "https://www.city.sapporo.jp/kikaku/miraisousei/proposal-kankeijinko.html"
+              },
+              {
+                "label": "「令和8年度さっぽろ連携中枢都市圏移住促進等業務」公募型企画競争の実施について",
+                "url": "https://www.city.sapporo.jp/kikaku/proposal/r8iju.html"
+              },
+              {
+                "label": "「2040年を見据えたまちづくりのあり方の検討に向けた調査・研究等業務」公募型企画競争の実施について",
+                "url": "https://www.city.sapporo.jp/kikaku/choso/2040.html"
+              },
+              {
+                "label": "「令和8年度札幌市移住促進地域おこし協力隊募集・採用及び活動支援業務」公募型企画競争の実施について",
+                "url": "https://www.city.sapporo.jp/kikaku/miraisousei/kyouryokutai.html"
+              }
+            ]
+          },
+          {
+            "label": "政策企画部・年度別結果（現行件数から除外）",
             "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r7.html",
-            "role": "checked_official_branch",
+            "role": "result_archive",
             "case_count": 0,
+            "scanned": true,
             "details": []
           },
           {
-            "label": "year archive",
+            "label": "政策企画部・年度別結果（現行件数から除外）",
             "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r6.html",
-            "role": "checked_official_branch",
+            "role": "result_archive",
             "case_count": 0,
+            "scanned": true,
             "details": []
           }
         ]
       },
       "checked_urls": [
         {
-          "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou.html",
-          "label": "department proposal list"
+          "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/ippan-koubo.html",
+          "label": "市長部局全体・公募中案件一覧"
         },
         {
-          "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/index.html",
-          "label": "central procurement hub"
+          "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou.html",
+          "label": "政策企画部・現在案件"
+        },
+        {
+          "label": "EXCEL selected",
+          "url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/documents/keiyakuankenichiran.xlsx"
         },
         {
           "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r7.html",
-          "label": "year archive"
+          "label": "政策企画部・年度別結果（除外）"
         },
         {
           "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r6.html",
-          "label": "year archive"
-        }
-      ],
-      "missing_candidates": [
+          "label": "政策企画部・年度別結果（除外）"
+        },
         {
-          "title": "令和8年度さっぽろ連携中枢都市圏移住促進等業務",
+          "url": "https://www.city.sapporo.jp/kikaku/choso/entame.html",
+          "label": "「札幌ならではのエンタメ・クリエイティブ分野を中心とした都市ブランドの確立に向けた調査・研究等業務」公募型企画競争の実施について"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/kikaku/miraisousei/proposal-kankeijinko.html",
+          "label": "「札幌市における関係人口施策の在り方に関する調査・分析等業務」公募型企画競争の実施について"
+        },
+        {
           "url": "https://www.city.sapporo.jp/kikaku/proposal/r8iju.html",
-          "status": "要確認"
+          "label": "「令和8年度さっぽろ連携中枢都市圏移住促進等業務」公募型企画競争の実施について"
         },
         {
-          "title": "2040年を見据えたまちづくりのあり方の検討に向けた調査・研究等業務",
           "url": "https://www.city.sapporo.jp/kikaku/choso/2040.html",
-          "status": "要確認"
+          "label": "「2040年を見据えたまちづくりのあり方の検討に向けた調査・研究等業務」公募型企画競争の実施について"
         },
         {
-          "title": "令和8年度札幌市移住促進地域おこし協力隊募集・採用及び活動支援業務",
           "url": "https://www.city.sapporo.jp/kikaku/miraisousei/kyouryokutai.html",
-          "status": "要確認"
-        },
-        {
-          "title": "持続可能な雪対策の在り方検討に向けた市民会議（ミニ・パブリックス）等の実施運営業務",
-          "url": "https://www.city.sapporo.jp/kikaku/miraisousei/proposal-yukitaisaku-minipab.html",
-          "status": "要確認"
-        },
-        {
-          "title": "令和8年度市民参加による水素エネルギー普及啓発事業企画検討業務",
-          "url": "https://www.city.sapporo.jp/kankyo/suiso/r8proposal.html",
-          "status": "要確認"
+          "label": "「令和8年度札幌市移住促進地域おこし協力隊募集・採用及び活動支援業務」公募型企画競争の実施について"
         }
       ],
+      "missing_candidates": [],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypothesis": "replay every frozen route",
-          "result": "Planning bureau root exposed five open and two ended proposal cases; all seven details returned HTTP 200"
+          "result": "ipankyousou.htmlを政策企画部の現在案件枝として固定し、R7/R6結果URLを現行探索から除外"
         },
         {
           "round": 2,
-          "hypothesis": "year archive, department root, central procurement and pagination alternatives",
-          "result": "R7/R6 archives exist; the central procurement hub branches to multiple department pages; canonical root has no pagination"
+          "result": "市長部局全体のippan-koubo添付をEXCELから本文抽出"
         },
         {
           "round": 3,
-          "hypothesis": "detail-level procurement-method verification and whole-city boundary",
-          "result": "seven proposal details confirmed, while the central hub and preserved tourism/waterworks routes prove the planning root is not a whole-city public end"
+          "result": "添付309行から公募型企画競争51件を分類。個別詳細URLの完全到達は継続課題"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou.html",
-          "pagination_link_count": 0,
-          "public_end": true,
-          "scope": "planning bureau page only"
+          "selected_document_url": "https://www.city.sapporo.jp/zaisei/keiyaku-kanri/anken/documents/keiyakuankenichiran.xlsx",
+          "selected_document_kind": "excel",
+          "document_sha256": "3a33f4d2ebe040c471c89117e1662d262d4ad356411de3022378aae1b569e813",
+          "citywide_document_row_count": 309,
+          "citywide_proposal_occurrence_count": 51,
+          "citywide_non_proposal_count": 258,
+          "row_conservation_pass": true,
+          "result_archives_excluded": [
+            "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r6.html",
+            "https://www.city.sapporo.jp/kikaku/shomu/ipankyousou_r7.html"
+          ]
         }
       ],
-      "observed_at": "2026-07-30T10:50:38Z"
+      "observed_at": "2026-07-30"
     },
     {
       "issuer_id": "muni:022039",
@@ -404,7 +1252,7 @@
       "details_reached": 4,
       "delta": 39,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.hachinohe.aomori.jp/jigyoshamuke/nyusatsu_keiyaku/kobojoho/index.html",
       "route": {
         "root": {
           "url": "https://www.city.hachinohe.aomori.jp/",
@@ -497,37 +1345,122 @@
       "prefecture": "青森県",
       "display_name": "青森市",
       "lane": "A3",
-      "conclusion": "EXACT_CONFIRMED",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 3,
       "canonical_count": 3,
-      "official_rows": 3,
-      "details_reached": 3,
-      "delta": 0,
+      "official_rows": 24,
+      "details_reached": 24,
+      "delta": 21,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/index.html",
       "route": {
         "root": {
           "url": "https://www.city.aomori.aomori.jp/",
-          "label": "https://www.city.aomori.aomori.jp/"
+          "label": "青森市公式サイト"
         },
         "branches": [
           {
-            "label": "dedicated proposal list",
+            "label": "全庁プロポーザル一覧（募集中＋実施結果）",
             "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/index.html",
-            "role": "dedicated proposal list",
-            "case_count": 3,
+            "role": "whole_site_proposal_category",
+            "case_count": 24,
+            "scanned": true,
             "details": [
               {
-                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009383.html",
-                "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009383.html"
+                "label": "青森市子育て情報誌発行業務公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009383.html"
               },
               {
-                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009380.html",
-                "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009380.html"
+                "label": "雪に関する市民相談窓口コールセンター運営業務委託公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009380.html"
               },
               {
-                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009059.html",
-                "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009059.html"
+                "label": "青森市魅力発信ASMR動画制作及び広告配信業務公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009059.html"
+              },
+              {
+                "label": "最高裁判決を踏まえた生活保護費追加給付関連業務委託公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010891.html"
+              },
+              {
+                "label": "青森市ふるさと納税プロモーション戦略策定業務公募型プロポーザルの実施結果について",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010485.html"
+              },
+              {
+                "label": "青森市地域企業DX推進環境形成業務に係る公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010272.html"
+              },
+              {
+                "label": "青森市おためし地域おこし協力隊実施及び地域おこし協力隊サポート業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010486.html"
+              },
+              {
+                "label": "青森市健康運動施設管理業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009980.html"
+              },
+              {
+                "label": "令和8年度青森市職員研修業務委託に係る公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004707.html"
+              },
+              {
+                "label": "青森市選挙人名簿管理システム標準化対応業務公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009972.html"
+              },
+              {
+                "label": "青森市AIドリル教材導入業務公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009945.html"
+              },
+              {
+                "label": "青森市就学支援システム標準化対応業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009954.html"
+              },
+              {
+                "label": "青森市立浪岡病院キャッシュレス決済に係る指定納付受託業務公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1009930.html"
+              },
+              {
+                "label": "第16回みなとオアシスSea級グルメ全国大会inあおもり及び （仮称）鉄道博物館出張企画展実施業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009387.html"
+              },
+              {
+                "label": "令和7年度まちなかにぎわい創出プロジェクト推進業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009061.html"
+              },
+              {
+                "label": "モビリティデータ等連携基盤構築業務委託公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008854.html"
+              },
+              {
+                "label": "青森西部地区デマンド型交通運行業務公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004703.html"
+              },
+              {
+                "label": "「AOMORI外国語ガイド塾」運営業務委託に係る公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008836.html"
+              },
+              {
+                "label": "青森市水道メーター検針等業務委託公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008265.html"
+              },
+              {
+                "label": "青森市民図書館電算システム運用委託業務及び賃貸借業務公募型プロポーザルの実施結果 （外部リンク）",
+                "url": "https://www.library.city.aomori.aomori.jp/acl/osirase/propo/kekka.htm"
+              },
+              {
+                "label": "青森市立浪岡病院医事業務に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1008059.html"
+              },
+              {
+                "label": "青森市総合計画（基本構想・前期基本計画）冊子制作業務に係る公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1007589.html"
+              },
+              {
+                "label": "青森市こども・若者の居場所づくり支援モデル事業業務委託に係る公募型プロポーザルの実施",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004701.html"
+              },
+              {
+                "label": "青森市文化観光交流施設 ねぶたミュージアム内投影映像製作業務委託に係る公募型プロポーザルの実施結果",
+                "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1005371.html"
               }
             ]
           }
@@ -535,49 +1468,238 @@
       },
       "checked_urls": [
         {
-          "url": "https://www.city.aomori.aomori.jp/",
-          "label": "https://www.city.aomori.aomori.jp/"
-        },
-        {
           "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/index.html",
-          "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/index.html"
+          "label": "全庁プロポーザル一覧（募集中＋実施結果）"
         },
         {
           "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009383.html",
-          "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009383.html"
+          "label": "青森市子育て情報誌発行業務公募型プロポーザルの実施"
         },
         {
           "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009380.html",
-          "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009380.html"
+          "label": "雪に関する市民相談窓口コールセンター運営業務委託公募型プロポーザルの実施"
         },
         {
           "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009059.html",
-          "label": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009059.html"
+          "label": "青森市魅力発信ASMR動画制作及び広告配信業務公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010891.html",
+          "label": "最高裁判決を踏まえた生活保護費追加給付関連業務委託公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010485.html",
+          "label": "青森市ふるさと納税プロモーション戦略策定業務公募型プロポーザルの実施結果について"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010272.html",
+          "label": "青森市地域企業DX推進環境形成業務に係る公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010486.html",
+          "label": "青森市おためし地域おこし協力隊実施及び地域おこし協力隊サポート業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009980.html",
+          "label": "青森市健康運動施設管理業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004707.html",
+          "label": "令和8年度青森市職員研修業務委託に係る公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009972.html",
+          "label": "青森市選挙人名簿管理システム標準化対応業務公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009945.html",
+          "label": "青森市AIドリル教材導入業務公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009954.html",
+          "label": "青森市就学支援システム標準化対応業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1009930.html",
+          "label": "青森市立浪岡病院キャッシュレス決済に係る指定納付受託業務公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009387.html",
+          "label": "第16回みなとオアシスSea級グルメ全国大会inあおもり及び （仮称）鉄道博物館出張企画展実施業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009061.html",
+          "label": "令和7年度まちなかにぎわい創出プロジェクト推進業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008854.html",
+          "label": "モビリティデータ等連携基盤構築業務委託公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004703.html",
+          "label": "青森西部地区デマンド型交通運行業務公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008836.html",
+          "label": "「AOMORI外国語ガイド塾」運営業務委託に係る公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008265.html",
+          "label": "青森市水道メーター検針等業務委託公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.library.city.aomori.aomori.jp/acl/osirase/propo/kekka.htm",
+          "label": "青森市民図書館電算システム運用委託業務及び賃貸借業務公募型プロポーザルの実施結果 （外部リンク）"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1008059.html",
+          "label": "青森市立浪岡病院医事業務に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1007589.html",
+          "label": "青森市総合計画（基本構想・前期基本計画）冊子制作業務に係る公募型プロポーザルの実施結果"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004701.html",
+          "label": "青森市こども・若者の居場所づくり支援モデル事業業務委託に係る公募型プロポーザルの実施"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1005371.html",
+          "label": "青森市文化観光交流施設 ねぶたミュージアム内投影映像製作業務委託に係る公募型プロポーザルの実施結果"
         }
       ],
-      "missing_candidates": [],
+      "missing_candidates": [
+        {
+          "title": "最高裁判決を踏まえた生活保護費追加給付関連業務委託公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010891.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市ふるさと納税プロモーション戦略策定業務公募型プロポーザルの実施結果について",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010485.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市地域企業DX推進環境形成業務に係る公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010272.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市おためし地域おこし協力隊実施及び地域おこし協力隊サポート業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1010486.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市健康運動施設管理業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009980.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和8年度青森市職員研修業務委託に係る公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004707.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市選挙人名簿管理システム標準化対応業務公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009972.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市AIドリル教材導入業務公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009945.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市就学支援システム標準化対応業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009954.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市立浪岡病院キャッシュレス決済に係る指定納付受託業務公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1009930.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "第16回みなとオアシスSea級グルメ全国大会inあおもり及び （仮称）鉄道博物館出張企画展実施業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009387.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和7年度まちなかにぎわい創出プロジェクト推進業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1009061.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "モビリティデータ等連携基盤構築業務委託公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008854.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森西部地区デマンド型交通運行業務公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004703.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "「AOMORI外国語ガイド塾」運営業務委託に係る公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008836.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市水道メーター検針等業務委託公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1008265.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市民図書館電算システム運用委託業務及び賃貸借業務公募型プロポーザルの実施結果 （外部リンク）",
+          "url": "https://www.library.city.aomori.aomori.jp/acl/osirase/propo/kekka.htm",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市立浪岡病院医事業務に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/hukushi_kenkou/kenkou_iryou/1003093/1003248/1008059.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市総合計画（基本構想・前期基本計画）冊子制作業務に係る公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1007589.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市こども・若者の居場所づくり支援モデル事業業務委託に係る公募型プロポーザルの実施",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1004701.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "青森市文化観光交流施設 ねぶたミュージアム内投影映像製作業務委託に係る公募型プロポーザルの実施結果",
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/1005371.html",
+          "status": "公式一覧掲載・Pages未収載"
+        }
+      ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypothesis": "frozen canonical proposal-list route",
-          "result": "Three rows appear before the explicit 実施結果 heading and all three detail pages were reached."
+          "result": "既知案件ではなく、自治体公式一覧そのものを母集団として固定"
         },
         {
           "round": 2,
-          "hypothesis": "year/archive, department root and pagination",
-          "result": "The official page separates the three current rows from historical results on the same public page; no pagination or separate current-year archive was exposed."
+          "result": "表示24行を、プロポーザル24件・対象外0行へ保存的に分類"
+        },
+        {
+          "round": 3,
+          "result": "案件詳細へ24/24件到達し、方式確認23/24件"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/jigyosha/1004700/index.html",
-          "next_control": false,
-          "archive_mode": "current rows followed by 実施結果",
-          "public_end": "current-section boundary explicit"
+          "visible_unique_row_count": 24,
+          "proposal_list_case_count": 24,
+          "non_proposal_row_count": 0,
+          "row_conservation_pass": true,
+          "frozen_case_seed_used": false
         }
       ],
-      "observed_at": "2026-07-30T10:41:22Z"
+      "observed_at": "2026-07-30"
     },
     {
       "issuer_id": "shared:02:aomori_portal_discovery",
@@ -610,6 +1732,13 @@
             "label": "department_case_details",
             "url": "",
             "role": "department_case_details",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "pagination_archive",
+            "url": "",
+            "role": "pagination_archive",
             "case_count": 0,
             "details": []
           }
@@ -802,7 +1931,7 @@
       "details_reached": 2,
       "delta": 4,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.oshu.iwate.jp/shigoto_sangyo/nyusatsu_keiyaku/5/index.html",
       "route": {
         "root": {
           "url": "https://www.city.oshu.iwate.jp/",
@@ -1166,7 +2295,7 @@
       "details_reached": 3,
       "delta": 449,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.sendai.jp/jigyosha/keyaku/jigyosha/proposal/index.html",
       "route": {
         "root": {
           "url": "https://www.city.sendai.jp/",
@@ -1177,6 +2306,13 @@
             "label": "procurement_hub",
             "url": "https://www.city.sendai.jp/jigyosha/keyaku/index.html",
             "role": "procurement_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "proposal_list",
+            "url": "https://www.city.sendai.jp/jigyosha/keyaku/jigyosha/proposal/index.html",
+            "role": "proposal_list",
             "case_count": 0,
             "details": []
           }
@@ -1461,11 +2597,11 @@
       "details_reached": 9,
       "delta": 6,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.ishinomaki.lg.jp/d0020/d0010/d0040/040/010/index.html",
       "route": {
         "root": {
           "url": "https://www.city.ishinomaki.lg.jp/d0020/d0010/d0040/040/010/index.html",
-          "label": "dedicated proposal announcement list"
+          "label": "https://www.city.ishinomaki.lg.jp/d0020/d0010/d0040/040/010/index.html"
         },
         "branches": [
           {
@@ -1552,74 +2688,158 @@
       "prefecture": "秋田県",
       "display_name": "横手市",
       "lane": "A3",
-      "conclusion": "EXACT_CONFIRMED",
+      "conclusion": "OFFICIAL_LIST_ENUMERATED",
       "pages_count": 2,
       "canonical_count": 2,
-      "official_rows": 2,
-      "details_reached": 2,
-      "delta": 0,
+      "official_rows": 8,
+      "details_reached": 8,
+      "delta": 6,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/index.html",
       "route": {
         "root": {
           "url": "https://www.city.yokote.lg.jp/",
-          "label": "https://www.city.yokote.lg.jp/"
+          "label": "横手市公式サイト"
         },
         "branches": [
           {
-            "label": "procurement hub",
-            "url": "https://www.city.yokote.lg.jp/shigoto/1001164/index.html",
-            "role": "procurement hub",
-            "case_count": 0,
-            "details": []
+            "label": "全庁プロポーザル方式による発注一覧（募集中＋終了）",
+            "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/index.html",
+            "role": "whole_site_proposal_category",
+            "case_count": 8,
+            "scanned": true,
+            "details": [
+              {
+                "label": "「就職支援マッチングサイト」構築業務委託の公募型プロポーザルを実施します【終了しました】",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013205.html"
+              },
+              {
+                "label": "令和8年度横手市ハンズオン支援プログラム業務委託の公募型プロポーザルを実施します",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013590.html"
+              },
+              {
+                "label": "令和8年度 シン・十文字拠点基本計画策定支援業務委託 公募型プロポーザル",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013423.html"
+              },
+              {
+                "label": "書かないワンストップ窓口構築に係る公募型プロポーザルを実施します（終了）",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013032.html"
+              },
+              {
+                "label": "令和7年度横手市ハンズオン支援プログラム業務委託の公募型プロポーザルを実施します【終了しました】",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012659.html"
+              },
+              {
+                "label": "令和8年度 三枚橋1号街区公園トライアル利活用支援業務委託 公募型プロポーザル【終了しました】",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013257.html"
+              },
+              {
+                "label": "令和7年度市立小中学校Wi-Fi環境構築リースに係る公募型プロポーザルを実施します（終了）",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012563.html"
+              },
+              {
+                "label": "令和7年度「横手市若者交流事業業務委託」公募型プロポーザルを実施しました",
+                "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1010744.html"
+              }
+            ]
           }
         ]
       },
       "checked_urls": [
         {
-          "url": "https://www.city.yokote.lg.jp/",
-          "label": "https://www.city.yokote.lg.jp/"
-        },
-        {
-          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/index.html",
-          "label": "https://www.city.yokote.lg.jp/shigoto/1001164/index.html"
-        },
-        {
           "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/index.html",
-          "label": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/index.html"
+          "label": "全庁プロポーザル方式による発注一覧（募集中＋終了）"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013205.html",
+          "label": "「就職支援マッチングサイト」構築業務委託の公募型プロポーザルを実施します【終了しました】"
         },
         {
           "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013590.html",
-          "label": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013590.html"
+          "label": "令和8年度横手市ハンズオン支援プログラム業務委託の公募型プロポーザルを実施します"
         },
         {
           "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013423.html",
-          "label": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013423.html"
+          "label": "令和8年度 シン・十文字拠点基本計画策定支援業務委託 公募型プロポーザル"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013032.html",
+          "label": "書かないワンストップ窓口構築に係る公募型プロポーザルを実施します（終了）"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012659.html",
+          "label": "令和7年度横手市ハンズオン支援プログラム業務委託の公募型プロポーザルを実施します【終了しました】"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013257.html",
+          "label": "令和8年度 三枚橋1号街区公園トライアル利活用支援業務委託 公募型プロポーザル【終了しました】"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012563.html",
+          "label": "令和7年度市立小中学校Wi-Fi環境構築リースに係る公募型プロポーザルを実施します（終了）"
+        },
+        {
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1010744.html",
+          "label": "令和7年度「横手市若者交流事業業務委託」公募型プロポーザルを実施しました"
         }
       ],
-      "missing_candidates": [],
+      "missing_candidates": [
+        {
+          "title": "「就職支援マッチングサイト」構築業務委託の公募型プロポーザルを実施します【終了しました】",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013205.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "書かないワンストップ窓口構築に係る公募型プロポーザルを実施します（終了）",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013032.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和7年度横手市ハンズオン支援プログラム業務委託の公募型プロポーザルを実施します【終了しました】",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012659.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和8年度 三枚橋1号街区公園トライアル利活用支援業務委託 公募型プロポーザル【終了しました】",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1013257.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和7年度市立小中学校Wi-Fi環境構築リースに係る公募型プロポーザルを実施します（終了）",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1012563.html",
+          "status": "公式一覧掲載・Pages未収載"
+        },
+        {
+          "title": "令和7年度「横手市若者交流事業業務委託」公募型プロポーザルを実施しました",
+          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/1010744.html",
+          "status": "公式一覧掲載・Pages未収載"
+        }
+      ],
       "duplicate_groups": [],
       "discovery_rounds": [
         {
           "round": 1,
-          "hypothesis": "frozen canonical proposal-list route",
-          "result": "Two non-ended current rows were present and both details were reached."
+          "result": "既知案件ではなく、自治体公式一覧そのものを母集団として固定"
         },
         {
           "round": 2,
-          "hypothesis": "procurement hub, annual archive, department root and pagination",
-          "result": "The proposal-specific list is linked from the city procurement hub; six additional rows are explicitly ended/historical and no next-page control is exposed."
+          "result": "表示8行を、プロポーザル8件・対象外0行へ保存的に分類"
+        },
+        {
+          "round": 3,
+          "result": "案件詳細へ8/8件到達し、方式確認8/8件"
         }
       ],
       "pagination_evidence": [
         {
-          "url": "https://www.city.yokote.lg.jp/shigoto/1001164/1001363/1005293/index.html",
-          "next_control": false,
-          "archive_mode": "eight inline rows; six explicitly ended/historical",
-          "public_end": "visible list end reached"
+          "visible_unique_row_count": 8,
+          "proposal_list_case_count": 8,
+          "non_proposal_row_count": 0,
+          "row_conservation_pass": true,
+          "frozen_case_seed_used": false
         }
       ],
-      "observed_at": "2026-07-30T10:41:22Z"
+      "observed_at": "2026-07-30"
     },
     {
       "issuer_id": "muni:052019",
@@ -2068,7 +3288,7 @@
       "details_reached": 4,
       "delta": 101,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nyusatsu/1006744/index.html",
       "route": {
         "root": {
           "url": "https://www.city.yamagata-yamagata.lg.jp/",
@@ -2079,6 +3299,27 @@
             "label": "proposal_master_list",
             "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nyusatsu/1006744/index.html",
             "role": "proposal_master_list",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "current_or_recruitment_branch",
+            "url": "",
+            "role": "current_or_recruitment_branch",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "result_branch",
+            "url": "",
+            "role": "result_branch",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "historical_recruitment_branch",
+            "url": "",
+            "role": "historical_recruitment_branch",
             "case_count": 0,
             "details": []
           }
@@ -2195,6 +3436,27 @@
             "label": "state procurement hub",
             "url": "https://www.pref.yamagata.jp/kensei/nyuusatsujouhou/index.html",
             "role": "state procurement hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "dedicated proposal list",
+            "url": "https://www.pref.yamagata.jp/kensei/nyuusatsujouhou/nyuusatsujouhou/proposal/index.html",
+            "role": "dedicated proposal list",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "result/status branch",
+            "url": "https://www.pref.yamagata.jp/kensei/nyuusatsujouhou/nyuusatsujouhou/jyokyo/index.html",
+            "role": "result/status branch",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "service procurement branch",
+            "url": "https://www.pref.yamagata.jp/kensei/nyuusatsujouhou/nyuusatsujouhou/gyoumuitaku/index.html",
+            "role": "service procurement branch",
             "case_count": 0,
             "details": []
           }
@@ -2477,11 +3739,11 @@
       "details_reached": 16,
       "delta": 14,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.fukushima.fukushima.jp/shigoto-sangyo/nyusatsu-keiyaku/2/3/index.html",
       "route": {
         "root": {
           "url": "https://www.city.fukushima.fukushima.jp/shigoto-sangyo/nyusatsu-keiyaku/2/3/index.html",
-          "label": "official proposal list"
+          "label": "https://www.city.fukushima.fukushima.jp/shigoto-sangyo/nyusatsu-keiyaku/2/3/index.html"
         },
         "branches": [
           {
@@ -2615,11 +3877,11 @@
       "details_reached": 7,
       "delta": 6,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.fukushima.lg.jp/sec/11015a/kikaku-nyuusatsu2.html",
       "route": {
         "root": {
           "url": "https://www.pref.fukushima.lg.jp/sec/11015a/kikaku-nyuusatsu2.html",
-          "label": "planning-department list"
+          "label": "https://www.pref.fukushima.lg.jp/sec/11015a/kikaku-nyuusatsu2.html"
         },
         "branches": [
           {
@@ -2742,7 +4004,7 @@
       "details_reached": 38,
       "delta": 37,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.koriyama.lg.jp/soshiki/226/index-2.html",
       "route": {
         "root": {
           "url": "https://www.city.koriyama.lg.jp/",
@@ -2760,6 +4022,13 @@
             "label": "department-only branch; unsuitable as issuer-wide canonical root",
             "url": "https://www.city.koriyama.lg.jp/soshiki/226/index-2.html",
             "role": "department-only branch; unsuitable as issuer-wide canonical root",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "citywide other-services list",
+            "url": "https://www.city.koriyama.lg.jp/site/keiyakuportal/list87-226.html",
+            "role": "citywide other-services list",
             "case_count": 0,
             "details": []
           }
@@ -2909,7 +4178,7 @@
       "details_reached": 76,
       "delta": 73,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.tsukuba.lg.jp/nusatsu/joho/1005222/index.html",
       "route": {
         "root": {
           "url": "https://www.city.tsukuba.lg.jp/nusatsu/joho/1005222/index.html",
@@ -3426,7 +4695,7 @@
       "details_reached": 18,
       "delta": 16,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.utsunomiya.lg.jp/sangyo/nyusatsu/koubo/index.html",
       "route": {
         "root": {
           "url": "https://www.city.utsunomiya.lg.jp/sangyo/nyusatsu/koubo/index.html",
@@ -3549,11 +4818,11 @@
       "details_reached": 2,
       "delta": 18,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.oyama.tochigi.jp/sangyou-sigoto/nyuusatsu-keiyaku/etc/",
       "route": {
         "root": {
-          "url": "https://www.city.oyama.tochigi.jp/",
-          "label": "https://www.city.oyama.tochigi.jp/"
+          "url": "https://www.city.oyama.tochigi.jp/sangyou-sigoto/nyuusatsu-keiyaku/etc/",
+          "label": "https://www.city.oyama.tochigi.jp/sangyou-sigoto/nyuusatsu-keiyaku/etc/"
         },
         "branches": [
           {
@@ -3810,7 +5079,7 @@
       "details_reached": 24,
       "delta": 21,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.maebashi.gunma.jp/sangyo_business/9/2/index.html",
       "route": {
         "root": {
           "url": "https://www.city.maebashi.gunma.jp/sangyo_business/9/2/index.html",
@@ -4159,7 +5428,7 @@
       "details_reached": 48,
       "delta": 47,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.saitama.lg.jp/005/001/017/index.html",
       "route": {
         "root": {
           "url": "https://www.city.saitama.lg.jp/005/001/017/index.html",
@@ -4382,11 +5651,11 @@
       "details_reached": 4,
       "delta": 9,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.kawaguchi.lg.jp/recruit/index.html",
       "route": {
         "root": {
-          "url": "https://www.city.kawaguchi.lg.jp/",
-          "label": "https://www.city.kawaguchi.lg.jp/"
+          "url": "https://www.city.kawaguchi.lg.jp/recruit/index.html",
+          "label": "https://www.city.kawaguchi.lg.jp/recruit/index.html"
         },
         "branches": [
           {
@@ -4510,11 +5779,11 @@
       "details_reached": 3,
       "delta": 19,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.chiba.jp/portal/business/index19/nyusatsujoho/anken/itaku/index.html",
       "route": {
         "root": {
-          "url": "https://www.city.chiba.jp/",
-          "label": "https://www.city.chiba.jp/"
+          "url": "https://www.city.chiba.jp/portal/business/index19/nyusatsujoho/anken/itaku/index.html",
+          "label": "https://www.city.chiba.jp/portal/business/index19/nyusatsujoho/anken/itaku/index.html"
         },
         "branches": [
           {
@@ -4637,7 +5906,7 @@
       "details_reached": 19,
       "delta": 18,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.chiba.lg.jp/nyuu-kei/buppin-itaku/nyuusatsukoukoku/koukoku/index.html",
       "route": {
         "root": {
           "url": "https://www.pref.chiba.lg.jp/nyuu-kei/buppin-itaku/nyuusatsukoukoku/koukoku/index.html",
@@ -4748,7 +6017,7 @@
       "details_reached": 31,
       "delta": 29,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.funabashi.lg.jp/jigyou/nyusatsu/001/index.html",
       "route": {
         "root": {
           "url": "https://www.city.funabashi.lg.jp/jigyou/nyusatsu/001/index.html",
@@ -4867,11 +6136,11 @@
       "details_reached": 4,
       "delta": 5,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.hachioji.tokyo.jp/shisei/001/011/002/002/index.html",
       "route": {
         "root": {
-          "url": "https://www.city.hachioji.tokyo.jp/",
-          "label": "https://www.city.hachioji.tokyo.jp/"
+          "url": "https://www.city.hachioji.tokyo.jp/shisei/001/011/002/002/index.html",
+          "label": "https://www.city.hachioji.tokyo.jp/shisei/001/011/002/002/index.html"
         },
         "branches": [
           {
@@ -4983,11 +6252,11 @@
       "details_reached": 8,
       "delta": 22,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.shinjuku.lg.jp/jigyo/index02_pps.html",
       "route": {
         "root": {
-          "url": "https://www.city.shinjuku.lg.jp/",
-          "label": "https://www.city.shinjuku.lg.jp/"
+          "url": "https://www.city.shinjuku.lg.jp/jigyo/index02_pps.html",
+          "label": "https://www.city.shinjuku.lg.jp/jigyo/index02_pps.html"
         },
         "branches": [
           {
@@ -5221,11 +6490,11 @@
       "details_reached": 2,
       "delta": 20,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.kawasaki.jp/templates/proposal/0-Curr.html",
       "route": {
         "root": {
-          "url": "https://www.city.kawasaki.jp/",
-          "label": "https://www.city.kawasaki.jp/"
+          "url": "https://www.city.kawasaki.jp/templates/proposal/0-Curr.html",
+          "label": "https://www.city.kawasaki.jp/templates/proposal/0-Curr.html"
         },
         "branches": [
           {
@@ -5354,11 +6623,11 @@
       "details_reached": 32,
       "delta": 20,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/bunka/",
       "route": {
         "root": {
-          "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/",
-          "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/"
+          "url": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/bunka/",
+          "label": "https://www.city.yokohama.lg.jp/business/nyusatsu/kakukukyoku/2026/itaku/bunka/"
         },
         "branches": [
           {
@@ -5597,7 +6866,7 @@
       "details_reached": 10,
       "delta": 8,
       "confidence": "medium",
-      "root_url": "",
+      "root_url": "https://www.city.sagamihara.kanagawa.jp/sangyo/1026667/index.html",
       "route": {
         "root": {
           "url": "https://www.city.sagamihara.kanagawa.jp/sangyo/1026667/index.html",
@@ -6213,7 +7482,7 @@
       "details_reached": 2,
       "delta": 16,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
       "route": {
         "root": {
           "url": "https://www.city.nagaoka.niigata.jp/sangyou/cate09/propo/r08propo.html",
@@ -6411,7 +7680,7 @@
       "details_reached": 35,
       "delta": 0,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.toyama.lg.jp/kurashi/suido/1018439/1018453/1010591/1009820.html",
       "route": {
         "root": {
           "url": "https://www.city.toyama.lg.jp/business/nyusatsu/1014598/index.html",
@@ -6505,7 +7774,7 @@
       "details_reached": 195,
       "delta": 193,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.toyama.jp/sangyou/nyuusatsu/koubo/bosyuu.html",
       "route": {
         "root": {
           "url": "https://www.pref.toyama.jp/",
@@ -6516,6 +7785,13 @@
             "label": "whole_prefecture_proposal_hub",
             "url": "https://www.pref.toyama.jp/sangyou/nyuusatsu/koubo/index.html",
             "role": "whole_prefecture_proposal_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "proposal_list",
+            "url": "https://www.pref.toyama.jp/sangyou/nyuusatsu/koubo/bosyuu.html",
+            "role": "proposal_list",
             "case_count": 0,
             "details": []
           }
@@ -6597,7 +7873,7 @@
       "details_reached": 5,
       "delta": 21,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.takaoka.toyama.jp/gyosei/sangyo_business/nyusatsu_keiyaku/1/index.html",
       "route": {
         "root": {
           "url": "https://www.city.takaoka.toyama.jp/gyosei/sangyo_business/nyusatsu_keiyaku/1/index.html",
@@ -7319,7 +8595,7 @@
       "details_reached": 28,
       "delta": 15,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.fukui.lg.jp/sigoto/keiyaku/proposal/index.html",
       "route": {
         "root": {
           "url": "https://www.city.fukui.lg.jp/",
@@ -7330,6 +8606,13 @@
             "label": "procurement_hub",
             "url": "https://www.city.fukui.lg.jp/sigoto/keiyaku/index.html",
             "role": "procurement_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "whole_city_proposal_list",
+            "url": "https://www.city.fukui.lg.jp/sigoto/keiyaku/proposal/index.html",
+            "role": "whole_city_proposal_list",
             "case_count": 0,
             "details": []
           }
@@ -7689,7 +8972,7 @@
       "details_reached": 75,
       "delta": 16,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.kofu.yamanashi.jp/keyaku/business/nyusatsu/nyusatsu-sonota-kobogata.html",
       "route": {
         "root": {
           "url": "https://www.city.kofu.yamanashi.jp/keyaku/business/nyusatsu/nyusatsu-sonota-kobogata.html",
@@ -8101,7 +9384,7 @@
       "details_reached": 19,
       "delta": -5,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
       "route": {
         "root": {
           "url": "https://www.city.matsumoto.nagano.jp/site/nyusatsu-keiyaku/list503-1755.html",
@@ -8312,7 +9595,7 @@
       "details_reached": 3,
       "delta": 6,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.nagano.nagano.jp/menu/7/2/7/6/1/index.html",
       "route": {
         "root": {
           "url": "https://www.city.nagano.nagano.jp/menu/7/2/7/6/1/index.html",
@@ -8469,7 +9752,7 @@
       "details_reached": 297,
       "delta": 410,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.nagano.lg.jp/kensa/puropo-kokoku.html",
       "route": {
         "root": {
           "url": "https://www.pref.nagano.lg.jp/",
@@ -8579,7 +9862,7 @@
       "details_reached": 9,
       "delta": 8,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.ogaki.lg.jp/category/3-1-6-0-0-0-0-0-0-0.html",
       "route": {
         "root": {
           "url": "https://www.city.ogaki.lg.jp/",
@@ -8590,6 +9873,13 @@
             "label": "procurement_hub",
             "url": "https://www.city.ogaki.lg.jp/category/3-1-0-0-0-0-0-0-0-0.html",
             "role": "procurement_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "proposal_list",
+            "url": "https://www.city.ogaki.lg.jp/category/3-1-6-0-0-0-0-0-0-0.html",
+            "role": "proposal_list",
             "case_count": 0,
             "details": []
           }
@@ -8675,7 +9965,7 @@
       "details_reached": 10,
       "delta": 8,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.gifu.lg.jp/business/nyuusatsu/1005619/1039150/index.html",
       "route": {
         "root": {
           "url": "https://www.city.gifu.lg.jp/",
@@ -8686,6 +9976,13 @@
             "label": "procurement_hub",
             "url": "https://www.city.gifu.lg.jp/business/nyuusatsu/1005619/index.html",
             "role": "procurement_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "R8_closed_result_list",
+            "url": "https://www.city.gifu.lg.jp/business/nyuusatsu/1005619/1039150/index.html",
+            "role": "R8_closed_result_list",
             "case_count": 0,
             "details": []
           }
@@ -8758,7 +10055,7 @@
       "details_reached": 0,
       "delta": 44,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.gifu.lg.jp/bid/search/bid_static_html_5.html",
       "route": {
         "root": {
           "url": "https://www.pref.gifu.lg.jp/bid/search/bid_static_html_5.html",
@@ -8951,6 +10248,76 @@
           "title": "企業タイアップによる県産品ブランディング強化事業委託業務プロポーザル募集",
           "url": "https://www.pref.gifu.lg.jp/bid/bid/486599.html",
           "status": "要確認"
+        },
+        {
+          "title": "次世代を担う若者活用県産品プロモーション事業委託業務（令和8年度）プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/486728.html",
+          "status": "要確認"
+        },
+        {
+          "title": "わくわく×きときとプロモーション事業委託業務（令和8年度）プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/488442.html",
+          "status": "要確認"
+        },
+        {
+          "title": "メディアを活用した県産品プロモーション事業委託業務（令和8年度）プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/486781.html",
+          "status": "要確認"
+        },
+        {
+          "title": "大関ケ原祭2026開催業務委託プロポーザル募集",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/486264.html",
+          "status": "要確認"
+        },
+        {
+          "title": "岐阜県スペースビジネス創出支援業務プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/414604.html",
+          "status": "要確認"
+        },
+        {
+          "title": "岐阜県ぎふっこ育児サポート事業運営業務委託プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/484353.html",
+          "status": "要確認"
+        },
+        {
+          "title": "豪州市場における訪日旅行プロモーション事業委託業務プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/484616.html",
+          "status": "要確認"
+        },
+        {
+          "title": "米国市場における訪日旅行プロモーション事業委託業務プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/483707.html",
+          "status": "要確認"
+        },
+        {
+          "title": "令和8年度「国外大学等プログラム」企画運営業務委託プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/481303.html",
+          "status": "要確認"
+        },
+        {
+          "title": "令和8年度子育て支援員研修業務委託プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/485114.html",
+          "status": "要確認"
+        },
+        {
+          "title": "令和8年度保育士等キャリアアップ研修業務委託プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/483058.html",
+          "status": "要確認"
+        },
+        {
+          "title": "（選定結果）令和8年度スタートアップとのオープンイノベーション促進支援事業プロポーザル募集",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/479567.html",
+          "status": "要確認"
+        },
+        {
+          "title": "県産品海外販路向けローカライズ支援業務委託プロポーザル募集【選定結果】",
+          "url": "https://www.pref.gifu.lg.jp/bid/bid/494522.html",
+          "status": "要確認"
+        },
+        {
+          "title": "公募型プロポーザル",
+          "url": "https://www.pref.gifu.lg.jp/bid/search/search.php?search_bid_kwd=&ctg%5B%5D=5&sec02=0&sec01=0&date1=&date2=&search=1",
+          "status": "要確認"
         }
       ],
       "duplicate_groups": [],
@@ -9028,7 +10395,7 @@
       "details_reached": 2,
       "delta": 19,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.hamamatsu.shizuoka.jp/tyotatu/bid/consignment/ippan/index.html",
       "route": {
         "root": {
           "url": "https://www.city.hamamatsu.shizuoka.jp/tyotatu/bid/consignment/ippan/index.html",
@@ -9490,6 +10857,121 @@
         {
           "title": "【選定結果の公表】公募型プロポーザル「令和8年度静岡市民生委員・児童委員研修業務」",
           "url": "https://www.city.shizuoka.lg.jp/jigyousyabosyu/s013076.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「障害者相談支援センター運営業務（精神）」",
+          "url": "https://www.city.shizuoka.lg.jp/s2498/s013008.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「令和8年度静岡市生活支援体制整備業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s4523/s013133.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「静岡市社会的養護自立支援拠点事業運営業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s4986/s013003.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「東静岡1号調整池活用事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s6925/s013097.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「木材の情報共有システム構築業務」（静岡市オクシズ材プラットフォーム活用推進協議会事業）",
+          "url": "https://www.city.shizuoka.lg.jp/s5732/s012578.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問に対する回答の公表】公募型プロポーザル「静岡市清水ナショナルトレーニングセンター基本構想策定支援業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s5423/s015333.html",
+          "status": "要確認"
+        },
+        {
+          "title": "指定管理者募集「静岡市清水ナショナルトレーニングセンター」（非公募）",
+          "url": "https://www.city.shizuoka.lg.jp/s5423/s013142.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「医療福祉AIオンデマンド地域交通実証業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s3792/s012596.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「東静岡2号調整池活用事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s6925/s013094.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「静岡市運動・スポーツ習慣化促進事業支援業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s5423/s013126.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「旧清沢小学校活用事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s6925/s013092.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「旧足久保小学校活用事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s6925/s013090.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「旧清水斎場活用事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s6925/s013089.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「静岡市デジタルデバイスを活用した保健指導サービス導入業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s7463/s012331.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「令和8年度静岡市地域福祉共生センター地域福祉推進業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s4523/s013078.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「令和8年度ママケアデイサービス企画・運営業務」",
+          "url": "https://www.city.shizuoka.lg.jp/jigyousyabosyu/s013070.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「生活困窮者自立相談支援事業業務」",
+          "url": "https://www.city.shizuoka.lg.jp/jigyousyabosyu/s012338.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「子どもの学習意欲向上事業」",
+          "url": "https://www.city.shizuoka.lg.jp/s3865/s012338.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「中小企業等DX支援業務(社内蓄積データ活用支援)」",
+          "url": "https://www.city.shizuoka.lg.jp/s2746/s013086.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【提案書の受付終了】公募型プロポーザル「統一地方選挙啓発業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s6493/s009055.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「令和8年度参加支援事業及びアウトリーチ等を通じた継続的支援事業業務」",
+          "url": "https://www.city.shizuoka.lg.jp/jigyousyabosyu/s012324.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「食品関連海外展開支援実施業務」",
+          "url": "https://www.city.shizuoka.lg.jp/s2746/s013120.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【選定結果の公表】公募型プロポーザル「令和8年度静岡市発達早期支援業務」",
+          "url": "https://www.city.shizuoka.lg.jp/jigyousyabosyu/hattatupuropo.html",
           "status": "要確認"
         }
       ],
@@ -10222,7 +11704,7 @@
       "details_reached": 2,
       "delta": 72,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.pref.aichi.jp/life/5/19/66/index.html",
       "route": {
         "root": {
           "url": "https://www.pref.aichi.jp/life/5/19/66/index.html",
@@ -10423,6 +11905,216 @@
           "title": "次世代モビリティ活用実証支援委託業務の委託事業者を募集します",
           "url": "https://www.pref.aichi.jp/soshiki/startup/mobility-katuyou2026.html",
           "status": "要確認"
+        },
+        {
+          "title": "あいちモビリティイノベーションプロジェクト「空と道がつながる愛知モデル2030」 eVTOL離着陸場等整備に係る調査及び設計業務委託実施事業者を募集します",
+          "url": "https://www.pref.aichi.jp/site/nextgeneration-airmobility/evtol2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】「2026年度あいち農業イノベーションプロジェクト推進業務」の委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/nogyo-keiei/2026innoveitaku.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追記しました】2026年度「モノづくり企業新規事業創出プログラム委託業務（オープンイノベーション裾野拡大事業）」の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/sangyoshinko/aichi-oi-2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】2026年度グローバルイベントの委託事業者を募集します！",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/global-event-fy2026-kobo.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問の受付は終了しました】モビリティサービス提供実施委託業務の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/mobility-service2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【令和8年3月2日更新：質問及び回答を追加しました】令和8年度「女性働き手創出支援事業」の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/rodofukushi/2026-joseihatarakite-itaku-boshu.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【令和8年3月2日更新：質問及び回答を追加しました】令和8年度「あいち子育て女性再就職サポートセンター運営事業」の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/rodofukushi/2026-mamajob-unei-boshu.html",
+          "status": "要確認"
+        },
+        {
+          "title": "労働総合支援事業（内職相談）委託業務の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/rodofukushi/roudousougoushien-naishoku.html",
+          "status": "要確認"
+        },
+        {
+          "title": "地産地消SAFサプライチェーン構築プロジェクト推進事業の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/jisedai/saf2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "スタートアップ・ダイバーシティ推進事業委託業務の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/2026-diversity.html",
+          "status": "要確認"
+        },
+        {
+          "title": "物流脱炭素化プロジェクト推進事業業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/suiso/buturyudecarboprojectr8.html",
+          "status": "要確認"
+        },
+        {
+          "title": "（質問及び回答を追加しました）あいち創業館団体用展示ガイド及びイベント開催業務の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/aichi-sogyokan-guide-event-2026rev1.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】水素需要拡大推進事業業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/suiso/jyuyo-kakudai-suishin.html",
+          "status": "要確認"
+        },
+        {
+          "title": "2026年度スタートアップ・エコシステムのグローバル化推進事業の委託事業者を募集します！",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/ecosystem-global-fy2026-kobo.html",
+          "status": "要確認"
+        },
+        {
+          "title": "『あいちモビリティイノベーションプロジェクト「空と道がつながる愛知モデル2030」』地上空撮ドローン社会実装推進業務の委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/jisedai/saigai2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "あいち創業館団体用展示ガイド及びイベント開催業務の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/aichi-sogyokan-guide-event-2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "あいちモビリティイノベーションプロジェクト「空と道がつながる愛知モデル2030」 プロジェクト推進に係る会議運営・調査業務委託実施事業者を募集します",
+          "url": "https://www.pref.aichi.jp/site/nextgeneration-airmobility/chosa2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "あいちモビリティイノベーションプロジェクト「空と道がつながる愛知モデル2030」 ドローンエンジニア人材育成体制構築支援事業業務委託実施事業者を募集します",
+          "url": "https://www.pref.aichi.jp/site/nextgeneration-airmobility/droneengineer2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "『あいちモビリティイノベーションプロジェクト「空と道がつながる愛知モデル2030」』物流ドローン社会実装推進事業の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/site/nextgeneration-airmobility/dronebuturyuu2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「2026年愛知県窯業事業者燃油価格高騰対策支援金及び2026年愛知県繊維事業者燃油価格高騰対策支援金交付業務」の委託事業者を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/sangyoshinko/yogyo-seni-shien2026.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】個人防護具の流通備蓄管理業務委託の企画提案を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/kansen-taisaku/kojinbougogu.html",
+          "status": "要確認"
+        },
+        {
+          "title": "大高緑地将来構想検討業務委託の公募型プロポーザル募集について",
+          "url": "https://www.pref.aichi.jp/soshiki/koen/oodakapuropo2511.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【あいち農業イノベーションプロジェクト】 「現場フィールド活用型イノベーション推進事業」に係るスタートアップ等からの技術提案の追加公募について",
+          "url": "https://www.pref.aichi.jp/press-release/2025genba-innova.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「経済安全保障促進事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/site/aichi-chizai/keizaianpo2025.html",
+          "status": "要確認"
+        },
+        {
+          "title": "2025年度「愛・地球博20祭」クロージングセレモニー及び記録誌作成に係る企画提案を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/kikaku/banpaku20th-cl-boshu.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「第13回全国少年少女チャレンジ創造コンテスト全国大会開催業務」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/san-kagi/challenge-contest-koubo202502.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「2025年度あいち農業イノベーションプロジェクト推進業務」の委託先を募集します（2025年3月12日更新）",
+          "url": "https://www.pref.aichi.jp/soshiki/nogyo-keiei/2025innoveitaku.html",
+          "status": "要確認"
+        },
+        {
+          "title": "令和7年度愛知県基幹的広域防災拠点（第1期・消防学校）PFI アドバイザリー業務の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/bosai-kyoten/kyotenadviser202501.html",
+          "status": "要確認"
+        },
+        {
+          "title": "令和7年度愛知県基幹的広域防災拠点（第2期・防災公園）PFIアドバイザリー業務の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/bosai-kyoten/kyotenadviser202502.html",
+          "status": "要確認"
+        },
+        {
+          "title": "愛知県基幹的広域防災拠点（防災公園）PFIアドバイザリー業務の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/bosai-kyoten/kyotenadviser2.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【知事会見】【あいち農業イノベーションプロジェクト】 「現場フィールド活用型イノベーション推進事業」に係るスタートアップ等からの技術提案の公募について",
+          "url": "https://www.pref.aichi.jp/press-release/2024genba-inoveitaku2.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました。】「少年少女発明クラブ活動強化及び普及啓発事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/san-kagi/hatsumeiclub-koubo2024.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました（6月17日更新）】愛知県基幹的広域防災拠点PFIアドバイザリー業務の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/bosai-kyoten/kyotenadviser1.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】「少子化対策の観点から結婚や子どもの法的保護等を巡る実情や課題に関する調査業務」の委託先を募集します（4月25日更新）",
+          "url": "https://www.pref.aichi.jp/soshiki/kikaku/shoshikataisaku-research.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】「愛知の発明の日記念講演会開催事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/site/aichi-chizai/hatsumei-koubo2024.html",
+          "status": "要確認"
+        },
+        {
+          "title": "2024年度「新あいち創造研究開発成果展示会開催事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/san-kagi/aime2024.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「少年少女発明クラブ活動強化及び普及啓発事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/san-kagi/hatsumeiclub-koubo2023.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】あいちモノづくりエキスポ2023開催業務の委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/san-kagi/aichimonodukuriexpoitaku.html",
+          "status": "要確認"
+        },
+        {
+          "title": "【質問及び回答を追加しました】「愛知の発明の日記念講演会開催事業」業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/site/aichi-chizai/hatsumei-koubo2023.html",
+          "status": "要確認"
+        },
+        {
+          "title": "エコシステム形成支援統括マネージャー（広域/東三河エリア）設置業務及び東三河スタートアップ機運醸成支援業務の委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/manager2022.html",
+          "status": "要確認"
+        },
+        {
+          "title": "愛・地球博記念公園設計技術協力業務（その2）に関するコストマネジメント業務の委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/ghibli-park/ecicostmanagement.html",
+          "status": "要確認"
+        },
+        {
+          "title": "「スタートアップ支援拠点検討調査」の業務委託先を募集します",
+          "url": "https://www.pref.aichi.jp/soshiki/startup/2018startup-chousa.html",
+          "status": "要確認"
         }
       ],
       "duplicate_groups": [],
@@ -10526,7 +12218,7 @@
       "details_reached": 14,
       "delta": 14,
       "confidence": "high",
-      "root_url": "",
+      "root_url": "https://www.city.toyota.aichi.jp/shisei/keiyaku/proposal/1030252/index.html",
       "route": {
         "root": {
           "url": "https://www.city.toyota.aichi.jp/",
@@ -10537,6 +12229,20 @@
             "label": "procurement_hub",
             "url": "https://www.city.toyota.aichi.jp/shisei/keiyaku/index.html",
             "role": "procurement_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "proposal_hub",
+            "url": "https://www.city.toyota.aichi.jp/shisei/keiyaku/proposal/index.html",
+            "role": "proposal_hub",
+            "case_count": 0,
+            "details": []
+          },
+          {
+            "label": "current_list",
+            "url": "https://www.city.toyota.aichi.jp/shisei/keiyaku/proposal/1030252/index.html",
+            "role": "current_list",
             "case_count": 0,
             "details": []
           }
