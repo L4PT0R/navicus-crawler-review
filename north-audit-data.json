@@ -1,6 +1,6 @@
 {
   "schema_version": "navicus_mie_north_audit_pages_v1",
-  "generated_at": "2026-07-30T14:23:27.175268Z",
+  "generated_at": "2026-07-30T14:27:02.937682Z",
   "source_manifest_sha256": "b5bc686db25175c525a00759f596d03f1c57e893fa87da0f97f8de880620ec16  input_manifest.json",
   "publication_status": "REVIEW_ONLY_NO_GO",
   "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
@@ -12482,17 +12482,17 @@
       "details_reached": 13,
       "delta": 12,
       "confidence": "high",
-      "root_url": "https://www.city.niigata.lg.jp/jigyo/",
+      "root_url": "https://www.city.niigata.lg.jp/category/jigyosha/index.html",
       "route": {
         "root": {
-          "url": "https://www.city.niigata.lg.jp/jigyo/",
-          "label": "新潟市 公式調達起点"
+          "url": "https://www.city.niigata.lg.jp/category/jigyosha/index.html",
+          "label": "新潟市 新着情報（事業者向け）"
         },
         "branches": [
           {
-            "label": "新潟市 公式調達起点",
-            "url": "https://www.city.niigata.lg.jp/jigyo/",
-            "role": "business_cross_section",
+            "label": "新潟市 新着情報（事業者向け）",
+            "url": "https://www.city.niigata.lg.jp/category/jigyosha/index.html",
+            "role": "whole_city_business_updates_frontier",
             "case_count": 1,
             "scanned": true,
             "details": [
@@ -12501,160 +12501,13 @@
                 "label": "https://www.city.niigata.lg.jp/shisei/seisaku/jigyoproject/furusatoitaku.html"
               }
             ]
-          },
-          {
-            "label": "business_all_updates",
-            "url": "https://www.city.niigata.lg.jp/jigyo/allNewsList.html",
-            "role": "business_all_updates",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "goods_services_contract_hub",
-            "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
-            "role": "goods_services_contract_hub",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "goods_eprocurement",
-            "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/buppindenshinyusatsu/portal.html",
-            "role": "goods_eprocurement",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "whole_site_rss",
-            "url": "https://www.city.niigata.lg.jp/rss_news.xml",
-            "role": "whole_site_rss",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "新潟市公共建築課 プロポーザル選定",
-            "url": "https://www.city.niigata.lg.jp/business/doboku/kokyokenchiku/puroposentei/r7puropo/index.html",
-            "role": "official_department_proposal_list",
-            "case_count": 0,
-            "scanned": false,
-            "details": []
-          },
-          {
-            "label": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/allNewsList.html",
-            "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/allNewsList.html",
-            "role": "proposal_or_procurement_list",
-            "case_count": 1,
-            "details": []
-          },
-          {
-            "label": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html",
-            "url": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html",
-            "role": "checked_official_branch",
-            "case_count": 0,
-            "details": []
-          },
-          {
-            "label": "https://www.city.niigata.lg.jp/iryo/kenko/hokenkenko/kenkoukeiei2026.html",
-            "url": "https://www.city.niigata.lg.jp/iryo/kenko/hokenkenko/kenkoukeiei2026.html",
-            "role": "checked_official_branch",
-            "case_count": 0,
-            "details": []
-          },
-          {
-            "label": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/sogyoshien/R8_startup.html",
-            "url": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/sogyoshien/R8_startup.html",
-            "role": "checked_official_branch",
-            "case_count": 0,
-            "details": []
-          },
-          {
-            "label": "https://www.city.niigata.lg.jp/iryo/kenfuku/news/syuuroujunbisien.html",
-            "url": "https://www.city.niigata.lg.jp/iryo/kenfuku/news/syuuroujunbisien.html",
-            "role": "checked_official_branch",
-            "case_count": 0,
-            "details": []
           }
         ]
       },
       "checked_urls": [
         {
-          "url": "https://www.city.niigata.lg.jp/jigyo/",
-          "label": "新潟市 公式調達起点"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/allNewsList.html",
-          "label": "business_all_updates"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/",
-          "label": "goods_services_contract_hub"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/buppindenshinyusatsu/portal.html",
-          "label": "goods_eprocurement"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/rss_news.xml",
-          "label": "whole_site_rss"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/doboku/kokyokenchiku/puroposentei/r7puropo/index.html",
-          "label": "新潟市公共建築課 プロポーザル選定"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/allNewsList.html",
-          "label": "https://www.city.niigata.lg.jp/business/keiyaku/keiyaku_top/allNewsList.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html",
-          "label": "https://www.city.niigata.lg.jp/shisei/zaisan/zaikeisuishin/saitekikasienpuropo.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/iryo/kenko/hokenkenko/kenkoukeiei2026.html",
-          "label": "https://www.city.niigata.lg.jp/iryo/kenko/hokenkenko/kenkoukeiei2026.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/sogyoshien/R8_startup.html",
-          "label": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/sogyoshien/R8_startup.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/iryo/kenfuku/news/syuuroujunbisien.html",
-          "label": "https://www.city.niigata.lg.jp/iryo/kenfuku/news/syuuroujunbisien.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/kurashi/gomi/oshirase/bioplapropo.html",
-          "label": "https://www.city.niigata.lg.jp/kurashi/gomi/oshirase/bioplapropo.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/syokuno15.html",
-          "label": "https://www.city.niigata.lg.jp/business/shoko/shokoshien/syokuno15.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/iryo/kenfuku/seikatsuhogo/seihosaikousai.html",
-          "label": "https://www.city.niigata.lg.jp/iryo/kenfuku/seikatsuhogo/seihosaikousai.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/seiseiAIpuropo.html",
-          "label": "https://www.city.niigata.lg.jp/jigyo/seiseiAIpuropo.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/koyozinzaiikusei.html",
-          "label": "https://www.city.niigata.lg.jp/jigyo/koyozinzaiikusei.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/koyoteleworker.html",
-          "label": "https://www.city.niigata.lg.jp/jigyo/koyoteleworker.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/gakusei_R8.html",
-          "label": "https://www.city.niigata.lg.jp/jigyo/gakusei_R8.html"
-        },
-        {
-          "url": "https://www.city.niigata.lg.jp/jigyo/koyotobira.html",
-          "label": "https://www.city.niigata.lg.jp/jigyo/koyotobira.html"
+          "url": "https://www.city.niigata.lg.jp/category/jigyosha/index.html",
+          "label": "新潟市 新着情報（事業者向け）"
         }
       ],
       "missing_candidates": [

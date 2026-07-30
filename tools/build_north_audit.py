@@ -520,6 +520,9 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
                 "scanned": True,
                 "details": [],
             })
+        retained_checked = [] if override.get("only_checked_roots") else [
+            row for row in checked if row.get("url") not in dropped
+        ]
         ordered_checked = [
             {"url": root_url, "label": root_label},
         ] + [
@@ -527,7 +530,7 @@ def apply_operator_route_overrides(items: list[dict]) -> None:
             for branch in additional_specs
         ] + [
             {"url": url, "label": "結果ページ（除外）"} for url in sorted(excluded)
-        ] + [row for row in checked if row.get("url") not in dropped]
+        ] + retained_checked
         unique_checked = []
         seen_checked = set()
         for row in ordered_checked:
