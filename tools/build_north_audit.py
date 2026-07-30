@@ -27,6 +27,11 @@ FRESH_NO_GO_OVERRIDE_FILES = (
 )
 NAGOYA_RESULT = WORKSPACE / "work/nagoya_department_recruitment_2026-07-30/result.json"
 KANAGAWA_RSS_RESULT = WORKSPACE / "work/kanagawa_rss_frontier_2026-07-30/result.json"
+ACCEPTED_CONCLUSIONS = {
+    "EXACT_CONFIRMED", "OFFICIAL_LIST_ENUMERATED", "OFFICIAL_BRANCHES_ENUMERATED",
+    "RSS_FRONTIER_CLASSIFIED", "RSS_FRONTIER_CONFIGURED",
+    "OFFICIAL_FRONTIER_CONFIGURED", "EXTERNAL_SYSTEM_TERMINAL_CONFIRMED",
+}
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -790,17 +795,20 @@ def main() -> None:
     apply_nagoya_department_overlay(items)
     apply_kanagawa_rss_frontier_overlay(items)
     counts = Counter(item["conclusion"] for item in items)
+    blocking_count = sum(count for conclusion, count in counts.items() if conclusion not in ACCEPTED_CONCLUSIONS)
     payload = {
         "schema_version": "navicus_mie_north_audit_pages_v1",
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "source_manifest_sha256": (RUN / "input_manifest.sha256").read_text(encoding="utf-8").strip(),
-        "publication_status": "REVIEW_ONLY_NO_GO",
+        "publication_status": "GO" if blocking_count == 0 else "REVIEW_ONLY_NO_GO",
         "scope": "都道府県コード01北海道〜23愛知・Pages掲載69発注者",
         "summary": {
             "issuer_count": len(items),
             "pages_count": sum(item["pages_count"] for item in items),
             "official_row_observation_count": sum(item["official_rows"] for item in items),
             "conclusion_counts": dict(counts),
+            "accepted_count": len(items) - blocking_count,
+            "blocking_count": blocking_count,
         },
         "items": items,
     }
